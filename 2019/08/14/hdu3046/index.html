@@ -64,7 +64,7 @@
 <meta property="og:description" content="题目来源： 传送门 Problem Description 问题描述In ZJNU, there is a well-known prairie. And it attracts pleasant sheep and his companions to have a holiday. Big big wolf and his families know about this, and quietl">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://acm.hdu.edu.cn/data/images/vipcon10-1007-1.JPG">
-<meta property="og:updated_time" content="2019-08-14T15:25:25.352Z">
+<meta property="og:updated_time" content="2019-08-14T15:43:10.488Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hdu3046 Pleasant sheep and big big wolf 题解">
 <meta name="twitter:description" content="题目来源： 传送门 Problem Description 问题描述In ZJNU, there is a well-known prairie. And it attracts pleasant sheep and his companions to have a holiday. Big big wolf and his families know about this, and quietl">
@@ -242,7 +242,7 @@
                 
               
 
-              <time title="创建时间：2019-08-14 23:05:35 / 修改时间：23:25:25" itemprop="dateCreated datePublished" datetime="2019-08-14T23:05:35+08:00">2019-08-14</time>
+              <time title="创建时间：2019-08-14 23:05:35 / 修改时间：23:43:10" itemprop="dateCreated datePublished" datetime="2019-08-14T23:05:35+08:00">2019-08-14</time>
             </span>
           
             
@@ -334,6 +334,10 @@
 
             <div class="post-nav-prev post-nav-item">
               
+                <a href="/2019/08/14/Follow/" rel="prev" title="Follow.">
+                  Follow. <i class="fa fa-chevron-right"></i>
+                </a>
+              
             </div>
           </div>
         
@@ -389,7 +393,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -408,7 +412,9 @@
         
           
         
-        <span class="site-state-item-count">4</span>
+          
+        
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span>
         
       </div>
@@ -553,6 +559,56 @@
 
   
 
+  
+    
+      
+<script type="text/x-mathjax-config">
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') {
+          next = next.nextSibling;
+        }
+        if (next && next.nodeName.toLowerCase() === 'br') {
+          next.parentNode.removeChild(next);
+        }
+      }
+    });
+  });
+
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
+      if (element.nodeName.toLowerCase() == 'li') {
+        element = element.parentNode;
+      }
+      element.classList.add('has-jax');
+    }
+  });
+</script>
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', function() {
+    MathJax.Hub.Typeset();
+  }, window.MathJax);
+</script>
+
+    
   
 
   
