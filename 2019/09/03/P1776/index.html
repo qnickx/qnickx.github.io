@@ -55,20 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="网络流学习笔记（一）（未完待续） 简介网络流(network-flows)是一种类比水流的解决问题方法，与线性规划密切相关。在oi中网络流是非常重要的考点。">
+  <meta name="description" content="题目描述终于，破解了千年的难题。小FF找到了王室的宝物室，里面堆满了无数价值连城的宝物……这下小FF可发财了，嘎嘎。但是这里的宝物实在是太多了，小FF的采集车似乎装不下那么多宝物。看来小FF只能含泪舍弃其中的一部分宝物了……小FF对洞穴里的宝物进行了整理，他发现每样宝物都有一件或者多件。他粗略估算了下每样宝物的价值，之后开始了宝物筛选工作：小FF有一个最大载重为W的采集车，洞穴里总共有n种宝物，每">
+<meta name="keywords" content="多重背包">
 <meta property="og:type" content="article">
-<meta property="og:title" content="网络流学习笔记（一）">
-<meta property="og:url" content="http://yoursite.com/2019/08/13/网络流学习笔记（一）/index.html">
+<meta property="og:title" content="P1776 宝物筛选 题解">
+<meta property="og:url" content="http://yoursite.com/2019/09/03/P1776/index.html">
 <meta property="og:site_name" content="qnickx&#39;s blog">
-<meta property="og:description" content="网络流学习笔记（一）（未完待续） 简介网络流(network-flows)是一种类比水流的解决问题方法，与线性规划密切相关。在oi中网络流是非常重要的考点。">
+<meta property="og:description" content="题目描述终于，破解了千年的难题。小FF找到了王室的宝物室，里面堆满了无数价值连城的宝物……这下小FF可发财了，嘎嘎。但是这里的宝物实在是太多了，小FF的采集车似乎装不下那么多宝物。看来小FF只能含泪舍弃其中的一部分宝物了……小FF对洞穴里的宝物进行了整理，他发现每样宝物都有一件或者多件。他粗略估算了下每样宝物的价值，之后开始了宝物筛选工作：小FF有一个最大载重为W的采集车，洞穴里总共有n种宝物，每">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://miao.su/images/2019/08/13/15dfe7.png">
-<meta property="og:updated_time" content="2019-08-13T15:38:24.098Z">
+<meta property="og:updated_time" content="2019-09-03T15:21:42.994Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="网络流学习笔记（一）">
-<meta name="twitter:description" content="网络流学习笔记（一）（未完待续） 简介网络流(network-flows)是一种类比水流的解决问题方法，与线性规划密切相关。在oi中网络流是非常重要的考点。">
-<meta name="twitter:image" content="https://miao.su/images/2019/08/13/15dfe7.png">
-  <link rel="canonical" href="http://yoursite.com/2019/08/13/网络流学习笔记（一）/">
+<meta name="twitter:title" content="P1776 宝物筛选 题解">
+<meta name="twitter:description" content="题目描述终于，破解了千年的难题。小FF找到了王室的宝物室，里面堆满了无数价值连城的宝物……这下小FF可发财了，嘎嘎。但是这里的宝物实在是太多了，小FF的采集车似乎装不下那么多宝物。看来小FF只能含泪舍弃其中的一部分宝物了……小FF对洞穴里的宝物进行了整理，他发现每样宝物都有一件或者多件。他粗略估算了下每样宝物的价值，之后开始了宝物筛选工作：小FF有一个最大载重为W的采集车，洞穴里总共有n种宝物，每">
+  <link rel="canonical" href="http://yoursite.com/2019/09/03/P1776/">
 
 
 <script id="page-configurations">
@@ -82,7 +81,7 @@
   };
 </script>
 
-  <title>网络流学习笔记（一） | qnickx's blog</title>
+  <title>P1776 宝物筛选 题解 | qnickx's blog</title>
   
 
 
@@ -210,7 +209,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/13/网络流学习笔记（一）/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/03/P1776/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="qnickx">
@@ -224,7 +223,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">网络流学习笔记（一）
+          <h1 class="post-title" itemprop="name headline">P1776 宝物筛选 题解
 
             
           </h1>
@@ -241,7 +240,7 @@
                 
               
 
-              <time title="创建时间：2019-08-13 23:00:36 / 修改时间：23:38:24" itemprop="dateCreated datePublished" datetime="2019-08-13T23:00:36+08:00">2019-08-13</time>
+              <time title="创建时间：2019-09-03 23:15:27 / 修改时间：23:21:42" itemprop="dateCreated datePublished" datetime="2019-09-03T23:15:27+08:00">2019-09-03</time>
             </span>
           
             
@@ -254,7 +253,14 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/算法笔记/" itemprop="url" rel="index"><span itemprop="name">算法笔记</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/OI/题解/" itemprop="url" rel="index"><span itemprop="name">题解</span></a></span>
 
                 
                 
@@ -273,14 +279,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="网络流学习笔记（一）"><a href="#网络流学习笔记（一）" class="headerlink" title="网络流学习笔记（一）"></a>网络流学习笔记（一）</h1><p>（未完待续）</p>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>网络流(network-flows)是一种类比水流的解决问题方法，与线性规划密切相关。在oi中网络流是非常重要的考点。</p>
+        <h5 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h5><p>终于，破解了千年的难题。小FF找到了王室的宝物室，里面堆满了无数价值连城的宝物……这下小FF可发财了，嘎嘎。但是这里的宝物实在是太多了，小FF的采集车似乎装不下那么多宝物。看来小FF只能含泪舍弃其中的一部分宝物了……小FF对洞穴里的宝物进行了整理，他发现每样宝物都有一件或者多件。他粗略估算了下每样宝物的价值，之后开始了宝物筛选工作：小FF有一个最大载重为W的采集车，洞穴里总共有n种宝物，每种宝物的价值为v[i]，重量为w[i]，每种宝物有m[i]件。小FF希望在采集车不超载的前提下，选择一些宝物装进采集车，使得它们的价值和最大。</p>
+<h5 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h5><p>第一行为一个整数N和w，分别表示宝物种数和采集车的最大载重。</p>
+<p>接下来n行每行三个整数，其中第i行第一个数表示第i类品价值，第二个整数表示一件该类物品的重量，第三个整数为该类物品数量。</p>
+<h5 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h5><p>输出仅一个整数ans，表示在采集车不超载的情况下收集的宝物的最大价值。</p>
 <a id="more"></a>
-<h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><p>网络是指一个有向图$G=(V,E)$.其中的每一条边$(u,v)\in E$都有一个权值$c(u,v)$,称之为容量，当$(u,v)\notin G$ 时,$c(u,v)=0$.</p>
-<h3 id="流"><a href="#流" class="headerlink" title="流"></a>流</h3><script type="math/tex; mode=display">f(u,v)=\left\{\begin{split} &f(u,v)&,(u,v)\in E\\ &-f(v,u)&,(v,u)\in E\\ &0&,(u,v)\notin E,(v,u)\notin E \end{split}\right.</script><h2 id="最大流问题"><a href="#最大流问题" class="headerlink" title="最大流问题"></a>最大流问题</h2><p>给定一个有向图$G=(V,E)$，把图中的边看作管道，每条边上有一个权值，表示该管道的流量上限。给定源点$s$和汇点$t$，现在假设在$s$处有一个水源，$t$处有一个蓄水池，问从$s$到$t$的最大水流量是多少</p>
-<p><img src="https://miao.su/images/2019/08/13/15dfe7.png" alt="如图"></p>
-<h2 id="Ford-Fulkerson算法"><a href="#Ford-Fulkerson算法" class="headerlink" title="Ford-Fulkerson算法"></a>Ford-Fulkerson算法</h2><p>基本思路很简单,每次用dfs从源到汇找一条可行路径，<br>然后把这条路塞满。这条路径上容量最小的那条边的容量，就是这次dfs所找到的流量。然后对于路径上的每条边，其容量要减去刚才找到的流量。并对反向边加上相同的流量 。</p>
-<h2 id="Edmonds-Karp算法"><a href="#Edmonds-Karp算法" class="headerlink" title="Edmonds-Karp算法"></a>Edmonds-Karp算法</h2><h2 id="Dicnic算法"><a href="#Dicnic算法" class="headerlink" title="Dicnic算法"></a>Dicnic算法</h2>
+<h5 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h5><p>4 20<br>3 9 3<br>5 9 1<br>9 4 2<br>8 1 3</p>
+<h5 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h5><p>47</p>
+<h5 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h5><p>很裸的二进制拆分多重背包，拆分成能表示所有物品组合的物品即可。</p>
+<h5 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">1000005</span>;</span><br><span class="line"><span class="keyword">int</span> n,maxv,ans,sz,v[maxn],val[maxn],dp[maxn],tot;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;maxv);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> w,b,c;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;w,&amp;b,&amp;c);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=c;j&lt;&lt;=<span class="number">1</span>)	val[++tot]=w*j,v[tot]=b*j,c-=j;</span><br><span class="line">		<span class="keyword">if</span>(c)	val[++tot]=w*c,v[tot]=b*c;</span><br><span class="line">	&#125;</span><br><span class="line">	dp[<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=tot;i++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> j=maxv;j&gt;=v[i];j--)&#123;</span><br><span class="line">			dp[j]=max(dp[j],dp[j-v[i]]+val[i]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=maxv;i++)	ans=max(ans,dp[i]);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
     </div>
 
     
@@ -290,14 +298,23 @@
       
 
       <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/多重背包/" rel="tag"># 多重背包</a>
+            
+          </div>
+        
 
         
 
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/08/12/搬迁公告/" rel="next" title="搬迁公告">
-                  <i class="fa fa-chevron-left"></i> 搬迁公告
+                <a href="/2019/09/02/hdu5172/" rel="next" title="hdu5172GTY's Gayfriends 题解">
+                  <i class="fa fa-chevron-left"></i> hdu5172GTY's Gayfriends 题解
                 </a>
               
             </div>
@@ -306,8 +323,8 @@
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/2019/08/14/hdu3046/" rel="prev" title="hdu3046 Pleasant sheep and big big wolf 题解">
-                  hdu3046 Pleasant sheep and big big wolf 题解 <i class="fa fa-chevron-right"></i>
+                <a href="/2019/09/03/P1119/" rel="prev" title="P1119 灾后重建 题解">
+                  P1119 灾后重建 题解 <i class="fa fa-chevron-right"></i>
                 </a>
               
             </div>
@@ -470,7 +487,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#网络流学习笔记（一）"><span class="nav-number">1.</span> <span class="nav-text">网络流学习笔记（一）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.1.</span> <span class="nav-text">简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#网络"><span class="nav-number">1.1.1.</span> <span class="nav-text">网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#流"><span class="nav-number">1.1.2.</span> <span class="nav-text">流</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最大流问题"><span class="nav-number">1.2.</span> <span class="nav-text">最大流问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ford-Fulkerson算法"><span class="nav-number">1.3.</span> <span class="nav-text">Ford-Fulkerson算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Edmonds-Karp算法"><span class="nav-number">1.4.</span> <span class="nav-text">Edmonds-Karp算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dicnic算法"><span class="nav-number">1.5.</span> <span class="nav-text">Dicnic算法</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#输入格式"><span class="nav-number">2.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#输出格式"><span class="nav-number">3.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#样例输入"><span class="nav-number">4.</span> <span class="nav-text">样例输入</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#样例输出"><span class="nav-number">5.</span> <span class="nav-text">样例输出</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#思路"><span class="nav-number">6.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#代码"><span class="nav-number">7.</span> <span class="nav-text">代码</span></a></li></ol></div>
             
 
           </div>
@@ -567,56 +584,6 @@
 
   
 
-  
-    
-      
-<script type="text/x-mathjax-config">
-
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
-      processEscapes: true,
-      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    },
-    TeX: {
-      equationNumbers: {
-        autoNumber: 'AMS'
-      }
-    }
-  });
-
-  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
-    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
-      if (data.display) {
-        var next = data.script.nextSibling;
-        while (next && next.nodeName.toLowerCase() === '#text') {
-          next = next.nextSibling;
-        }
-        if (next && next.nodeName.toLowerCase() === 'br') {
-          next.parentNode.removeChild(next);
-        }
-      }
-    });
-  });
-
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for (i = 0; i < all.length; i += 1) {
-      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
-      if (element.nodeName.toLowerCase() == 'li') {
-        element = element.parentNode;
-      }
-      element.classList.add('has-jax');
-    }
-  });
-</script>
-<script>
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', function() {
-    MathJax.Hub.Typeset();
-  }, window.MathJax);
-</script>
-
-    
   
 
   
