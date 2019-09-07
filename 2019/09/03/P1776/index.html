@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="qnickx&#39;s blog">
 <meta property="og:description" content="题目描述终于，破解了千年的难题。小FF找到了王室的宝物室，里面堆满了无数价值连城的宝物……这下小FF可发财了，嘎嘎。但是这里的宝物实在是太多了，小FF的采集车似乎装不下那么多宝物。看来小FF只能含泪舍弃其中的一部分宝物了……小FF对洞穴里的宝物进行了整理，他发现每样宝物都有一件或者多件。他粗略估算了下每样宝物的价值，之后开始了宝物筛选工作：小FF有一个最大载重为W的采集车，洞穴里总共有n种宝物，每">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-03T15:21:42.994Z">
+<meta property="og:updated_time" content="2019-09-07T14:54:13.053Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="P1776 宝物筛选 题解">
 <meta name="twitter:description" content="题目描述终于，破解了千年的难题。小FF找到了王室的宝物室，里面堆满了无数价值连城的宝物……这下小FF可发财了，嘎嘎。但是这里的宝物实在是太多了，小FF的采集车似乎装不下那么多宝物。看来小FF只能含泪舍弃其中的一部分宝物了……小FF对洞穴里的宝物进行了整理，他发现每样宝物都有一件或者多件。他粗略估算了下每样宝物的价值，之后开始了宝物筛选工作：小FF有一个最大载重为W的采集车，洞穴里总共有n种宝物，每">
@@ -262,11 +262,19 @@
                 
               
 
-              <time title="创建时间：2019-09-03 23:15:27 / 修改时间：23:21:42" itemprop="dateCreated datePublished" datetime="2019-09-03T23:15:27+08:00">2019-09-03</time>
+              <time title="创建时间：2019-09-03 23:15:27" itemprop="dateCreated datePublished" datetime="2019-09-03T23:15:27+08:00">2019-09-03</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-09-07 22:54:13" itemprop="dateModified" datetime="2019-09-07T22:54:13+08:00">2019-09-07</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -431,13 +439,7 @@
         
           
         
-          
-        
-          
-        
-          
-        
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -664,6 +666,56 @@
 
   
 
+  
+    
+      
+<script type="text/x-mathjax-config">
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') {
+          next = next.nextSibling;
+        }
+        if (next && next.nodeName.toLowerCase() === 'br') {
+          next.parentNode.removeChild(next);
+        }
+      }
+    });
+  });
+
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
+      if (element.nodeName.toLowerCase() == 'li') {
+        element = element.parentNode;
+      }
+      element.classList.add('has-jax');
+    }
+  });
+</script>
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', function() {
+    MathJax.Hub.Typeset();
+  }, window.MathJax);
+</script>
+
+    
   
 
   
