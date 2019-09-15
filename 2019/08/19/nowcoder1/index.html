@@ -56,7 +56,7 @@
 </script>
 
   <meta name="description" content="A 最短路思路很明显和最短路本身没啥关系。 把所有边的边权排个序，然后任意相邻的两条边如果边权之差大于$s$很明显就不能构造出这样的图，这时输出$-1$即可。否则直接按照顺序用双指针记录重边然后连边，思路不难。 代码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748#incl">
-<meta name="keywords" content="模拟,trie树,最短路">
+<meta name="keywords" content="最短路,模拟,trie树">
 <meta property="og:type" content="article">
 <meta property="og:title" content="牛客暑期noip提高组模拟(一) 解题报告">
 <meta property="og:url" content="http://yoursite.com/2019/08/19/nowcoder1/index.html">
@@ -331,11 +331,11 @@
           
           <div class="post-tags">
             
+              <a href="/tags/最短路/" rel="tag"># 最短路</a>
+            
               <a href="/tags/模拟/" rel="tag"># 模拟</a>
             
               <a href="/tags/trie树/" rel="tag"># trie树</a>
-            
-              <a href="/tags/最短路/" rel="tag"># 最短路</a>
             
           </div>
         
@@ -375,6 +375,9 @@
 
           </div>
           
+    
+    <div class="comments" id="gitalk-container"></div>
+  
 
         </div>
           
@@ -414,7 +417,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -731,6 +734,26 @@
   <script src="/js/scrollspy.js?v=7.3.0"></script>
 <script src="/js/post-details.js?v=7.3.0"></script>
 
+
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', function() {
+    var gitalk = new Gitalk({
+      clientID: 'da53b7a9674d247192bd',
+      clientSecret: 'a07cd89d4207e8455daa2d7986ff58f25c8dcd6c',
+      repo: '',
+      owner: 'qnickx',
+      admin: ['qnickx'],
+      id: '6c5a3e759639826f6b6de742f212a1a1',
+        language: 'zh-CN',
+      
+      distractionFreeMode: 'true'
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+</script>
 
 </body>
 </html>
