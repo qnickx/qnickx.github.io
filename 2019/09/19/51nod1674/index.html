@@ -55,19 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="题目描述终于，破解了千年的难题。小FF找到了王室的宝物室，里面堆满了无数价值连城的宝物……这下小FF可发财了，嘎嘎。但是这里的宝物实在是太多了，小FF的采集车似乎装不下那么多宝物。看来小FF只能含泪舍弃其中的一部分宝物了……小FF对洞穴里的宝物进行了整理，他发现每样宝物都有一件或者多件。他粗略估算了下每样宝物的价值，之后开始了宝物筛选工作：小FF有一个最大载重为W的采集车，洞穴里总共有n种宝物，每">
-<meta name="keywords" content="多重背包">
+  <meta name="description" content="题目链接传送门 题目描述lyk拥有一个区间。 它规定一个区间的价值为这个区间中所有数and起来的值与这个区间所有数or起来的值的乘积。 例如3个数2,3,6。它们and起来的值为2，or起来的值为7，这个区间对答案的贡献为2*7=14。 现在lyk有一个n个数的序列，它想知道所有n*(n+1)/2个区间的贡献的和对1000000007取模后的结果是多少。 例如当这个序列为{3,4,5}时，那么区间">
+<meta name="keywords" content="分治">
 <meta property="og:type" content="article">
-<meta property="og:title" content="P1776 宝物筛选 题解">
-<meta property="og:url" content="http://yoursite.com/2019/09/03/P1776/index.html">
+<meta property="og:title" content="51nod1674 区间的价值V2 题解">
+<meta property="og:url" content="http://yoursite.com/2019/09/19/51nod1674/index.html">
 <meta property="og:site_name" content="qnickx&#39;s blog">
-<meta property="og:description" content="题目描述终于，破解了千年的难题。小FF找到了王室的宝物室，里面堆满了无数价值连城的宝物……这下小FF可发财了，嘎嘎。但是这里的宝物实在是太多了，小FF的采集车似乎装不下那么多宝物。看来小FF只能含泪舍弃其中的一部分宝物了……小FF对洞穴里的宝物进行了整理，他发现每样宝物都有一件或者多件。他粗略估算了下每样宝物的价值，之后开始了宝物筛选工作：小FF有一个最大载重为W的采集车，洞穴里总共有n种宝物，每">
+<meta property="og:description" content="题目链接传送门 题目描述lyk拥有一个区间。 它规定一个区间的价值为这个区间中所有数and起来的值与这个区间所有数or起来的值的乘积。 例如3个数2,3,6。它们and起来的值为2，or起来的值为7，这个区间对答案的贡献为2*7=14。 现在lyk有一个n个数的序列，它想知道所有n*(n+1)/2个区间的贡献的和对1000000007取模后的结果是多少。 例如当这个序列为{3,4,5}时，那么区间">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-07T14:54:13.053Z">
+<meta property="og:updated_time" content="2019-09-19T16:02:51.191Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="P1776 宝物筛选 题解">
-<meta name="twitter:description" content="题目描述终于，破解了千年的难题。小FF找到了王室的宝物室，里面堆满了无数价值连城的宝物……这下小FF可发财了，嘎嘎。但是这里的宝物实在是太多了，小FF的采集车似乎装不下那么多宝物。看来小FF只能含泪舍弃其中的一部分宝物了……小FF对洞穴里的宝物进行了整理，他发现每样宝物都有一件或者多件。他粗略估算了下每样宝物的价值，之后开始了宝物筛选工作：小FF有一个最大载重为W的采集车，洞穴里总共有n种宝物，每">
-  <link rel="canonical" href="http://yoursite.com/2019/09/03/P1776/">
+<meta name="twitter:title" content="51nod1674 区间的价值V2 题解">
+<meta name="twitter:description" content="题目链接传送门 题目描述lyk拥有一个区间。 它规定一个区间的价值为这个区间中所有数and起来的值与这个区间所有数or起来的值的乘积。 例如3个数2,3,6。它们and起来的值为2，or起来的值为7，这个区间对答案的贡献为2*7=14。 现在lyk有一个n个数的序列，它想知道所有n*(n+1)/2个区间的贡献的和对1000000007取模后的结果是多少。 例如当这个序列为{3,4,5}时，那么区间">
+  <link rel="canonical" href="http://yoursite.com/2019/09/19/51nod1674/">
 
 
 <script id="page-configurations">
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>P1776 宝物筛选 题解 | qnickx's blog</title>
+  <title>51nod1674 区间的价值V2 题解 | qnickx's blog</title>
   
 
 
@@ -231,7 +231,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/03/P1776/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/19/51nod1674/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="qnickx">
@@ -245,7 +245,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">P1776 宝物筛选 题解
+          <h1 class="post-title" itemprop="name headline">51nod1674 区间的价值V2 题解
 
             
           </h1>
@@ -262,7 +262,7 @@
                 
               
 
-              <time title="创建时间：2019-09-03 23:15:27" itemprop="dateCreated datePublished" datetime="2019-09-03T23:15:27+08:00">2019-09-03</time>
+              <time title="创建时间：2019-09-19 23:48:26" itemprop="dateCreated datePublished" datetime="2019-09-19T23:48:26+08:00">2019-09-19</time>
             </span>
           
             
@@ -273,7 +273,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-07 22:54:13" itemprop="dateModified" datetime="2019-09-07T22:54:13+08:00">2019-09-07</time>
+                <time title="修改时间：2019-09-20 00:02:51" itemprop="dateModified" datetime="2019-09-20T00:02:51+08:00">2019-09-20</time>
               </span>
             
           
@@ -309,15 +309,19 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h5 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h5><p>终于，破解了千年的难题。小FF找到了王室的宝物室，里面堆满了无数价值连城的宝物……这下小FF可发财了，嘎嘎。但是这里的宝物实在是太多了，小FF的采集车似乎装不下那么多宝物。看来小FF只能含泪舍弃其中的一部分宝物了……小FF对洞穴里的宝物进行了整理，他发现每样宝物都有一件或者多件。他粗略估算了下每样宝物的价值，之后开始了宝物筛选工作：小FF有一个最大载重为W的采集车，洞穴里总共有n种宝物，每种宝物的价值为v[i]，重量为w[i]，每种宝物有m[i]件。小FF希望在采集车不超载的前提下，选择一些宝物装进采集车，使得它们的价值和最大。</p>
-<h5 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h5><p>第一行为一个整数N和w，分别表示宝物种数和采集车的最大载重。</p>
-<p>接下来n行每行三个整数，其中第i行第一个数表示第i类品价值，第二个整数表示一件该类物品的重量，第三个整数为该类物品数量。</p>
-<h5 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h5><p>输出仅一个整数ans，表示在采集车不超载的情况下收集的宝物的最大价值。</p>
+        <h4 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h4><p><a href="http://www.51nod.com/Challenge/Problem.html#problemId=1674" target="_blank" rel="noopener">传送门</a></p>
+<h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>lyk拥有一个区间。</p>
+<p>它规定一个区间的价值为这个区间中所有数and起来的值与这个区间所有数or起来的值的乘积。</p>
+<p>例如3个数2,3,6。它们and起来的值为2，or起来的值为7，这个区间对答案的贡献为2*7=14。</p>
+<p>现在lyk有一个n个数的序列，它想知道所有n*(n+1)/2个区间的贡献的和对1000000007取模后的结果是多少。</p>
+<p>例如当这个序列为{3,4,5}时，那么区间[1,1],[1,2],[1,3],[2,2],[2,3],[3,3]的贡献分别为9,0,0,16,20,25。</p>
 <a id="more"></a>
-<h5 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h5><p>4 20<br>3 9 3<br>5 9 1<br>9 4 2<br>8 1 3</p>
-<h5 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h5><p>47</p>
-<h5 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h5><p>很裸的二进制拆分多重背包，拆分成能表示所有物品组合的物品即可。</p>
-<h5 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">1000005</span>;</span><br><span class="line"><span class="keyword">int</span> n,maxv,ans,sz,v[maxn],val[maxn],dp[maxn],tot;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;maxv);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> w,b,c;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;w,&amp;b,&amp;c);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=c;j&lt;&lt;=<span class="number">1</span>)	val[++tot]=w*j,v[tot]=b*j,c-=j;</span><br><span class="line">		<span class="keyword">if</span>(c)	val[++tot]=w*c,v[tot]=b*c;</span><br><span class="line">	&#125;</span><br><span class="line">	dp[<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=tot;i++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> j=maxv;j&gt;=v[i];j--)&#123;</span><br><span class="line">			dp[j]=max(dp[j],dp[j-v[i]]+val[i]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=maxv;i++)	ans=max(ans,dp[i]);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h4><p>第一行一个数n(1&lt;=n&lt;=100000)。<br>接下来一行n个数ai，表示这n个数(0&lt;=ai&lt;=10^9)。</p>
+<h4 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h4><p>仅一行表示答案</p>
+<h4 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h4><p>3<br>3 4 5</p>
+<h4 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h4><p>70</p>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>由于与运算和或运算都具有收敛性：即参与运算的数越多结果则越靠拢0或1，那么我们就可以对离散化的答案开一个map，然后对一个区间进行分治，然后将相同的答案累计个数并乘起来即可，注意取模的位置。</p>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> ll mod=<span class="number">1e9</span>+<span class="number">7</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span>  maxn=<span class="number">100005</span>;</span><br><span class="line">ll sz[maxn],n,AND[maxn],OR[maxn],ans;</span><br><span class="line"><span class="built_in">map</span>&lt;pair&lt;ll,ll&gt;,ll&gt; mp,mp2;</span><br><span class="line"><span class="built_in">map</span>&lt;pair&lt;ll,ll&gt;,ll&gt;::iterator it,it2;<span class="comment">//第一维为与，第二维为或</span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span> L,<span class="keyword">int</span> R)</span></span>&#123;</span><br><span class="line"><span class="comment">//	printf("%d %d\n",L,R);</span></span><br><span class="line">	<span class="keyword">if</span>(L&gt;R)	<span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">int</span> mid=(L+R)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">	mp.clear(),mp2.clear();</span><br><span class="line">	AND[mid]=sz[mid],OR[mid]=sz[mid],mp[make_pair(sz[mid],sz[mid])]++,mp2[make_pair(sz[mid],sz[mid])]++;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=mid<span class="number">-1</span>;i&gt;=L;i--)	AND[i]=AND[i+<span class="number">1</span>]&amp;sz[i],OR[i]=OR[i+<span class="number">1</span>]|sz[i],mp[make_pair(AND[i],OR[i])]++;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=mid+<span class="number">1</span>;i&lt;=R;i++)  AND[i]=AND[i<span class="number">-1</span>]&amp;sz[i],OR[i]=OR[i<span class="number">-1</span>]|sz[i],mp2[make_pair(AND[i],OR[i])]++;</span><br><span class="line">	<span class="keyword">for</span>(it=mp.begin();it!=mp.end();it++)	<span class="keyword">for</span>(it2=mp2.begin();it2!=mp2.end();it2++)	ans=(ans+((*it).first.first&amp;(*it2).first.first)*((*it).first.second|(*it2).first.second)%mod*(*it).second*(*it2).second)%mod;</span><br><span class="line">	solve(L,mid<span class="number">-1</span>);solve(mid+<span class="number">1</span>,R);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;n);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)	<span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;sz[i]);</span><br><span class="line">	solve(<span class="number">1</span>,n);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%lld"</span>,ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -333,7 +337,7 @@
           
           <div class="post-tags">
             
-              <a href="/tags/多重背包/" rel="tag"># 多重背包</a>
+              <a href="/tags/分治/" rel="tag"># 分治</a>
             
           </div>
         
@@ -343,8 +347,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/09/02/hdu5172/" rel="next" title="hdu5172GTY's Gayfriends 题解">
-                  <i class="fa fa-chevron-left"></i> hdu5172GTY's Gayfriends 题解
+                <a href="/2019/09/19/poj1125/" rel="next" title="poj1125 Stockbroker Grapevine 题解">
+                  <i class="fa fa-chevron-left"></i> poj1125 Stockbroker Grapevine 题解
                 </a>
               
             </div>
@@ -352,10 +356,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/09/03/P1119/" rel="prev" title="P1119 灾后重建 题解">
-                  P1119 灾后重建 题解 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -582,7 +582,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#输入格式"><span class="nav-number">2.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#输出格式"><span class="nav-number">3.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#样例输入"><span class="nav-number">4.</span> <span class="nav-text">样例输入</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#样例输出"><span class="nav-number">5.</span> <span class="nav-text">样例输出</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#思路"><span class="nav-number">6.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#代码"><span class="nav-number">7.</span> <span class="nav-text">代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目链接"><span class="nav-number">1.</span> <span class="nav-text">题目链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#题目描述"><span class="nav-number">2.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输入"><span class="nav-number">3.</span> <span class="nav-text">输入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出"><span class="nav-number">4.</span> <span class="nav-text">输出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例输入"><span class="nav-number">5.</span> <span class="nav-text">样例输入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例输出"><span class="nav-number">6.</span> <span class="nav-text">样例输出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-number">7.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">8.</span> <span class="nav-text">代码</span></a></li></ol></div>
             
 
           </div>
@@ -752,7 +752,7 @@
       repo: 'blogcomments',
       owner: 'qnickx',
       admin: ['qnickx'],
-      id: '21947c0660a697df5efc090da534fba7',
+      id: 'e65cd383ab70662db0eaf843f5bce264',
         language: 'zh-CN',
       
       distractionFreeMode: 'true'
