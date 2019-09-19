@@ -55,19 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="题目描述2020年，人类在火星上建立了一个庞大的基地群，总共有n个基地。起初为了节约材料，人类只修建了n-1条道路来连接这些基地，并且每两个基地都能够通过道路到达，所以所有的基地形成了一个巨大的树状结构。如果基地A到基地B至少要经过d条道路的话，我们称基地A到基地B的距离为d。 由于火星上非常干燥，经常引发火灾，人类决定在火星上修建若干个消防局。消防局只能修建在基地里，每个消防局有能力扑灭与它距离">
-<meta name="keywords" content="树形dp,贪心">
+  <meta name="description" content="题目链接传送门 Description 题目描述Stockbrokers are known to overreact to rumours. You have been contracted to develop a method of spreading disinformation amongst the stockbrokers to give your employer the tact">
+<meta name="keywords" content="floyd,最短路">
 <meta property="og:type" content="article">
-<meta property="og:title" content="P2279[HNOI2003]消防局的设立 题解">
-<meta property="og:url" content="http://yoursite.com/2019/09/04/P2279/index.html">
+<meta property="og:title" content="poj1125">
+<meta property="og:url" content="http://yoursite.com/2019/09/19/poj1125/index.html">
 <meta property="og:site_name" content="qnickx&#39;s blog">
-<meta property="og:description" content="题目描述2020年，人类在火星上建立了一个庞大的基地群，总共有n个基地。起初为了节约材料，人类只修建了n-1条道路来连接这些基地，并且每两个基地都能够通过道路到达，所以所有的基地形成了一个巨大的树状结构。如果基地A到基地B至少要经过d条道路的话，我们称基地A到基地B的距离为d。 由于火星上非常干燥，经常引发火灾，人类决定在火星上修建若干个消防局。消防局只能修建在基地里，每个消防局有能力扑灭与它距离">
+<meta property="og:description" content="题目链接传送门 Description 题目描述Stockbrokers are known to overreact to rumours. You have been contracted to develop a method of spreading disinformation amongst the stockbrokers to give your employer the tact">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-07T14:54:27.034Z">
+<meta property="og:updated_time" content="2019-09-19T15:45:57.539Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="P2279[HNOI2003]消防局的设立 题解">
-<meta name="twitter:description" content="题目描述2020年，人类在火星上建立了一个庞大的基地群，总共有n个基地。起初为了节约材料，人类只修建了n-1条道路来连接这些基地，并且每两个基地都能够通过道路到达，所以所有的基地形成了一个巨大的树状结构。如果基地A到基地B至少要经过d条道路的话，我们称基地A到基地B的距离为d。 由于火星上非常干燥，经常引发火灾，人类决定在火星上修建若干个消防局。消防局只能修建在基地里，每个消防局有能力扑灭与它距离">
-  <link rel="canonical" href="http://yoursite.com/2019/09/04/P2279/">
+<meta name="twitter:title" content="poj1125">
+<meta name="twitter:description" content="题目链接传送门 Description 题目描述Stockbrokers are known to overreact to rumours. You have been contracted to develop a method of spreading disinformation amongst the stockbrokers to give your employer the tact">
+  <link rel="canonical" href="http://yoursite.com/2019/09/19/poj1125/">
 
 
 <script id="page-configurations">
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>P2279[HNOI2003]消防局的设立 题解 | qnickx's blog</title>
+  <title>poj1125 | qnickx's blog</title>
   
 
 
@@ -231,7 +231,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/04/P2279/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/19/poj1125/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="qnickx">
@@ -245,7 +245,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">P2279[HNOI2003]消防局的设立 题解
+          <h1 class="post-title" itemprop="name headline">poj1125
 
             
           </h1>
@@ -262,19 +262,11 @@
                 
               
 
-              <time title="创建时间：2019-09-04 23:26:42" itemprop="dateCreated datePublished" datetime="2019-09-04T23:26:42+08:00">2019-09-04</time>
+              <time title="创建时间：2019-09-19 23:42:25 / 修改时间：23:45:57" itemprop="dateCreated datePublished" datetime="2019-09-19T23:42:25+08:00">2019-09-19</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-07 22:54:27" itemprop="dateModified" datetime="2019-09-07T22:54:27+08:00">2019-09-07</time>
-              </span>
             
           
             <span class="post-meta-item">
@@ -309,19 +301,19 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h5 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h5><p>2020年，人类在火星上建立了一个庞大的基地群，总共有n个基地。起初为了节约材料，人类只修建了n-1条道路来连接这些基地，并且每两个基地都能够通过道路到达，所以所有的基地形成了一个巨大的树状结构。如果基地A到基地B至少要经过d条道路的话，我们称基地A到基地B的距离为d。</p>
-<p>由于火星上非常干燥，经常引发火灾，人类决定在火星上修建若干个消防局。消防局只能修建在基地里，每个消防局有能力扑灭与它距离不超过2的基地的火灾。</p>
-<p>你的任务是计算至少要修建多少个消防局才能够确保火星上所有的基地在发生火灾时，消防队有能力及时扑灭火灾。</p>
+        <h4 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h4><p><a href="http://poj.org/problem?id=1125" target="_blank" rel="noopener">传送门</a></p>
+<h4 id="Description-题目描述"><a href="#Description-题目描述" class="headerlink" title="Description 题目描述"></a>Description 题目描述</h4><p>Stockbrokers are known to overreact to rumours. You have been contracted to develop a method of spreading disinformation amongst the stockbrokers to give your employer the tactical edge in the stock market. For maximum effect, you have to spread the rumours in the fastest possible way.</p>
+<p>Unfortunately for you, stockbrokers only trust information coming from their “Trusted sources” This means you have to take into account the structure of their contacts when starting a rumour. It takes a certain amount of time for a specific stockbroker to pass the rumour on to each of his colleagues. Your task will be to write a program that tells you which stockbroker to choose as your starting point for the rumour, as well as the time it will take for the rumour to spread throughout the stockbroker community. This duration is measured as the time needed for the last person to receive the information.</p>
 <a id="more"></a>
-<h5 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h5><p>输入文件名为input.txt。</p>
-<p>输入文件的第一行为n （n&lt;=1000），表示火星上基地的数目。接下来的n-1行每行有一个正整数，其中文件第i行的正整数为a[i]，表示从编号为i的基地到编号为a[i]的基地之间有一条道路，为了更加简洁的描述树状结构的基地群，有a[i]&lt;i。</p>
-<h5 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h5><p>输出文件名为output.txt</p>
-<p>输出文件仅有一个正整数，表示至少要设立多少个消防局才有能力及时扑灭任何基地发生的火灾。</p>
-<h5 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h5><p>6<br>1<br>2<br>3<br>5</p>
-<h5 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h5><p>2</p>
-<h5 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h5><p>标算是树形dp然而可以用贪心搞……嫌时间不够就暂时用贪心苟着。</p>
-<p>考虑任意一个节点$node_i$，假如它能被处理，那么一定是他的爷爷，他的父亲节点，他的兄弟节点，他的儿子节点，他的孙子节点当中的任意一个部署有消防站。而很显然部署一个在他的爷爷的位置可以解决他和他兄弟，于是贪心的做法就是每次找出未被处理的深度最深的点，然后标记它的爷爷即可。</p>
-<h5 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">1005</span>;</span><br><span class="line"><span class="keyword">int</span> ans,fa[maxn],dep[maxn],n,head[maxn],ver[maxn&lt;&lt;<span class="number">1</span>],Nxt[maxn&lt;&lt;<span class="number">1</span>],tot;</span><br><span class="line"><span class="keyword">bool</span> vis[maxn];</span><br><span class="line">priority_queue&lt; pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; &gt; pq;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> v)</span></span>&#123;</span><br><span class="line">	ver[++tot]=v,Nxt[tot]=head[u],head[u]=tot;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> f)</span></span>&#123;</span><br><span class="line"><span class="comment">//	printf("%d %d\n",u,f);</span></span><br><span class="line">	dep[u]=dep[f]+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=head[u];i;i=Nxt[i])&#123;</span><br><span class="line">		<span class="keyword">if</span>(ver[i]==f)	<span class="keyword">continue</span>;</span><br><span class="line">		fa[ver[i]]=u;</span><br><span class="line">		dfs(ver[i],u);</span><br><span class="line">	&#125;</span><br><span class="line">	pq.push(make_pair(dep[u],u));</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">deal</span><span class="params">(<span class="keyword">int</span> u)</span></span>&#123;</span><br><span class="line">	vis[u]=<span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=head[u];i;i=Nxt[i])&#123;</span><br><span class="line">		<span class="keyword">int</span> tmp=ver[i];</span><br><span class="line">	<span class="comment">//	if(tmp==fa[u])	continue;</span></span><br><span class="line">		vis[tmp]=<span class="literal">true</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> j=head[tmp];j;j=Nxt[j]) vis[ver[j]]=<span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> tmp;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;tmp);</span><br><span class="line">		add(i+<span class="number">1</span>,tmp),add(tmp,i+<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	dfs(<span class="number">1</span>,<span class="number">0</span>);</span><br><span class="line">	<span class="keyword">while</span>(!pq.empty())&#123;</span><br><span class="line">		<span class="keyword">while</span>(!pq.empty()&amp;&amp;vis[pq.top().second])	pq.pop();</span><br><span class="line">		<span class="keyword">if</span>(pq.empty())	<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">int</span> u=pq.top().second;pq.pop();</span><br><span class="line">		ans++;</span><br><span class="line">		<span class="keyword">int</span> ls;</span><br><span class="line">		<span class="keyword">if</span>(fa[fa[u]])	 ls=fa[fa[u]];<span class="keyword">else</span>  ls=<span class="number">1</span>;</span><br><span class="line">		deal(ls);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Input-输入"><a href="#Input-输入" class="headerlink" title="Input 输入"></a>Input 输入</h4><p>Your program will input data for different sets of stockbrokers. Each set starts with a line with the number of stockbrokers. Following this is a line for each stockbroker which contains the number of people who they have contact with, who these people are, and the time taken for them to pass the message to each person. The format of each stockbroker line is as follows: The line starts with the number of contacts (n), followed by n pairs of integers, one pair for each contact. Each pair lists first a number referring to the contact (e.g. a ‘1’ means person number one in the set), followed by the time in minutes taken to pass a message to that person. There are no special punctuation symbols or spacing rules.</p>
+<p>Each person is numbered 1 through to the number of stockbrokers. The time taken to pass the message on will be between 1 and 10 minutes (inclusive), and the number of contacts will range between 0 and one less than the number of stockbrokers. The number of stockbrokers will range from 1 to 100. The input is terminated by a set of stockbrokers containing 0 (zero) people.</p>
+<h4 id="Output-输出"><a href="#Output-输出" class="headerlink" title="Output 输出"></a>Output 输出</h4><p>For each set of data, your program must output a single line containing the person who results in the fastest message transmission, and how long before the last person will receive any given message after you give it to this person, measured in integer minutes.<br>It is possible that your program will receive a network of connections that excludes some persons, i.e. some people may be unreachable. If your program detects such a broken network, simply output the message “disjoint”. Note that the time taken to pass the message from person A to person B is not necessarily the same as the time taken to pass it from B to A, if such transmission is possible at all.</p>
+<h4 id="Sample-Input-样例输入"><a href="#Sample-Input-样例输入" class="headerlink" title="Sample Input 样例输入"></a>Sample Input 样例输入</h4><p>3<br>2 2 4 3 5<br>2 1 2 3 6<br>2 1 2 2 2<br>5<br>3 4 4 2 8 5 3<br>1 5 8<br>4 1 6 4 10 2 7 5 2<br>0<br>2 2 5 1 5<br>0</p>
+<h4 id="Sample-Output-样例输出"><a href="#Sample-Output-样例输出" class="headerlink" title="Sample Output 样例输出"></a>Sample Output 样例输出</h4><p>3 2<br>3 10</p>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>题意简述:有n个人,他们要以最快速度互相传递一个消息,现在已知每个人可以传递的人及传递时间,求能用最短时间传递完信息的1那个人</p>
+<p>n小于100,然后根据题意可知答案是一个能将消息传递给其他所有人且传递最长时间最短的人,于是跑一遍floyd然后$\mathcal O(n^2)$统计即可得出答案.</p>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n,f[<span class="number">105</span>][<span class="number">105</span>],ans,pos;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;j++)	f[i][j]=<span class="number">192608171</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)	f[i][i]=<span class="number">0</span>;</span><br><span class="line">	ans=<span class="number">0x7ffffff</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">floyd</span><span class="params">()</span></span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> k=<span class="number">1</span>;k&lt;=n;k++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;j++)&#123;</span><br><span class="line">				f[i][j]=min(f[i][j],f[i][k]+f[k][j]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> tmp=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">bool</span> vis=<span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;j++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(f[i][j]==<span class="number">192608171</span>)	&#123;vis=<span class="literal">true</span>;<span class="keyword">break</span>;&#125;</span><br><span class="line">				<span class="keyword">else</span> <span class="keyword">if</span>(f[i][j]&gt;tmp)	tmp=f[i][j];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(vis)	<span class="keyword">continue</span>;</span><br><span class="line">		<span class="keyword">if</span>(tmp&lt;ans)&#123;ans=tmp,pos=i;&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n)&amp;&amp;n)&#123;</span><br><span class="line">		init();</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">			<span class="keyword">int</span> m;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;m);</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=m;j++)&#123;	<span class="keyword">int</span> tmp,l;<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;tmp,&amp;l),f[i][tmp]=min(f[i][tmp],l);&#125;</span><br><span class="line">			floyd();</span><br><span class="line">			solve();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>,pos,ans);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
     </div>
 
     
@@ -336,9 +328,9 @@
           
           <div class="post-tags">
             
-              <a href="/tags/树形dp/" rel="tag"># 树形dp</a>
+              <a href="/tags/floyd/" rel="tag"># floyd</a>
             
-              <a href="/tags/贪心/" rel="tag"># 贪心</a>
+              <a href="/tags/最短路/" rel="tag"># 最短路</a>
             
           </div>
         
@@ -348,8 +340,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/09/03/P1119/" rel="next" title="P1119 灾后重建 题解">
-                  <i class="fa fa-chevron-left"></i> P1119 灾后重建 题解
+                <a href="/2019/09/18/poj2481/" rel="next" title="poj2481 Cows 题解">
+                  <i class="fa fa-chevron-left"></i> poj2481 Cows 题解
                 </a>
               
             </div>
@@ -357,10 +349,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/09/10/CF292D/" rel="prev" title="CF292D Connected Components 题解">
-                  CF292D Connected Components 题解 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -585,7 +573,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#输入格式"><span class="nav-number">2.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#输出格式"><span class="nav-number">3.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#样例输入"><span class="nav-number">4.</span> <span class="nav-text">样例输入</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#样例输出"><span class="nav-number">5.</span> <span class="nav-text">样例输出</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#思路"><span class="nav-number">6.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#代码"><span class="nav-number">7.</span> <span class="nav-text">代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目链接"><span class="nav-number">1.</span> <span class="nav-text">题目链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Description-题目描述"><span class="nav-number">2.</span> <span class="nav-text">Description 题目描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Input-输入"><span class="nav-number">3.</span> <span class="nav-text">Input 输入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Output-输出"><span class="nav-number">4.</span> <span class="nav-text">Output 输出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-Input-样例输入"><span class="nav-number">5.</span> <span class="nav-text">Sample Input 样例输入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-Output-样例输出"><span class="nav-number">6.</span> <span class="nav-text">Sample Output 样例输出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-number">7.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">8.</span> <span class="nav-text">代码</span></a></li></ol></div>
             
 
           </div>
@@ -755,7 +743,7 @@
       repo: 'blogcomments',
       owner: 'qnickx',
       admin: ['qnickx'],
-      id: 'c8b9fe7f1c824c576a1a909ca5a1b51d',
+      id: '3d9946581c8f35b98ea850875e3a8105',
         language: 'zh-CN',
       
       distractionFreeMode: 'true'
