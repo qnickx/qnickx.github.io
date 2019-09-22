@@ -55,19 +55,21 @@
   };
 </script>
 
-  <meta name="description" content="题目描述2020年，人类在火星上建立了一个庞大的基地群，总共有n个基地。起初为了节约材料，人类只修建了n-1条道路来连接这些基地，并且每两个基地都能够通过道路到达，所以所有的基地形成了一个巨大的树状结构。如果基地A到基地B至少要经过d条道路的话，我们称基地A到基地B的距离为d。 由于火星上非常干燥，经常引发火灾，人类决定在火星上修建若干个消防局。消防局只能修建在基地里，每个消防局有能力扑灭与它距离">
-<meta name="keywords" content="树形dp,贪心">
+  <meta name="description" content="题目链接传送门 题目描述有一种图形叫做五角形圈。一个五角形圈的中心有1个由n个顶点和n条边组成的圈。在中心的这个n边圈的每一条边同时也是某一个五角形的一条边，一共有n个不同的五角形。这些五角形只在五角形圈的中心的圈上有公共的顶点。如图0所示是一个4-五角形圈。  现在给定一个n五角形圈，你的任务就是求出n五角形圈的不同生成树的数目。还记得什么是图的生成树吗？一个图的生成树是保留原图的所有顶点以及顶">
+<meta name="keywords" content="杂题,结论题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="P2279[HNOI2003]消防局的设立 题解">
-<meta property="og:url" content="http://yoursite.com/2019/09/04/P2279/index.html">
+<meta property="og:title" content="P4821 [中山市选]生成树 题解">
+<meta property="og:url" content="http://yoursite.com/2019/09/22/P4821/index.html">
 <meta property="og:site_name" content="qnickx&#39;s blog">
-<meta property="og:description" content="题目描述2020年，人类在火星上建立了一个庞大的基地群，总共有n个基地。起初为了节约材料，人类只修建了n-1条道路来连接这些基地，并且每两个基地都能够通过道路到达，所以所有的基地形成了一个巨大的树状结构。如果基地A到基地B至少要经过d条道路的话，我们称基地A到基地B的距离为d。 由于火星上非常干燥，经常引发火灾，人类决定在火星上修建若干个消防局。消防局只能修建在基地里，每个消防局有能力扑灭与它距离">
+<meta property="og:description" content="题目链接传送门 题目描述有一种图形叫做五角形圈。一个五角形圈的中心有1个由n个顶点和n条边组成的圈。在中心的这个n边圈的每一条边同时也是某一个五角形的一条边，一共有n个不同的五角形。这些五角形只在五角形圈的中心的圈上有公共的顶点。如图0所示是一个4-五角形圈。  现在给定一个n五角形圈，你的任务就是求出n五角形圈的不同生成树的数目。还记得什么是图的生成树吗？一个图的生成树是保留原图的所有顶点以及顶">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-07T14:54:27.034Z">
+<meta property="og:image" content="https://miao.su/images/2019/09/22/clip_image001a31b1.png">
+<meta property="og:updated_time" content="2019-09-22T11:46:01.048Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="P2279[HNOI2003]消防局的设立 题解">
-<meta name="twitter:description" content="题目描述2020年，人类在火星上建立了一个庞大的基地群，总共有n个基地。起初为了节约材料，人类只修建了n-1条道路来连接这些基地，并且每两个基地都能够通过道路到达，所以所有的基地形成了一个巨大的树状结构。如果基地A到基地B至少要经过d条道路的话，我们称基地A到基地B的距离为d。 由于火星上非常干燥，经常引发火灾，人类决定在火星上修建若干个消防局。消防局只能修建在基地里，每个消防局有能力扑灭与它距离">
-  <link rel="canonical" href="http://yoursite.com/2019/09/04/P2279/">
+<meta name="twitter:title" content="P4821 [中山市选]生成树 题解">
+<meta name="twitter:description" content="题目链接传送门 题目描述有一种图形叫做五角形圈。一个五角形圈的中心有1个由n个顶点和n条边组成的圈。在中心的这个n边圈的每一条边同时也是某一个五角形的一条边，一共有n个不同的五角形。这些五角形只在五角形圈的中心的圈上有公共的顶点。如图0所示是一个4-五角形圈。  现在给定一个n五角形圈，你的任务就是求出n五角形圈的不同生成树的数目。还记得什么是图的生成树吗？一个图的生成树是保留原图的所有顶点以及顶">
+<meta name="twitter:image" content="https://miao.su/images/2019/09/22/clip_image001a31b1.png">
+  <link rel="canonical" href="http://yoursite.com/2019/09/22/P4821/">
 
 
 <script id="page-configurations">
@@ -81,7 +83,7 @@
   };
 </script>
 
-  <title>P2279[HNOI2003]消防局的设立 题解 | qnickx's blog</title>
+  <title>P4821 [中山市选]生成树 题解 | qnickx's blog</title>
   
 
 
@@ -231,7 +233,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/04/P2279/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/22/P4821/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="qnickx">
@@ -245,7 +247,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">P2279[HNOI2003]消防局的设立 题解
+          <h1 class="post-title" itemprop="name headline">P4821 [中山市选]生成树 题解
 
             
           </h1>
@@ -262,19 +264,11 @@
                 
               
 
-              <time title="创建时间：2019-09-04 23:26:42" itemprop="dateCreated datePublished" datetime="2019-09-04T23:26:42+08:00">2019-09-04</time>
+              <time title="创建时间：2019-09-22 14:21:09 / 修改时间：19:46:01" itemprop="dateCreated datePublished" datetime="2019-09-22T14:21:09+08:00">2019-09-22</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-07 22:54:27" itemprop="dateModified" datetime="2019-09-07T22:54:27+08:00">2019-09-07</time>
-              </span>
             
           
             <span class="post-meta-item">
@@ -309,19 +303,19 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h5 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h5><p>2020年，人类在火星上建立了一个庞大的基地群，总共有n个基地。起初为了节约材料，人类只修建了n-1条道路来连接这些基地，并且每两个基地都能够通过道路到达，所以所有的基地形成了一个巨大的树状结构。如果基地A到基地B至少要经过d条道路的话，我们称基地A到基地B的距离为d。</p>
-<p>由于火星上非常干燥，经常引发火灾，人类决定在火星上修建若干个消防局。消防局只能修建在基地里，每个消防局有能力扑灭与它距离不超过2的基地的火灾。</p>
-<p>你的任务是计算至少要修建多少个消防局才能够确保火星上所有的基地在发生火灾时，消防队有能力及时扑灭火灾。</p>
+        <h4 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h4><p><a href="https://www.luogu.org/problem/P4821" target="_blank" rel="noopener">传送门</a></p>
+<h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>有一种图形叫做五角形圈。一个五角形圈的中心有1个由n个顶点和n条边组成的圈。在中心的这个n边圈的每一条边同时也是某一个五角形的一条边，一共有n个不同的五角形。这些五角形只在五角形圈的中心的圈上有公共的顶点。如图0所示是一个4-五角形圈。</p>
+<p><img src="https://miao.su/images/2019/09/22/clip_image001a31b1.png" alt="如图所示"></p>
+<p>现在给定一个n五角形圈，你的任务就是求出n五角形圈的不同生成树的数目。还记得什么是图的生成树吗？一个图的生成树是保留原图的所有顶点以及顶点的数目减去一这么多条边,从而生成的一棵树。</p>
+<p>由于这样的生成树数目可能过多，你只需要输出答案对2007的模数即可。</p>
 <a id="more"></a>
-<h5 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h5><p>输入文件名为input.txt。</p>
-<p>输入文件的第一行为n （n&lt;=1000），表示火星上基地的数目。接下来的n-1行每行有一个正整数，其中文件第i行的正整数为a[i]，表示从编号为i的基地到编号为a[i]的基地之间有一条道路，为了更加简洁的描述树状结构的基地群，有a[i]&lt;i。</p>
-<h5 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h5><p>输出文件名为output.txt</p>
-<p>输出文件仅有一个正整数，表示至少要设立多少个消防局才有能力及时扑灭任何基地发生的火灾。</p>
-<h5 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h5><p>6<br>1<br>2<br>3<br>5</p>
-<h5 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h5><p>2</p>
-<h5 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h5><p>标算是树形dp然而可以用贪心搞……嫌时间不够就暂时用贪心苟着。</p>
-<p>考虑任意一个节点$node_i$，假如它能被处理，那么一定是他的爷爷，他的父亲节点，他的兄弟节点，他的儿子节点，他的孙子节点当中的任意一个部署有消防站。而很显然部署一个在他的爷爷的位置可以解决他和他兄弟，于是贪心的做法就是每次找出未被处理的深度最深的点，然后标记它的爷爷即可。</p>
-<h5 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">1005</span>;</span><br><span class="line"><span class="keyword">int</span> ans,fa[maxn],dep[maxn],n,head[maxn],ver[maxn&lt;&lt;<span class="number">1</span>],Nxt[maxn&lt;&lt;<span class="number">1</span>],tot;</span><br><span class="line"><span class="keyword">bool</span> vis[maxn];</span><br><span class="line">priority_queue&lt; pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; &gt; pq;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> v)</span></span>&#123;</span><br><span class="line">	ver[++tot]=v,Nxt[tot]=head[u],head[u]=tot;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> f)</span></span>&#123;</span><br><span class="line"><span class="comment">//	printf("%d %d\n",u,f);</span></span><br><span class="line">	dep[u]=dep[f]+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=head[u];i;i=Nxt[i])&#123;</span><br><span class="line">		<span class="keyword">if</span>(ver[i]==f)	<span class="keyword">continue</span>;</span><br><span class="line">		fa[ver[i]]=u;</span><br><span class="line">		dfs(ver[i],u);</span><br><span class="line">	&#125;</span><br><span class="line">	pq.push(make_pair(dep[u],u));</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">deal</span><span class="params">(<span class="keyword">int</span> u)</span></span>&#123;</span><br><span class="line">	vis[u]=<span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=head[u];i;i=Nxt[i])&#123;</span><br><span class="line">		<span class="keyword">int</span> tmp=ver[i];</span><br><span class="line">	<span class="comment">//	if(tmp==fa[u])	continue;</span></span><br><span class="line">		vis[tmp]=<span class="literal">true</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> j=head[tmp];j;j=Nxt[j]) vis[ver[j]]=<span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> tmp;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;tmp);</span><br><span class="line">		add(i+<span class="number">1</span>,tmp),add(tmp,i+<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	dfs(<span class="number">1</span>,<span class="number">0</span>);</span><br><span class="line">	<span class="keyword">while</span>(!pq.empty())&#123;</span><br><span class="line">		<span class="keyword">while</span>(!pq.empty()&amp;&amp;vis[pq.top().second])	pq.pop();</span><br><span class="line">		<span class="keyword">if</span>(pq.empty())	<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">int</span> u=pq.top().second;pq.pop();</span><br><span class="line">		ans++;</span><br><span class="line">		<span class="keyword">int</span> ls;</span><br><span class="line">		<span class="keyword">if</span>(fa[fa[u]])	 ls=fa[fa[u]];<span class="keyword">else</span>  ls=<span class="number">1</span>;</span><br><span class="line">		deal(ls);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h4><p>输入包含多组测试数据。第一行包含一个正整数T，表示测试数据数目。每组测试数据包含一个整数n( 2&lt;=N&lt;=100)，代表你需要求解的五角形圈中心的边数。</p>
+<h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h4><p>对每一组测试数据，输出一行包含一个整数x，表示n五角形圈的生成树数目模2007之后的结果。</p>
+<h4 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h4><p>1<br>2</p>
+<h4 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h4><p>40</p>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>很明显需要断$n-1$条边，然后打表看看$n=2$和$n=3$的情况，会发现需要断正多边形上的边然后其中一个五边形要再再删去一条边，且这条边必须要在中心圈上，于是根据乘法原理即为$4<em>n</em>5^{n-1}$。快速幂即可。</p>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> ll mod=<span class="number">2007</span>;</span><br><span class="line">ll n,ans,T;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> ll <span class="title">power</span><span class="params">(ll a,ll b)</span></span>&#123;</span><br><span class="line">	ll res=<span class="number">1L</span>L;</span><br><span class="line">	<span class="keyword">while</span>(b)&#123;<span class="keyword">if</span>(b&amp;<span class="number">1</span>)(res*=a%mod)%=mod;(a*=a%mod)%=mod;b&gt;&gt;=(<span class="number">1L</span>L);&#125;</span><br><span class="line">	<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;T);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> xh=<span class="number">1</span>;xh&lt;=T;xh++)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;n);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,<span class="number">4L</span>L*n%mod*power(<span class="number">5</span>,n<span class="number">-1</span>)%mod);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
     </div>
 
     
@@ -336,9 +330,9 @@
           
           <div class="post-tags">
             
-              <a href="/tags/树形dp/" rel="tag"># 树形dp</a>
+              <a href="/tags/杂题/" rel="tag"># 杂题</a>
             
-              <a href="/tags/贪心/" rel="tag"># 贪心</a>
+              <a href="/tags/结论题/" rel="tag"># 结论题</a>
             
           </div>
         
@@ -348,8 +342,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/09/03/P1119/" rel="next" title="P1119 灾后重建 题解">
-                  <i class="fa fa-chevron-left"></i> P1119 灾后重建 题解
+                <a href="/2019/09/20/codevs2370/" rel="next" title="codevs2370 小机房的树 题解">
+                  <i class="fa fa-chevron-left"></i> codevs2370 小机房的树 题解
                 </a>
               
             </div>
@@ -357,10 +351,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/09/10/CF292D/" rel="prev" title="CF292D Connected Components 题解">
-                  CF292D Connected Components 题解 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -591,7 +581,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#输入格式"><span class="nav-number">2.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#输出格式"><span class="nav-number">3.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#样例输入"><span class="nav-number">4.</span> <span class="nav-text">样例输入</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#样例输出"><span class="nav-number">5.</span> <span class="nav-text">样例输出</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#思路"><span class="nav-number">6.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#代码"><span class="nav-number">7.</span> <span class="nav-text">代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目链接"><span class="nav-number">1.</span> <span class="nav-text">题目链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#题目描述"><span class="nav-number">2.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输入格式"><span class="nav-number">3.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出格式"><span class="nav-number">4.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例输入"><span class="nav-number">5.</span> <span class="nav-text">样例输入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例输出"><span class="nav-number">6.</span> <span class="nav-text">样例输出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-number">7.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">8.</span> <span class="nav-text">代码</span></a></li></ol></div>
             
 
           </div>
@@ -761,7 +751,7 @@
       repo: 'blogcomments',
       owner: 'qnickx',
       admin: ['qnickx'],
-      id: 'c8b9fe7f1c824c576a1a909ca5a1b51d',
+      id: 'f707afd2fa5c94e4f76d3f89f2a5a4f5',
         language: 'zh-CN',
       
       distractionFreeMode: 'true'
