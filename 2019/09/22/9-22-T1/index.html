@@ -55,19 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="题目描述终于，破解了千年的难题。小FF找到了王室的宝物室，里面堆满了无数价值连城的宝物……这下小FF可发财了，嘎嘎。但是这里的宝物实在是太多了，小FF的采集车似乎装不下那么多宝物。看来小FF只能含泪舍弃其中的一部分宝物了……小FF对洞穴里的宝物进行了整理，他发现每样宝物都有一件或者多件。他粗略估算了下每样宝物的价值，之后开始了宝物筛选工作：小FF有一个最大载重为W的采集车，洞穴里总共有n种宝物，每">
-<meta name="keywords" content="多重背包">
+  <meta name="description" content="问题描述给定n个数，不能改变顺序，可以再中间添加加号、减号或乘号，求有多少种算式可以算出24。">
+<meta name="keywords" content="dfs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="P1776 宝物筛选 题解">
-<meta property="og:url" content="http://yoursite.com/2019/09/03/P1776/index.html">
+<meta property="og:title" content="9.22模拟赛 二十四点 题解">
+<meta property="og:url" content="http://yoursite.com/2019/09/22/9-22-T1/index.html">
 <meta property="og:site_name" content="qnickx&#39;s blog">
-<meta property="og:description" content="题目描述终于，破解了千年的难题。小FF找到了王室的宝物室，里面堆满了无数价值连城的宝物……这下小FF可发财了，嘎嘎。但是这里的宝物实在是太多了，小FF的采集车似乎装不下那么多宝物。看来小FF只能含泪舍弃其中的一部分宝物了……小FF对洞穴里的宝物进行了整理，他发现每样宝物都有一件或者多件。他粗略估算了下每样宝物的价值，之后开始了宝物筛选工作：小FF有一个最大载重为W的采集车，洞穴里总共有n种宝物，每">
+<meta property="og:description" content="问题描述给定n个数，不能改变顺序，可以再中间添加加号、减号或乘号，求有多少种算式可以算出24。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-07T14:54:13.053Z">
+<meta property="og:updated_time" content="2019-09-22T13:48:00.089Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="P1776 宝物筛选 题解">
-<meta name="twitter:description" content="题目描述终于，破解了千年的难题。小FF找到了王室的宝物室，里面堆满了无数价值连城的宝物……这下小FF可发财了，嘎嘎。但是这里的宝物实在是太多了，小FF的采集车似乎装不下那么多宝物。看来小FF只能含泪舍弃其中的一部分宝物了……小FF对洞穴里的宝物进行了整理，他发现每样宝物都有一件或者多件。他粗略估算了下每样宝物的价值，之后开始了宝物筛选工作：小FF有一个最大载重为W的采集车，洞穴里总共有n种宝物，每">
-  <link rel="canonical" href="http://yoursite.com/2019/09/03/P1776/">
+<meta name="twitter:title" content="9.22模拟赛 二十四点 题解">
+<meta name="twitter:description" content="问题描述给定n个数，不能改变顺序，可以再中间添加加号、减号或乘号，求有多少种算式可以算出24。">
+  <link rel="canonical" href="http://yoursite.com/2019/09/22/9-22-T1/">
 
 
 <script id="page-configurations">
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>P1776 宝物筛选 题解 | qnickx's blog</title>
+  <title>9.22模拟赛 二十四点 题解 | qnickx's blog</title>
   
 
 
@@ -231,7 +231,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/03/P1776/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/22/9-22-T1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="qnickx">
@@ -245,7 +245,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">P1776 宝物筛选 题解
+          <h1 class="post-title" itemprop="name headline">9.22模拟赛 二十四点 题解
 
             
           </h1>
@@ -262,19 +262,11 @@
                 
               
 
-              <time title="创建时间：2019-09-03 23:15:27" itemprop="dateCreated datePublished" datetime="2019-09-03T23:15:27+08:00">2019-09-03</time>
+              <time title="创建时间：2019-09-22 21:28:38 / 修改时间：21:48:00" itemprop="dateCreated datePublished" datetime="2019-09-22T21:28:38+08:00">2019-09-22</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-07 22:54:13" itemprop="dateModified" datetime="2019-09-07T22:54:13+08:00">2019-09-07</time>
-              </span>
             
           
             <span class="post-meta-item">
@@ -309,15 +301,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h5 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h5><p>终于，破解了千年的难题。小FF找到了王室的宝物室，里面堆满了无数价值连城的宝物……这下小FF可发财了，嘎嘎。但是这里的宝物实在是太多了，小FF的采集车似乎装不下那么多宝物。看来小FF只能含泪舍弃其中的一部分宝物了……小FF对洞穴里的宝物进行了整理，他发现每样宝物都有一件或者多件。他粗略估算了下每样宝物的价值，之后开始了宝物筛选工作：小FF有一个最大载重为W的采集车，洞穴里总共有n种宝物，每种宝物的价值为v[i]，重量为w[i]，每种宝物有m[i]件。小FF希望在采集车不超载的前提下，选择一些宝物装进采集车，使得它们的价值和最大。</p>
-<h5 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h5><p>第一行为一个整数N和w，分别表示宝物种数和采集车的最大载重。</p>
-<p>接下来n行每行三个整数，其中第i行第一个数表示第i类品价值，第二个整数表示一件该类物品的重量，第三个整数为该类物品数量。</p>
-<h5 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h5><p>输出仅一个整数ans，表示在采集车不超载的情况下收集的宝物的最大价值。</p>
+        <h4 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h4><p>给定n个数，不能改变顺序，可以再中间添加加号、减号或乘号，求有多少种算式可以算出24。</p>
 <a id="more"></a>
-<h5 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h5><p>4 20<br>3 9 3<br>5 9 1<br>9 4 2<br>8 1 3</p>
-<h5 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h5><p>47</p>
-<h5 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h5><p>很裸的二进制拆分多重背包，拆分成能表示所有物品组合的物品即可。</p>
-<h5 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">1000005</span>;</span><br><span class="line"><span class="keyword">int</span> n,maxv,ans,sz,v[maxn],val[maxn],dp[maxn],tot;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;maxv);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> w,b,c;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;w,&amp;b,&amp;c);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=c;j&lt;&lt;=<span class="number">1</span>)	val[++tot]=w*j,v[tot]=b*j,c-=j;</span><br><span class="line">		<span class="keyword">if</span>(c)	val[++tot]=w*c,v[tot]=b*c;</span><br><span class="line">	&#125;</span><br><span class="line">	dp[<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=tot;i++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> j=maxv;j&gt;=v[i];j--)&#123;</span><br><span class="line">			dp[j]=max(dp[j],dp[j-v[i]]+val[i]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=maxv;i++)	ans=max(ans,dp[i]);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h4><p>第一行一个正整数n。<br>接下来n行每行一个整数，第i行表示第i个数。</p>
+<h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h4><p>一行一个整数，输出满足条件的算式个数。</p>
+<h4 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h4><p>5<br>10<br>2<br>4<br>2<br>4</p>
+<h4 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h4><p>5</p>
+<h4 id="数据规模"><a href="#数据规模" class="headerlink" title="数据规模"></a>数据规模</h4><p>对于10%的数据，n=2<br>对于40%的数据，n&lt;=5<br>对于100%的数据，n&lt;=10</p>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>很明显是一个深搜，不用剪枝就能过，但是要注意不能从pos=0开始乘和减。</p>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n,sz[<span class="number">15</span>],fac[<span class="number">15</span>],sum[<span class="number">15</span>],ans;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> pos,<span class="keyword">int</span> now)</span></span>&#123;</span><br><span class="line"><span class="comment">//	printf("%d %d\n",pos,now);</span></span><br><span class="line"><span class="comment">//	if(now&gt;24&amp;&amp;sum[n]-sum[pos]&lt;now-24)	return;</span></span><br><span class="line"><span class="comment">//	if(now&lt;24&amp;&amp;sum[n]-sum[pos]&lt;24-now)	return;</span></span><br><span class="line"><span class="comment">//	printf("Yes\n");</span></span><br><span class="line">	<span class="keyword">if</span>(pos==n)&#123;</span><br><span class="line">		<span class="keyword">if</span>(now==<span class="number">24</span>)&#123;</span><br><span class="line">	<span class="comment">//		printf("Yes\n");</span></span><br><span class="line">			ans++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> res=sz[pos+<span class="number">1</span>];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=pos+<span class="number">2</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		res*=sz[i];</span><br><span class="line">		dfs(i,now+res);</span><br><span class="line">		<span class="keyword">if</span>(pos!=<span class="number">0</span>)dfs(i,now-res);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(pos!=<span class="number">0</span>)	dfs(pos+<span class="number">1</span>,now-sz[pos+<span class="number">1</span>]);</span><br><span class="line">	dfs(pos+<span class="number">1</span>,now+sz[pos+<span class="number">1</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	freopen(<span class="string">"z24a.in"</span>,<span class="string">"r"</span>,<span class="built_in">stdin</span>);</span><br><span class="line">	freopen(<span class="string">"z24a.out"</span>,<span class="string">"w"</span>,<span class="built_in">stdout</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">	fac[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;sz[i]),sum[i]=sum[i<span class="number">-1</span>]+sz[i];</span><br><span class="line">	dfs(<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -333,7 +325,7 @@
           
           <div class="post-tags">
             
-              <a href="/tags/多重背包/" rel="tag"># 多重背包</a>
+              <a href="/tags/dfs/" rel="tag"># dfs</a>
             
           </div>
         
@@ -343,8 +335,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/09/02/hdu5172/" rel="next" title="hdu5172GTY's Gayfriends 题解">
-                  <i class="fa fa-chevron-left"></i> hdu5172GTY's Gayfriends 题解
+                <a href="/2019/09/22/poj3268/" rel="next" title="poj3268">
+                  <i class="fa fa-chevron-left"></i> poj3268
                 </a>
               
             </div>
@@ -352,10 +344,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/09/03/P1119/" rel="prev" title="P1119 灾后重建 题解">
-                  P1119 灾后重建 题解 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -590,7 +578,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#输入格式"><span class="nav-number">2.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#输出格式"><span class="nav-number">3.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#样例输入"><span class="nav-number">4.</span> <span class="nav-text">样例输入</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#样例输出"><span class="nav-number">5.</span> <span class="nav-text">样例输出</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#思路"><span class="nav-number">6.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#代码"><span class="nav-number">7.</span> <span class="nav-text">代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输入格式"><span class="nav-number">2.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出格式"><span class="nav-number">3.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例输入"><span class="nav-number">4.</span> <span class="nav-text">样例输入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例输出"><span class="nav-number">5.</span> <span class="nav-text">样例输出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据规模"><span class="nav-number">6.</span> <span class="nav-text">数据规模</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-number">7.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">8.</span> <span class="nav-text">代码</span></a></li></ol></div>
             
 
           </div>
@@ -760,7 +748,7 @@
       repo: 'blogcomments',
       owner: 'qnickx',
       admin: ['qnickx'],
-      id: '21947c0660a697df5efc090da534fba7',
+      id: 'b859a99c102795f70470c5c30ddcf4fb',
         language: 'zh-CN',
       
       distractionFreeMode: 'true'
