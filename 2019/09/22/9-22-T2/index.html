@@ -55,18 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="由于不可抗因素，全站已搬迁，以前的内容只有明文数据储存，会慢慢补上的 在此祝嘉兴职业技术学院的彭洁伟大佐亲妈暴毙。">
+  <meta name="description" content="问题描述净月潭公园里有n个水塘，因为要做OIER们的宿营地，需要把这n个水塘中的水排干，水塘中的水在自然条件下1个单位的时间可以蒸发A升水。现在买了1台抽水机，使用抽水机可以让你用1个单位的时间使每个水塘除开自然蒸发的A升水外，还可抽B升水，但在1个单位的时间内只能对1个水塘使用。 要你求出排干所有水塘的最少时间（水塘中的水为0时为排干）。">
+<meta name="keywords" content="二分答案">
 <meta property="og:type" content="article">
-<meta property="og:title" content="搬迁公告">
-<meta property="og:url" content="http://yoursite.com/2019/08/12/搬迁公告/index.html">
+<meta property="og:title" content="9_22_T2 模拟赛 排干净月潭水塘 题解">
+<meta property="og:url" content="http://yoursite.com/2019/09/22/9-22-T2/index.html">
 <meta property="og:site_name" content="qnickx&#39;s blog">
-<meta property="og:description" content="由于不可抗因素，全站已搬迁，以前的内容只有明文数据储存，会慢慢补上的 在此祝嘉兴职业技术学院的彭洁伟大佐亲妈暴毙。">
+<meta property="og:description" content="问题描述净月潭公园里有n个水塘，因为要做OIER们的宿营地，需要把这n个水塘中的水排干，水塘中的水在自然条件下1个单位的时间可以蒸发A升水。现在买了1台抽水机，使用抽水机可以让你用1个单位的时间使每个水塘除开自然蒸发的A升水外，还可抽B升水，但在1个单位的时间内只能对1个水塘使用。 要你求出排干所有水塘的最少时间（水塘中的水为0时为排干）。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-14T15:10:58.644Z">
+<meta property="og:updated_time" content="2019-09-25T15:51:06.846Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="搬迁公告">
-<meta name="twitter:description" content="由于不可抗因素，全站已搬迁，以前的内容只有明文数据储存，会慢慢补上的 在此祝嘉兴职业技术学院的彭洁伟大佐亲妈暴毙。">
-  <link rel="canonical" href="http://yoursite.com/2019/08/12/搬迁公告/">
+<meta name="twitter:title" content="9_22_T2 模拟赛 排干净月潭水塘 题解">
+<meta name="twitter:description" content="问题描述净月潭公园里有n个水塘，因为要做OIER们的宿营地，需要把这n个水塘中的水排干，水塘中的水在自然条件下1个单位的时间可以蒸发A升水。现在买了1台抽水机，使用抽水机可以让你用1个单位的时间使每个水塘除开自然蒸发的A升水外，还可抽B升水，但在1个单位的时间内只能对1个水塘使用。 要你求出排干所有水塘的最少时间（水塘中的水为0时为排干）。">
+  <link rel="canonical" href="http://yoursite.com/2019/09/22/9-22-T2/">
 
 
 <script id="page-configurations">
@@ -80,7 +81,7 @@
   };
 </script>
 
-  <title>搬迁公告 | qnickx's blog</title>
+  <title>9_22_T2 模拟赛 排干净月潭水塘 题解 | qnickx's blog</title>
   
 
 
@@ -230,7 +231,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/12/搬迁公告/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/22/9-22-T2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="qnickx">
@@ -244,7 +245,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">搬迁公告
+          <h1 class="post-title" itemprop="name headline">9_22_T2 模拟赛 排干净月潭水塘 题解
 
             
           </h1>
@@ -261,7 +262,7 @@
                 
               
 
-              <time title="创建时间：2019-08-12 23:52:33" itemprop="dateCreated datePublished" datetime="2019-08-12T23:52:33+08:00">2019-08-12</time>
+              <time title="创建时间：2019-09-22 21:51:03" itemprop="dateCreated datePublished" datetime="2019-09-22T21:51:03+08:00">2019-09-22</time>
             </span>
           
             
@@ -272,7 +273,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-14 23:10:58" itemprop="dateModified" datetime="2019-08-14T23:10:58+08:00">2019-08-14</time>
+                <time title="修改时间：2019-09-25 23:51:06" itemprop="dateModified" datetime="2019-09-25T23:51:06+08:00">2019-09-25</time>
               </span>
             
           
@@ -282,7 +283,14 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/公告/" itemprop="url" rel="index"><span itemprop="name">公告</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/OI/题解/" itemprop="url" rel="index"><span itemprop="name">题解</span></a></span>
 
                 
                 
@@ -301,8 +309,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>由于不可抗因素，全站已搬迁，以前的内容只有明文数据储存，会慢慢补上的</p>
-<p>在此祝嘉兴职业技术学院的彭洁伟大佐亲妈暴毙。</p>
+        <h4 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h4><p>净月潭公园里有n个水塘，因为要做OIER们的宿营地，需要把这n个水塘中的水排干，水塘中的水在自然条件下1个单位的时间可以蒸发A升水。现在买了1台抽水机，使用抽水机可以让你用1个单位的时间使每个水塘除开自然蒸发的A升水外，还可抽B升水，但在1个单位的时间内只能对1个水塘使用。</p>
+<p>要你求出排干所有水塘的最少时间（水塘中的水为0时为排干）。</p>
+<a id="more"></a>
+<h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h4><p>第一行N，A，B；</p>
+<p>接下来N行，a1,a2,…aN每行一个数，表示每个水塘中水的升数。</p>
+<h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h4><p>一行一个整数，表示排干所有水塘的最少时间。</p>
+<h4 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h4><p>3 2 1<br>1<br>2<br>3</p>
+<h4 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h4><p>1</p>
+<h4 id="数据规模与约定"><a href="#数据规模与约定" class="headerlink" title="数据规模与约定"></a>数据规模与约定</h4><p>对于10%数据：N ≤ 5，1&lt;=ai,A,B&lt;=10<br>对于40%数据：N ≤ 5000，1&lt;=ai,A,B&lt;=5000<br>对于100%数据：N ≤ 500000，1&lt;=ai,A,B&lt;=500000</p>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>看数据范围应该能想到二分，二分一个总时间$mid$，然后只要一个水池超过该时间就全力去抽，最后判断时间是否合法。</p>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">500005</span>;</span><br><span class="line"><span class="keyword">int</span> ans,mid,l,r,n,A,B;</span><br><span class="line"><span class="keyword">int</span> sz[maxn];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> res=<span class="number">0</span>;<span class="comment">//×ÜÊ±¼ä </span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)	<span class="keyword">if</span>(x*A&lt;sz[i])	res+=(sz[i]-x*A+B<span class="number">-1</span>)/B;</span><br><span class="line">	<span class="keyword">if</span>(res&lt;=x)	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="comment">//	freopen("dry.in","r",stdin);</span></span><br><span class="line"><span class="comment">//	freopen("dry.out","w",stdout);</span></span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;n,&amp;A,&amp;B);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;sz[i]),r=max(r,sz[i]/A);</span><br><span class="line">	l=<span class="number">1</span>,r+=<span class="number">2</span>;</span><br><span class="line">	<span class="keyword">while</span>(l&lt;=r)&#123;</span><br><span class="line">		mid=(l+r)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span>(check(mid))&#123;</span><br><span class="line">			r=mid<span class="number">-1</span>;</span><br><span class="line">			ans=mid;</span><br><span class="line">		&#125;<span class="keyword">else</span> l=mid+<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>qu</p>
 
     </div>
 
@@ -313,21 +331,30 @@
       
 
       <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/二分答案/" rel="tag"># 二分答案</a>
+            
+          </div>
+        
 
         
 
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
+                <a href="/2019/09/22/9-22-T1/" rel="next" title="9.22模拟赛 二十四点 题解">
+                  <i class="fa fa-chevron-left"></i> 9.22模拟赛 二十四点 题解
+                </a>
+              
             </div>
 
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/08/13/网络流学习笔记（一）/" rel="prev" title="网络流学习笔记（一）">
-                  网络流学习笔记（一） <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -362,8 +389,17 @@
 
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -545,6 +581,23 @@
 
         </div>
       </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输入格式"><span class="nav-number">2.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出格式"><span class="nav-number">3.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例输入"><span class="nav-number">4.</span> <span class="nav-text">样例输入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例输出"><span class="nav-number">5.</span> <span class="nav-text">样例输出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据规模与约定"><span class="nav-number">6.</span> <span class="nav-text">数据规模与约定</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-number">7.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">8.</span> <span class="nav-text">代码</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
     </div>
   </aside>
@@ -636,6 +689,56 @@
   
 
   
+    
+      
+<script type="text/x-mathjax-config">
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') {
+          next = next.nextSibling;
+        }
+        if (next && next.nodeName.toLowerCase() === 'br') {
+          next.parentNode.removeChild(next);
+        }
+      }
+    });
+  });
+
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
+      if (element.nodeName.toLowerCase() == 'li') {
+        element = element.parentNode;
+      }
+      element.classList.add('has-jax');
+    }
+  });
+</script>
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', function() {
+    MathJax.Hub.Typeset();
+  }, window.MathJax);
+</script>
+
+    
+  
 
   
 
@@ -658,7 +761,7 @@
       repo: 'blogcomments',
       owner: 'qnickx',
       admin: ['qnickx'],
-      id: '6673d091c3d9f21d011140dd8f1621f5',
+      id: '759c71236a0f84e04ba3d88c6f55c17e',
         language: 'zh-CN',
       
       distractionFreeMode: 'true'
