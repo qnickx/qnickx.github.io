@@ -55,19 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="题目链接传送门 题目描述 Description小机房有棵焕狗种的树，树上有N个节点，节点标号为0到N-1，有两只虫子名叫飘狗和大吉狗，分居在两个不同的节点上。有一天，他们想爬到一个节点上去搞基，但是作为两只虫子，他们不想花费太多精力。已知从某个节点爬到其父亲节点要花费 c 的能量（从父亲节点爬到此节点也相同），他们想找出一条花费精力最短的路，以使得搞基的时候精力旺盛，他们找到你要你设计一个程序来">
-<meta name="keywords" content="LCA">
+  <meta name="description" content="题目描述给定 n 个水晶，第 i 个水晶的高度为 H i 。现在要求将这些水晶排成一排，要求相邻两个水晶之间的高度差均大于 k，问有多少种排法。">
+<meta name="keywords" content="状压dp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="codevs2370 小机房的树 题解">
-<meta property="og:url" content="http://yoursite.com/2019/09/20/codevs2370/index.html">
+<meta property="og:title" content="模拟赛 水晶的排列 题解">
+<meta property="og:url" content="http://yoursite.com/2019/09/28/9-21-T3/index.html">
 <meta property="og:site_name" content="qnickx&#39;s blog">
-<meta property="og:description" content="题目链接传送门 题目描述 Description小机房有棵焕狗种的树，树上有N个节点，节点标号为0到N-1，有两只虫子名叫飘狗和大吉狗，分居在两个不同的节点上。有一天，他们想爬到一个节点上去搞基，但是作为两只虫子，他们不想花费太多精力。已知从某个节点爬到其父亲节点要花费 c 的能量（从父亲节点爬到此节点也相同），他们想找出一条花费精力最短的路，以使得搞基的时候精力旺盛，他们找到你要你设计一个程序来">
+<meta property="og:description" content="题目描述给定 n 个水晶，第 i 个水晶的高度为 H i 。现在要求将这些水晶排成一排，要求相邻两个水晶之间的高度差均大于 k，问有多少种排法。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-20T15:21:53.144Z">
+<meta property="og:updated_time" content="2019-09-28T11:31:07.476Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="codevs2370 小机房的树 题解">
-<meta name="twitter:description" content="题目链接传送门 题目描述 Description小机房有棵焕狗种的树，树上有N个节点，节点标号为0到N-1，有两只虫子名叫飘狗和大吉狗，分居在两个不同的节点上。有一天，他们想爬到一个节点上去搞基，但是作为两只虫子，他们不想花费太多精力。已知从某个节点爬到其父亲节点要花费 c 的能量（从父亲节点爬到此节点也相同），他们想找出一条花费精力最短的路，以使得搞基的时候精力旺盛，他们找到你要你设计一个程序来">
-  <link rel="canonical" href="http://yoursite.com/2019/09/20/codevs2370/">
+<meta name="twitter:title" content="模拟赛 水晶的排列 题解">
+<meta name="twitter:description" content="题目描述给定 n 个水晶，第 i 个水晶的高度为 H i 。现在要求将这些水晶排成一排，要求相邻两个水晶之间的高度差均大于 k，问有多少种排法。">
+  <link rel="canonical" href="http://yoursite.com/2019/09/28/9-21-T3/">
 
 
 <script id="page-configurations">
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>codevs2370 小机房的树 题解 | qnickx's blog</title>
+  <title>模拟赛 水晶的排列 题解 | qnickx's blog</title>
   
 
 
@@ -231,7 +231,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/20/codevs2370/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/28/9-21-T3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="qnickx">
@@ -245,7 +245,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">codevs2370 小机房的树 题解
+          <h1 class="post-title" itemprop="name headline">模拟赛 水晶的排列 题解
 
             
           </h1>
@@ -262,7 +262,7 @@
                 
               
 
-              <time title="创建时间：2019-09-20 23:13:28 / 修改时间：23:21:53" itemprop="dateCreated datePublished" datetime="2019-09-20T23:13:28+08:00">2019-09-20</time>
+              <time title="创建时间：2019-09-28 19:19:23 / 修改时间：19:31:07" itemprop="dateCreated datePublished" datetime="2019-09-28T19:19:23+08:00">2019-09-28</time>
             </span>
           
             
@@ -301,25 +301,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h4 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h4><p><a href="http://codevs.cn/problem/2370/" target="_blank" rel="noopener">传送门</a></p>
-<h4 id="题目描述-Description"><a href="#题目描述-Description" class="headerlink" title="题目描述 Description"></a><strong>题目描述</strong> Description</h4><p>小机房有棵焕狗种的树，树上有N个节点，节点标号为0到N-1，有两只虫子名叫飘狗和大吉狗，分居在两个不同的节点上。有一天，他们想爬到一个节点上去搞基，但是作为两只虫子，他们不想花费太多精力。已知从某个节点爬到其父亲节点要花费 c 的能量（从父亲节点爬到此节点也相同），他们想找出一条花费精力最短的路，以使得搞基的时候精力旺盛，他们找到你要你设计一个程序来找到这条路，要求你告诉他们最少需要花费多少精力</p>
+        <h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>给定 n 个水晶，第 i 个水晶的高度为 H i 。<br>现在要求将这些水晶排成一排，要求相邻两个水晶之间的高度差均大于 k，问有多少种排法。</p>
 <a id="more"></a>
-<h4 id="输入描述-Input-Description"><a href="#输入描述-Input-Description" class="headerlink" title="输入描述 Input Description"></a><strong>输入描述</strong> Input Description</h4><p>第一行一个n，接下来n-1行每一行有三个整数u，v, c 。表示节点 u 爬到节点 v 需要花费 c 的精力。第n+1行有一个整数m表示有m次询问。接下来m行每一行有两个整数 u ，v 表示两只虫子所在的节点</p>
-<h4 id="输出描述-Output-Description"><a href="#输出描述-Output-Description" class="headerlink" title="输出描述 Output Description"></a><strong>输出描述</strong> Output Description</h4><p>一共有m行，每一行一个整数，表示对于该次询问所得出的最短距离。</p>
-<h4 id="样例输入-Sample-Input"><a href="#样例输入-Sample-Input" class="headerlink" title="样例输入 Sample Input"></a>样例输入 Sample Input</h4><p>3</p>
-<p>1 0 1</p>
-<p>2 0 1</p>
-<p>3</p>
-<p>1 0</p>
-<p>2 0</p>
-<p>1 2</p>
-<h4 id="样例输出-Sample-Output"><a href="#样例输出-Sample-Output" class="headerlink" title="样例输出 Sample Output"></a><strong>样例输出</strong> Sample Output</h4><p>1</p>
-<p>1</p>
-<p>2</p>
-<h4 id="数据范围及提示-Data-Size-amp-Hint"><a href="#数据范围及提示-Data-Size-amp-Hint" class="headerlink" title="数据范围及提示 Data Size &amp; Hint"></a><strong>数据范围及提示</strong> Data Size &amp; Hint</h4><p>1&lt;=n&lt;=50000， 1&lt;=m&lt;=75000， 0&lt;=c&lt;=1000</p>
-<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>LCA的一个性质:树上任意两点间的最短距离长度等于他们两个到树根的距离减去两倍LCA到树根的距离.</p>
-<p>于是利用这个性质,求出LCA后直接回答即可.</p>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">500005</span>,maxm=<span class="number">500005</span>;</span><br><span class="line"><span class="keyword">int</span> n,m;</span><br><span class="line"><span class="keyword">int</span> edge[maxn],dis[maxn],dep[maxn],tot,f[maxn][<span class="number">20</span>],lg[maxn],head[maxn],ver[maxm&lt;&lt;<span class="number">1</span>],Nxt[maxm&lt;&lt;<span class="number">1</span>];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> v,<span class="keyword">int</span> l)</span></span>&#123;</span><br><span class="line">	ver[++tot]=v,edge[tot]=l,Nxt[tot]=head[u],head[u]=tot;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> fa)</span></span>&#123;</span><br><span class="line">	f[u][<span class="number">0</span>]=fa,dep[u]=dep[fa]+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;(<span class="number">1</span>&lt;&lt;i)&lt;=dep[u];i++)	f[u][i]=f[f[u][i<span class="number">-1</span>]][i<span class="number">-1</span>];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=head[u];i;i=Nxt[i])	<span class="keyword">if</span>(ver[i]!=fa)	dis[ver[i]]=dis[u]+edge[i],dfs(ver[i],u);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">lca</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> v)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(dep[u]&lt;dep[v])	swap(u,v);</span><br><span class="line">	<span class="keyword">while</span>(dep[u]&gt;dep[v])	u=f[u][lg[dep[u]-dep[v]]<span class="number">-1</span>];</span><br><span class="line">	<span class="keyword">if</span>(u==v)	<span class="keyword">return</span> u;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=lg[dep[u]]<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--)	<span class="keyword">if</span>(f[u][i]!=f[v][i])	u=f[u][i],v=f[v][i];</span><br><span class="line">	<span class="keyword">return</span> f[u][<span class="number">0</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;i++)&#123;<span class="keyword">int</span> u,v,l;<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;u,&amp;v,&amp;l);u+=<span class="number">1</span>,v+=<span class="number">1</span>,add(u,v,l),add(v,u,l);&#125;</span><br><span class="line">	dfs(<span class="number">1</span>,<span class="number">0</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;m);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)	lg[i]=lg[i<span class="number">-1</span>]+(<span class="number">1</span>&lt;&lt;lg[i<span class="number">-1</span>]==i);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)&#123;<span class="keyword">int</span> u,v;<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;u,&amp;v);u+=<span class="number">1</span>,v+=<span class="number">1</span>;<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,dis[u]+dis[v]<span class="number">-2</span>*dis[lca(u,v)]);&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h4><p>第一行两个整数 n,k。<br>接下来 n 行，每行一个整数，第 i 行的整数表示 H i 。</p>
+<h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h4><p>输出一行一个整数表示排法的种类数。</p>
+<h4 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h4><p>4 1<br>3<br>4<br>2<br>1</p>
+<h4 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h4><p>2</p>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>考虑进行状态压缩动态规划，设 F s,i 表示由集合 s 内的点排成一列，最后一个<br>是第 i 个水晶，合法的方案数。<br>那么我们显然只需枚举倒数第二个水晶 j，并保证两个水晶之间的高度差大于<br>k 就行了，余下的将转化为子问题。<br>转移方程为: $F_{s,i}=\sum_{j \in s,j\not= i}F_{s-{i},j}[|H_i-H_j|&gt;k]$<br>时间复杂度$O(n^22^n)$</p>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line">ll n,k,maxstate,dp[(<span class="number">1</span>&lt;&lt;<span class="number">18</span>)<span class="number">-1</span>][<span class="number">20</span>],h[<span class="number">20</span>],ans;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">//freopen("3.in","r",stdin);</span></span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%lld%lld"</span>,&amp;n,&amp;k);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)	<span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;h[i]);</span><br><span class="line">	maxstate=(<span class="number">1</span>&lt;&lt;n)<span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)	dp[<span class="number">1</span>&lt;&lt;(i<span class="number">-1</span>)][i]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> s=<span class="number">1</span>;s&lt;=maxstate;s++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;j++)&#123;</span><br><span class="line">				<span class="keyword">if</span>(i==j)	<span class="keyword">continue</span>;</span><br><span class="line">				<span class="keyword">if</span>(<span class="built_in">abs</span>(h[i]-h[j])&gt;k&amp;&amp;(!((s&gt;&gt;(j<span class="number">-1</span>))&amp;<span class="number">1</span>)))	dp[s|(<span class="number">1</span>&lt;&lt;(j<span class="number">-1</span>))][j]+=dp[s][i];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)	ans+=dp[maxstate][i];</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%lld"</span>,ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
     </div>
 
     
@@ -334,7 +324,7 @@
           
           <div class="post-tags">
             
-              <a href="/tags/LCA/" rel="tag"># LCA</a>
+              <a href="/tags/状压dp/" rel="tag"># 状压dp</a>
             
           </div>
         
@@ -344,8 +334,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/09/19/51nod1674/" rel="next" title="51nod1674 区间的价值V2 题解">
-                  <i class="fa fa-chevron-left"></i> 51nod1674 区间的价值V2 题解
+                <a href="/2019/09/26/9-22-T3/" rel="next" title="9_22_T3 模拟赛 遗迹净化 题解">
+                  <i class="fa fa-chevron-left"></i> 9_22_T3 模拟赛 遗迹净化 题解
                 </a>
               
             </div>
@@ -353,10 +343,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/09/22/P4821/" rel="prev" title="P4821 [中山市选]生成树 题解">
-                  P4821 [中山市选]生成树 题解 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -597,7 +583,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目链接"><span class="nav-number">1.</span> <span class="nav-text">题目链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#题目描述-Description"><span class="nav-number">2.</span> <span class="nav-text">题目描述 Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输入描述-Input-Description"><span class="nav-number">3.</span> <span class="nav-text">输入描述 Input Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出描述-Output-Description"><span class="nav-number">4.</span> <span class="nav-text">输出描述 Output Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例输入-Sample-Input"><span class="nav-number">5.</span> <span class="nav-text">样例输入 Sample Input</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例输出-Sample-Output"><span class="nav-number">6.</span> <span class="nav-text">样例输出 Sample Output</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据范围及提示-Data-Size-amp-Hint"><span class="nav-number">7.</span> <span class="nav-text">数据范围及提示 Data Size &amp; Hint</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-number">8.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">9.</span> <span class="nav-text">代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输入格式"><span class="nav-number">2.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出格式"><span class="nav-number">3.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例输入"><span class="nav-number">4.</span> <span class="nav-text">样例输入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例输出"><span class="nav-number">5.</span> <span class="nav-text">样例输出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-number">6.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">7.</span> <span class="nav-text">代码</span></a></li></ol></div>
             
 
           </div>
@@ -767,7 +753,7 @@
       repo: 'blogcomments',
       owner: 'qnickx',
       admin: ['qnickx'],
-      id: 'c17375d0920a58db313a5361d7519c7c',
+      id: '858252e820095492015762f4616f49e0',
         language: 'zh-CN',
       
       distractionFreeMode: 'true'
