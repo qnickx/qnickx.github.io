@@ -44,8 +44,8 @@
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
-    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: '',
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: './public/search.xml',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
       copy_button: '复制',
@@ -205,9 +205,36 @@
     <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
   </ul>
 
 </nav>
+  <div class="site-search">
+    
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+  </div>
 </div>
     </header>
 
@@ -304,7 +331,7 @@
 <div id="decryptionError" style="display: none;">Incorrect Password!</div>
 <div id="noContentError" style="display: none;">No content to display!</div>
 <div id="encrypt-blog" style="display:none">
-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
+U2FsdGVkX1+yXeIEUQwmLKW38UEOAJopX+0i/i8nxqukCTQXL7EuTp65YhRcbK5d63s+YeK2myTjXx6Y8KdAbdd7iU3hkA65nL07VFeLVOmIrYfXd4zdwenLskZzAOfg7Ytakm28GRDuHpfrrX+HHntNl9MukQGgz7/VXT4JijF7/5EBOiiWKOLMMvpEQJPy+lEQtNz1mEI3cSJ2ump+RQcR80rfwqwYxLwF++zIzk9Ybdlvwqa66EOMXqxM4RY2GXJTOv11vzetp7IMP+H1uwUFgwg9Bf90005xwF+uu63EyyzmMktU0Nvh2pGf9ZSo56f9H70IGrwp9bi/Rg8RDDSlrKuSFBsZZD4N+6oWeS1Qqdjq4vRFkC/DruBMEBfVmEc1LujB3UwZWhY0uzgjE/A13tJIIXOAMLK/isoE6FIge9/EHoc1eu6Qj1Od1Ow6aQfbJPNPDJdSSztbtGAUKByqezeVA40QN2tkyu/fRAdSJ5nb25HUOJiIYdPwqmp1rkl976lT1G/m5C3UgeOg6zEccv/dNFfup+F4BK6RbKEjxH6VTtYg9SaW3s9P02TDHik1SuJeYB2RtW/oovi9ME6KlWrACze9XvIwmjMeBTQu1vDlBcUqKDlXXgarZ3UcCi6WjE2pgus0Z2Kv7GzpR7zntJDwYdp3aUewjhmA34a5SsZNtPlRTQ07fG/v7c3PWFFso5wNNtG+PUgkm/YpOh9YKNzchjg27Gz9nGD6WW1J348HPCCVmS3P6/rcL3qOfxvwFaSi4gPJ/5Pe39frnmqsxjZMdaNb346jAQTJ7XuYxNDa9whQFfN/w0iz/70gr7lCETTmHu+q+YYMfIAk1BJuEY0kTDuoe5N51GuMhdrAvvlX3Kz1xUl/f1DVItc+sdu18on7Hewb1UMaa9yLLxLhbe4VIxAgKI0sDrIiGVIicyeVVtIjc1flt/ok9/r2iGGJWAATt3Lqtcislq4fjOlWvz/wlhgttrfxUwDxVx7pZcJ2oz16eJtpxiPTg2HxhbLulwZ4XSm12noLutA4leixIepo4s+1aCxNECeZ9NKcLht9JPT+01VJLJhGnm9fhck4eqj6aDS2BbKFG/swjvFyvk6Iw5ohX75nuHYWCoOjT0b1HE/tVywokfCxgzmf91s+tTrRsBqCCIum6P6xwg4GOYlhOVDlqAcbrx8GLuZFNVQGcYfBl1Z3jt+Gf5QycVrnhnkfJW/rBJAthv8p+rtVqEagEXn5EtFXRVoaiVk=
 </div>
 <script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
     </div>
@@ -630,6 +657,8 @@ U2FsdGVkX19wC7yqb/WYRXdj534Q/oQJeEuXYLQ+aktGipNeBBo4ROQ9fcBbvFYgXSkGEHyFDa2ekXRm
 
 
 
+
+  <script src="/js/local-search.js?v=7.3.0"></script>
 
 
 
