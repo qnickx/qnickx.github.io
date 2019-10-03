@@ -55,19 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="题目链接传送门 Description 问题描述 Farmer John’s cows have discovered that the clover growing along the ridge of the hill (which we can think of as a one-dimensional number line) in his field is particularly go">
-<meta name="keywords" content="树状数组">
+  <meta name="description" content="题目链接传送门 题目描述fox来到了一排葡萄架下,葡萄架上有很多葡萄(n串),它想将一部分葡萄偷走.    每串葡萄都有一个价值,当然,由于有酸有甜,葡萄的价值可能为正,也可能为负.    当然,为了让农夫看不出来,fox规定,每k串葡萄中,它最多选b串,但是由于fox是比较贪心的,每连续k串葡萄中,它会最少选a串    例如n=5 k=3 a=1 b=2时,在第1—第3串葡萄中,fox只能选1或">
+<meta name="keywords" content="状压dp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="poj2481 Cows 题解">
-<meta property="og:url" content="http://yoursite.com/2019/09/18/poj2481/index.html">
+<meta property="og:title" content="tyvj1617 Grape 题解">
+<meta property="og:url" content="http://yoursite.com/2019/10/03/tyvj1617/index.html">
 <meta property="og:site_name" content="qnickx&#39;s blog">
-<meta property="og:description" content="题目链接传送门 Description 问题描述 Farmer John’s cows have discovered that the clover growing along the ridge of the hill (which we can think of as a one-dimensional number line) in his field is particularly go">
+<meta property="og:description" content="题目链接传送门 题目描述fox来到了一排葡萄架下,葡萄架上有很多葡萄(n串),它想将一部分葡萄偷走.    每串葡萄都有一个价值,当然,由于有酸有甜,葡萄的价值可能为正,也可能为负.    当然,为了让农夫看不出来,fox规定,每k串葡萄中,它最多选b串,但是由于fox是比较贪心的,每连续k串葡萄中,它会最少选a串    例如n=5 k=3 a=1 b=2时,在第1—第3串葡萄中,fox只能选1或">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-19T15:45:00.479Z">
+<meta property="og:updated_time" content="2019-10-03T15:40:19.061Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="poj2481 Cows 题解">
-<meta name="twitter:description" content="题目链接传送门 Description 问题描述 Farmer John’s cows have discovered that the clover growing along the ridge of the hill (which we can think of as a one-dimensional number line) in his field is particularly go">
-  <link rel="canonical" href="http://yoursite.com/2019/09/18/poj2481/">
+<meta name="twitter:title" content="tyvj1617 Grape 题解">
+<meta name="twitter:description" content="题目链接传送门 题目描述fox来到了一排葡萄架下,葡萄架上有很多葡萄(n串),它想将一部分葡萄偷走.    每串葡萄都有一个价值,当然,由于有酸有甜,葡萄的价值可能为正,也可能为负.    当然,为了让农夫看不出来,fox规定,每k串葡萄中,它最多选b串,但是由于fox是比较贪心的,每连续k串葡萄中,它会最少选a串    例如n=5 k=3 a=1 b=2时,在第1—第3串葡萄中,fox只能选1或">
+  <link rel="canonical" href="http://yoursite.com/2019/10/03/tyvj1617/">
 
 
 <script id="page-configurations">
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>poj2481 Cows 题解 | qnickx's blog</title>
+  <title>tyvj1617 Grape 题解 | qnickx's blog</title>
   
 
 
@@ -258,7 +258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/18/poj2481/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/03/tyvj1617/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="qnickx">
@@ -272,7 +272,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">poj2481 Cows 题解
+          <h1 class="post-title" itemprop="name headline">tyvj1617 Grape 题解
 
             
           </h1>
@@ -289,19 +289,11 @@
                 
               
 
-              <time title="创建时间：2019-09-18 23:22:13" itemprop="dateCreated datePublished" datetime="2019-09-18T23:22:13+08:00">2019-09-18</time>
+              <time title="创建时间：2019-10-03 23:04:35 / 修改时间：23:40:19" itemprop="dateCreated datePublished" datetime="2019-10-03T23:04:35+08:00">2019-10-03</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-19 23:45:00" itemprop="dateModified" datetime="2019-09-19T23:45:00+08:00">2019-09-19</time>
-              </span>
             
           
             <span class="post-meta-item">
@@ -336,20 +328,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h4 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h4><p><a href="http://poj.org/problem?id=2481" target="_blank" rel="noopener">传送门</a></p>
-<h4 id="Description-问题描述"><a href="#Description-问题描述" class="headerlink" title="Description 问题描述"></a>Description 问题描述</h4><p> Farmer John’s cows have discovered that the clover growing along the ridge of the hill (which we can think of as a one-dimensional number line) in his field is particularly good.</p>
-<p>Farmer John has N cows (we number the cows from 1 to N). Each of Farmer John’s N cows has a range of clover that she particularly likes (these ranges might overlap). The ranges are defined by a closed interval [S,E].</p>
-<p>But some cows are strong and some are weak. Given two cows: cowi and cowj, their favourite clover range is [Si, Ei] and [Sj, Ej]. If Si &lt;= Sj and Ej &lt;= Ei and Ei - Si &gt; Ej - Sj, we say that cowi is stronger than cowj.</p>
-<p>For each cow, how many cows are stronger than her? Farmer John needs your help!  </p>
+        <h4 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h4><p><a href="http://www.joyoi.cn/problem/tyvj-1617" target="_blank" rel="noopener">传送门</a></p>
+<h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>fox来到了一排葡萄架下,葡萄架上有很多葡萄(n串),它想将一部分葡萄偷走.<br>    每串葡萄都有一个价值,当然,由于有酸有甜,葡萄的价值可能为正,也可能为负.<br>    当然,为了让农夫看不出来,fox规定,每k串葡萄中,它最多选b串,但是由于fox是比较贪心的,每连续k串葡萄中,它会最少选a串<br>    例如n=5 k=3 a=1 b=2时,在第1—第3串葡萄中,fox只能选1或2串,在第2—第4串葡萄中,fox也只能选1或2串.<br>    图1的选法是不合法的,因为2—4中选出了3串葡萄<br>    图2的选法也是不合法的,因为1—3中选出了0串葡萄<br>    而图3的选法是合法的.<br>    现在,fox要选出一些葡萄,而农夫得到剩余的葡萄,由于fox有嫉妒心理,希望让fox得到的价值减去农夫得到的价值的差值最大</p>
 <a id="more"></a>
-<h4 id="Input-输入"><a href="#Input-输入" class="headerlink" title="Input 输入"></a>Input 输入</h4><p>The input contains multiple test cases.<br>For each test case, the first line is an integer N (1 &lt;= N &lt;= 105), which is the number of cows. Then come N lines, the i-th of which contains two integers: S and E(0 &lt;= S &lt; E &lt;= 105) specifying the start end location respectively of a range preferred by some cow. Locations are given as distance from the start of the ridge.</p>
-<p>The end of the input contains a single 0.  </p>
-<h4 id="Output-输出"><a href="#Output-输出" class="headerlink" title="Output 输出"></a>Output 输出</h4><p>For each test case, output one line containing n space-separated integers, the i-th of which specifying the number of cows that are stronger than $cow_i$.</p>
-<h4 id="Sample-Input-样例输入"><a href="#Sample-Input-样例输入" class="headerlink" title="Sample Input 样例输入"></a>Sample Input 样例输入</h4><p>3<br>1 2<br>0 3<br>3 4<br>0</p>
-<h4 id="Sample-Output-样例输出"><a href="#Sample-Output-样例输出" class="headerlink" title="Sample Output 样例输出"></a>Sample Output 样例输出</h4><p>1 0 0</p>
-<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>题意简述：一头奶牛能吃区间$[l,r]$的草，如果任意一头奶牛的这个范围在另一头奶牛的这个范围之内（重合除外），那么我们就说另一头奶牛更强壮，求出比每一头奶牛强壮的奶牛的数量。</p>
-<p>我们可以根据每个奶牛的区间的左端点排序，因为对于任意一个比它强的奶牛，左端点必定是在他左边的。然后对着坐标轴开一个树状数组，统计右端点到最大坐标间的奶牛个数，记录原始下标即可得到答案。</p>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">1e5</span>+<span class="number">14</span>;</span><br><span class="line"><span class="keyword">int</span> n,c[maxn],ans[maxn],lst;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">cow</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> l;</span><br><span class="line">	<span class="keyword">int</span> r;</span><br><span class="line">	<span class="keyword">int</span> xb;</span><br><span class="line">&#125;sz[maxn];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(cow cp1,cow cp2)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(cp1.l==cp2.l)	<span class="keyword">return</span> cp1.r&gt;cp2.r;</span><br><span class="line">	<span class="keyword">return</span> cp1.l&lt;cp2.l;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> val)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(;x&lt;=<span class="number">1e5</span>+<span class="number">1</span>;x+=x&amp;-x)	c[x]+=val;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">ask</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> res=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(;x&gt;<span class="number">0</span>;x-=x&amp;-x)	res+=c[x];	</span><br><span class="line">	<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n)==<span class="number">1</span>&amp;&amp;n)&#123;</span><br><span class="line">		lst=<span class="number">0</span>;</span><br><span class="line">		<span class="built_in">memset</span>(c,<span class="number">0</span>,<span class="keyword">sizeof</span>(c));</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)	sz[i].xb=i,<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;sz[i].l,&amp;sz[i].r),sz[i].l+=<span class="number">1</span>,sz[i].r+=<span class="number">1</span>;</span><br><span class="line"><span class="comment">//		for(register int i=1;i&lt;=n;i++)	printf("%d %d\n",sz[i].l,sz[i].r);</span></span><br><span class="line">		sort(sz+<span class="number">1</span>,sz+n+<span class="number">1</span>,cmp);	</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">	<span class="comment">//		printf("xb:%d\n",sz[i].xb);</span></span><br><span class="line">			<span class="keyword">int</span> tmp=ask(<span class="number">1e5</span>+<span class="number">1</span>)-ask(sz[i].r<span class="number">-1</span>);</span><br><span class="line">			add(sz[i].r,<span class="number">1</span>);</span><br><span class="line">			<span class="keyword">if</span>(sz[i].r==sz[i<span class="number">-1</span>].r&amp;&amp;sz[i].l==sz[i<span class="number">-1</span>].l)	&#123;ans[sz[i].xb]=lst;<span class="keyword">continue</span>;&#125;</span><br><span class="line">			ans[sz[i].xb]=tmp,lst=tmp;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"%d"</span>,ans[i]);</span><br><span class="line">			<span class="keyword">if</span>(i!=n)	<span class="built_in">printf</span>(<span class="string">" "</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h4><p> 第一行整数n,k,a,b<br> 第二行n个整数表示每串葡萄的价值</p>
+<h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h4><p>仅一行,表示答案</p>
+<h4 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h4><p>2 1 0 1<br>2 -2</p>
+<h4 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h4><p>4</p>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>n很大但是k很小，而k的状态很明显需要压缩表示</p>
+<p>于是设$F_{i,k}$为前i串葡萄的最后k串葡萄状态为k时的最大美味值，转移方程时很明显每次把k左移一位并且通过与运算处理掉超出位数的1.</p>
+<p>转移方程可得：</p>
+<p>$F_{i+1,S&lt;&lt;1|1}=min(F_{i+1,S&lt;&lt;1|1},F_{i,S}+c_{i+1}),F_{i+1,S&lt;&lt;1}=min(F_{i+1,S&lt;&lt;1},F_{i,S} )$</p>
+<p>由于有$a$和$b$的限制，所以需要预处理出一个状态是否合法</p>
+<p>需要注意的时初始状态为$F_{0,i}(i&lt;=maxstate)=0$ 其中maxstate==$2^k-1$</p>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">int</span> n,k,a,b,w[<span class="number">10005</span>],maxstate;</span><br><span class="line">ll sum,ans,dp[<span class="number">10005</span>][<span class="number">1</span>&lt;&lt;<span class="number">11</span>];</span><br><span class="line"><span class="keyword">bool</span> ok[<span class="number">1</span>&lt;&lt;<span class="number">12</span>];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">isok</span><span class="params">(<span class="keyword">int</span> S)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> tot=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=k;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(S&amp;(<span class="number">1</span>&lt;&lt;(i<span class="number">-1</span>)))	tot++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(tot&gt;=a&amp;&amp;tot&lt;=b)	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">//freopen("grape.in","r",stdin);</span></span><br><span class="line">	<span class="comment">//freopen("grape.out","w",stdout);</span></span><br><span class="line">	<span class="built_in">memset</span>(ok,<span class="literal">false</span>,<span class="keyword">sizeof</span>(ok));</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%d%d"</span>,&amp;n,&amp;k,&amp;a,&amp;b);</span><br><span class="line">	maxstate=(<span class="number">1</span>&lt;&lt;k)<span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;w[i]),sum+=w[i];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=maxstate;i++)	&#123;</span><br><span class="line">		ok[i]=isok(i);</span><br><span class="line">	<span class="comment">//	if(ok[i])	printf("Yes: %d\n",i);</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n;i++)	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=maxstate;j++)	dp[i][j]=<span class="number">-0x7ffffff</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=maxstate;i++)	dp[<span class="number">0</span>][i]=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=maxstate;j++)&#123;</span><br><span class="line">			<span class="keyword">int</span> S=(j&lt;&lt;<span class="number">1</span>)&amp;maxstate;</span><br><span class="line">			<span class="keyword">if</span>(dp[i][j]!=<span class="number">-0x7ffffff</span>)&#123;</span><br><span class="line">		<span class="comment">//		printf("%d %d\n",i,j);</span></span><br><span class="line">		<span class="comment">//		printf("%d %d\n",dp[i][j]);</span></span><br><span class="line">				<span class="keyword">if</span>(ok[S|<span class="number">1</span>]||i+<span class="number">1</span>&lt;k)dp[i+<span class="number">1</span>][S|<span class="number">1</span>]=max(dp[i+<span class="number">1</span>][S|<span class="number">1</span>],dp[i][j]+w[i+<span class="number">1</span>]);</span><br><span class="line">				<span class="keyword">if</span>(ok[S]||i+<span class="number">1</span>&lt;k)dp[i+<span class="number">1</span>][S]=max(dp[i+<span class="number">1</span>][S],dp[i][j]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	ans=<span class="number">-0x7ffffff</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=maxstate;i++)	ans=max(ans,dp[n][i]);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%lld"</span>,ans*<span class="number">2</span>-sum);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -365,7 +357,7 @@
           
           <div class="post-tags">
             
-              <a href="/tags/树状数组/" rel="tag"># 树状数组</a>
+              <a href="/tags/状压dp/" rel="tag"># 状压dp</a>
             
           </div>
         
@@ -375,8 +367,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/09/15/P3155/" rel="next" title="P3155 [CQOI2009]叶子的染色 题解">
-                  <i class="fa fa-chevron-left"></i> P3155 [CQOI2009]叶子的染色 题解
+                <a href="/2019/09/28/9-21-T3/" rel="next" title="模拟赛 水晶的排列 题解">
+                  <i class="fa fa-chevron-left"></i> 模拟赛 水晶的排列 题解
                 </a>
               
             </div>
@@ -384,10 +376,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/09/19/poj1125/" rel="prev" title="poj1125 Stockbroker Grapevine 题解">
-                  poj1125 Stockbroker Grapevine 题解 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -628,7 +616,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目链接"><span class="nav-number">1.</span> <span class="nav-text">题目链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Description-问题描述"><span class="nav-number">2.</span> <span class="nav-text">Description 问题描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Input-输入"><span class="nav-number">3.</span> <span class="nav-text">Input 输入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Output-输出"><span class="nav-number">4.</span> <span class="nav-text">Output 输出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-Input-样例输入"><span class="nav-number">5.</span> <span class="nav-text">Sample Input 样例输入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-Output-样例输出"><span class="nav-number">6.</span> <span class="nav-text">Sample Output 样例输出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-number">7.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">8.</span> <span class="nav-text">代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目链接"><span class="nav-number">1.</span> <span class="nav-text">题目链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#题目描述"><span class="nav-number">2.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输入格式"><span class="nav-number">3.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出格式"><span class="nav-number">4.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例输入"><span class="nav-number">5.</span> <span class="nav-text">样例输入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例输出"><span class="nav-number">6.</span> <span class="nav-text">样例输出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-number">7.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">8.</span> <span class="nav-text">代码</span></a></li></ol></div>
             
 
           </div>
@@ -800,7 +788,7 @@
       repo: 'blogcomments',
       owner: 'qnickx',
       admin: ['qnickx'],
-      id: '82035c35d3d9eddc63d7bdc1d200b889',
+      id: 'c8d25aa3b21732d4c4e2120b8ebd021d',
         language: 'zh-CN',
       
       distractionFreeMode: 'true'
