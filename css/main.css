@@ -1664,7 +1664,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff42ed;
+  background: #b873ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2717,4 +2717,7 @@ ul.breadcrumb li+li:last-child {
   padding: 0 5px;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+body {
+  background-image: url("https://miao.su/images/2019/09/06/Konachan.com-288097brown_eyesgreen_hairjapanese_clotheskochiya_sanaelong_hairmaachi_fsam4547mikonaveltoriitouhoutreeddb32.jpg");
 }
