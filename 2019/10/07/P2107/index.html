@@ -55,19 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="题目描述从文件中读入一个正整数n（10≤n≤31000）。要求将n写成若干个正整数之和，并且使这些正整数的乘积最大。 例如，n=13，则当n表示为4+3+3+3（或2+2+3+3+3）时，乘积=108为最大。">
-<meta name="keywords" content="高精度,数论">
+  <meta name="description" content="题目链接传送门 题目描述在小Z的家乡，有机房一条街，街上有很多机房。每个机房里都有一万个人在切题。小Z刚刷完CodeChef，准备出来逛逛。 机房一条街有 n 个机房，第 i 个机房的坐标为 xi ，小Z的家坐标为 0。小Z在街上移动的速度为1，即从 x1 到 x2 所耗费的时间为 |x1 − x2|。 每个机房的学生数量不同，ACM 题目水平也良莠不齐。小Z到达第 i 个机房后，可以花 ti 的">
+<meta name="keywords" content="贪心">
 <meta property="og:type" content="article">
-<meta property="og:title" content="P4157 [SCOI2006]整数划分 题解">
-<meta property="og:url" content="http://yoursite.com/2019/09/15/P4157/index.html">
+<meta property="og:title" content="P2107 小Z的AK计划 题解">
+<meta property="og:url" content="http://yoursite.com/2019/10/07/P2107/index.html">
 <meta property="og:site_name" content="qnickx&#39;s blog">
-<meta property="og:description" content="题目描述从文件中读入一个正整数n（10≤n≤31000）。要求将n写成若干个正整数之和，并且使这些正整数的乘积最大。 例如，n=13，则当n表示为4+3+3+3（或2+2+3+3+3）时，乘积=108为最大。">
+<meta property="og:description" content="题目链接传送门 题目描述在小Z的家乡，有机房一条街，街上有很多机房。每个机房里都有一万个人在切题。小Z刚刷完CodeChef，准备出来逛逛。 机房一条街有 n 个机房，第 i 个机房的坐标为 xi ，小Z的家坐标为 0。小Z在街上移动的速度为1，即从 x1 到 x2 所耗费的时间为 |x1 − x2|。 每个机房的学生数量不同，ACM 题目水平也良莠不齐。小Z到达第 i 个机房后，可以花 ti 的">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-15T13:54:51.498Z">
+<meta property="og:updated_time" content="2019-10-07T09:01:46.167Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="P4157 [SCOI2006]整数划分 题解">
-<meta name="twitter:description" content="题目描述从文件中读入一个正整数n（10≤n≤31000）。要求将n写成若干个正整数之和，并且使这些正整数的乘积最大。 例如，n=13，则当n表示为4+3+3+3（或2+2+3+3+3）时，乘积=108为最大。">
-  <link rel="canonical" href="http://yoursite.com/2019/09/15/P4157/">
+<meta name="twitter:title" content="P2107 小Z的AK计划 题解">
+<meta name="twitter:description" content="题目链接传送门 题目描述在小Z的家乡，有机房一条街，街上有很多机房。每个机房里都有一万个人在切题。小Z刚刷完CodeChef，准备出来逛逛。 机房一条街有 n 个机房，第 i 个机房的坐标为 xi ，小Z的家坐标为 0。小Z在街上移动的速度为1，即从 x1 到 x2 所耗费的时间为 |x1 − x2|。 每个机房的学生数量不同，ACM 题目水平也良莠不齐。小Z到达第 i 个机房后，可以花 ti 的">
+  <link rel="canonical" href="http://yoursite.com/2019/10/07/P2107/">
 
 
 <script id="page-configurations">
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>P4157 [SCOI2006]整数划分 题解 | qnickx's blog</title>
+  <title>P2107 小Z的AK计划 题解 | qnickx's blog</title>
   
 
 
@@ -258,7 +258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/15/P4157/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/07/P2107/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="qnickx">
@@ -272,7 +272,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">P4157 [SCOI2006]整数划分 题解
+          <h1 class="post-title" itemprop="name headline">P2107 小Z的AK计划 题解
 
             
           </h1>
@@ -289,7 +289,7 @@
                 
               
 
-              <time title="创建时间：2019-09-15 13:55:28 / 修改时间：21:54:51" itemprop="dateCreated datePublished" datetime="2019-09-15T13:55:28+08:00">2019-09-15</time>
+              <time title="创建时间：2019-10-07 17:00:20 / 修改时间：17:01:46" itemprop="dateCreated datePublished" datetime="2019-10-07T17:00:20+08:00">2019-10-07</time>
             </span>
           
             
@@ -328,17 +328,19 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>从文件中读入一个正整数n（10≤n≤31000）。要求将n写成若干个正整数之和，并且使这些正整数的乘积最大。</p>
-<p>例如，n=13，则当n表示为4+3+3+3（或2+2+3+3+3）时，乘积=108为最大。</p>
+        <h4 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h4><p><a href="https://www.luogu.org/problem/P2107" target="_blank" rel="noopener">传送门</a></p>
+<h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>在小Z的家乡，有机房一条街，街上有很多机房。每个机房里都有一万个人在切题。小Z刚刷完CodeChef，准备出来逛逛。</p>
+<p>机房一条街有 n 个机房，第 i 个机房的坐标为 xi ，小Z的家坐标为 0。小Z在街上移动的速度为1，即从 x1 到 x2 所耗费的时间为 |x1 − x2|。 每个机房的学生数量不同，ACM 题目水平也良莠不齐。小Z到达第 i 个机房后，可以花 ti 的时间想题，然后瞬间 AK；当然，也可以过机房而不入。</p>
+<p>小Z现在只有 m 个单位时间，之后他就该赶着去打 Codeforces 了。现在他想知道自己最多能在多少个机房 AK，希望你帮帮他。</p>
 <a id="more"></a>
-<h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h4><p>只有一个正整数：n （10≤n≤31000）</p>
-<h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h4><p>第1行输出一个整数，为最大乘积的位数。</p>
-<p>第2行输出最大乘积的前100位，如果不足100位，则按实际位数输出最大乘积。</p>
-<p>（提示：在给定的范围内，最大乘积的位数不超过5000位）。</p>
-<h4 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h4><p>13</p>
-<h4 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h4><p>3<br>108</p>
-<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>可以证明，任意数分解成2和3都比其他数更优.<br>假设说我们把一个数分解为比2和3更大的数，那么很明显的他能得到的乘积会更小。<br>于是就优先分3,然后不断减小，直到不大于5.<br>然后在5范围以内，可以知道4拆分成2+2更优<br>加特判即可。</p>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> ans[<span class="number">1000005</span>],tot,n;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Nxt</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=tot;i++)	ans[i+<span class="number">1</span>]+=(ans[i]/<span class="number">10</span>),ans[i]%=<span class="number">10</span>;</span><br><span class="line">	<span class="keyword">while</span>(ans[tot+<span class="number">1</span>]!=<span class="number">0</span>)	tot++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">multi</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=tot;i&gt;=<span class="number">1</span>;i--)&#123;</span><br><span class="line">		ans[i]*=x;</span><br><span class="line">	&#125;</span><br><span class="line">	Nxt();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="comment">//	freopen("integer.in","r",stdin);</span></span><br><span class="line"><span class="comment">//	freopen("integer.out","w",stdout);</span></span><br><span class="line">	ans[<span class="number">1</span>]=<span class="number">1</span>,tot=<span class="number">1</span>;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">	<span class="keyword">while</span>(n&gt;<span class="number">5</span>)&#123;n-=<span class="number">3</span>;multi(<span class="number">3</span>);&#125;</span><br><span class="line">	<span class="keyword">if</span>(n==<span class="number">5</span>)	multi(<span class="number">6</span>);</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(n==<span class="number">4</span>)	multi(<span class="number">4</span>);</span><br><span class="line">	<span class="keyword">else</span>	multi(n);</span><br><span class="line">	Nxt();</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,tot);</span><br><span class="line">	<span class="keyword">if</span>(tot&lt;=<span class="number">100</span>)	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=tot;i&gt;=<span class="number">1</span>;i--)	<span class="built_in">printf</span>(<span class="string">"%d"</span>,ans[i]);</span><br><span class="line">	<span class="keyword">else</span>	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=tot;i&gt;=tot<span class="number">-100</span>+<span class="number">1</span>;i--)	<span class="built_in">printf</span>(<span class="string">"%d"</span>,ans[i]);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h4><p>第一行包含两个整数 n，m。</p>
+<p>接下来 n 行，每行包含两个整数 xi，ti 。</p>
+<h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h4><p>第一行包含一个整数，表示小Z最多能 AK 的机房数量。</p>
+<h4 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h4><p>2 10<br>1 100<br>5 5</p>
+<h4 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h4><p>1 </p>
+<h4 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h4><p>对于 30% 的数据，n ≤ 20。<br>对于 60% 的数据，n ≤ 1000。<br>对于 100% 的数据，1 ≤ n ≤ 10^5，0 ≤ m，xi ≤ 10^18，0 ≤ ti ≤ 10^9。</p>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>反悔型的贪心。首先按照机房距离的从近至远排序，用一个大根堆记录当前已选的机房，然后用一个$sum_t$记录当前的总时间花销，对于一个机房，如果当前剩余时间能到达此机房并做完题，就将其加入堆中，若不能，则对选择此机房并抛弃大根堆中最大机房的时间谁更优，若更优则删去堆顶并加入当前元素，否则反之。</p>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">100005</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line">ll m,sumt,now;</span><br><span class="line">priority_queue&lt; pair&lt;ll,ll&gt; &gt; q;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">cpr</span>&#123;</span></span><br><span class="line">	ll x;</span><br><span class="line">	ll t;</span><br><span class="line">&#125;sz[maxn];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(cpr cp1,cpr cp2)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> cp1.x&lt;cp2.x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%lld"</span>,&amp;n,&amp;m);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)	<span class="built_in">scanf</span>(<span class="string">"%lld%lld"</span>,&amp;sz[i].x,&amp;sz[i].t);</span><br><span class="line">	sort(sz+<span class="number">1</span>,sz+n+<span class="number">1</span>,cmp);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(m-sumt-(sz[i].x-now)&gt;=sz[i].t)&#123;<span class="comment">//直接加进来 </span></span><br><span class="line">			sumt+=(sz[i].x-now);</span><br><span class="line">			sumt+=sz[i].t,now=sz[i].x;</span><br><span class="line">			q.push(make_pair(sz[i].t,i));</span><br><span class="line">			<span class="keyword">continue</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(!q.empty()&amp;&amp;(sumt-q.top().first+(sz[i].x-now)+sz[i].t&lt;sumt))&#123;</span><br><span class="line">			sumt-=q.top().first;</span><br><span class="line">			sumt+=sz[i].t,sumt+=(sz[i].x-now),now=sz[i].x;</span><br><span class="line">			q.push(make_pair(sz[i].t,i));</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,q.size());</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -354,9 +356,7 @@
           
           <div class="post-tags">
             
-              <a href="/tags/高精度/" rel="tag"># 高精度</a>
-            
-              <a href="/tags/数论/" rel="tag"># 数论</a>
+              <a href="/tags/贪心/" rel="tag"># 贪心</a>
             
           </div>
         
@@ -366,8 +366,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/09/11/hzu2105/" rel="next" title="hzu2105 Digits Count 题解">
-                  <i class="fa fa-chevron-left"></i> hzu2105 Digits Count 题解
+                <a href="/2019/10/03/tyvj1617/" rel="next" title="tyvj1617 Grape 题解">
+                  <i class="fa fa-chevron-left"></i> tyvj1617 Grape 题解
                 </a>
               
             </div>
@@ -375,10 +375,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/09/15/P1627/" rel="prev" title="P1627 [CQOI2009]中位数 题解">
-                  P1627 [CQOI2009]中位数 题解 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -619,7 +615,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输入格式"><span class="nav-number">2.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出格式"><span class="nav-number">3.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例输入"><span class="nav-number">4.</span> <span class="nav-text">样例输入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例输出"><span class="nav-number">5.</span> <span class="nav-text">样例输出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-number">6.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">7.</span> <span class="nav-text">代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目链接"><span class="nav-number">1.</span> <span class="nav-text">题目链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#题目描述"><span class="nav-number">2.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输入格式"><span class="nav-number">3.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出格式"><span class="nav-number">4.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例输入"><span class="nav-number">5.</span> <span class="nav-text">样例输入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例输出"><span class="nav-number">6.</span> <span class="nav-text">样例输出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#提示"><span class="nav-number">7.</span> <span class="nav-text">提示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-number">8.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">9.</span> <span class="nav-text">代码</span></a></li></ol></div>
             
 
           </div>
@@ -791,7 +787,7 @@
       repo: 'blogcomments',
       owner: 'qnickx',
       admin: ['qnickx'],
-      id: '0a29f994518a6e1bbeab196e79613b14',
+      id: 'cf13c82fae1b3da131ddbb48e754a909',
         language: 'zh-CN',
       
       distractionFreeMode: 'true'
