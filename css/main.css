@@ -1664,7 +1664,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff497e;
+  background: #ff6a7e;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2719,16 +2719,12 @@ ul.breadcrumb li+li:last-child {
   white-space: nowrap;
 }
 body {
-  background-image: url("https://miao.su/images/2019/10/08/39390345_p001cae.jpg");
+  background-image: url("https://miao.su/images/2019/10/08/76382473_p08c52d.jpg");
   background-repeat: repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
   background-size: cover;
 }
 .main-inner {
-  margin-top: 60px;
-  padding: 60px 60px 60px 60px;
-  background: #fff;
-  opacity: 0.8;
-  min-height: 500px;
+  opacity: 0.9;
 }
