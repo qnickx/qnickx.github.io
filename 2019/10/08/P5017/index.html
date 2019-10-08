@@ -55,19 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="问题描述给定n个数，不能改变顺序，可以再中间添加加号、减号或乘号，求有多少种算式可以算出24。">
-<meta name="keywords" content="dfs">
+  <meta name="description" content="题目链接传送门 题目描述有$n$名同学要乘坐摆渡车从人大附中前往人民大学，第$i$位同学在第$t_i$ 分钟去 等车。只有一辆摆渡车在工作，但摆渡车容量可以视为无限大。摆渡车从人大附中出发、 把车上的同学送到人民大学、再回到人大附中（去接其他同学），这样往返一趟总共花费$m$分钟（同学上下车时间忽略不计）。摆渡车要将所有同学都送到人民大学。 凯凯很好奇，如果他能任意安排摆渡车出发的时间，那么这些同">
+<meta name="keywords" content="动态规划">
 <meta property="og:type" content="article">
-<meta property="og:title" content="9.22模拟赛 二十四点 题解">
-<meta property="og:url" content="http://yoursite.com/2019/09/22/9-22-T1/index.html">
+<meta property="og:title" content="P5017 摆渡车(noip2018pjT3) 题解">
+<meta property="og:url" content="http://yoursite.com/2019/10/08/P5017/index.html">
 <meta property="og:site_name" content="qnickx&#39;s blog">
-<meta property="og:description" content="问题描述给定n个数，不能改变顺序，可以再中间添加加号、减号或乘号，求有多少种算式可以算出24。">
+<meta property="og:description" content="题目链接传送门 题目描述有$n$名同学要乘坐摆渡车从人大附中前往人民大学，第$i$位同学在第$t_i$ 分钟去 等车。只有一辆摆渡车在工作，但摆渡车容量可以视为无限大。摆渡车从人大附中出发、 把车上的同学送到人民大学、再回到人大附中（去接其他同学），这样往返一趟总共花费$m$分钟（同学上下车时间忽略不计）。摆渡车要将所有同学都送到人民大学。 凯凯很好奇，如果他能任意安排摆渡车出发的时间，那么这些同">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-22T13:48:00.089Z">
+<meta property="og:updated_time" content="2019-10-08T06:22:33.066Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="9.22模拟赛 二十四点 题解">
-<meta name="twitter:description" content="问题描述给定n个数，不能改变顺序，可以再中间添加加号、减号或乘号，求有多少种算式可以算出24。">
-  <link rel="canonical" href="http://yoursite.com/2019/09/22/9-22-T1/">
+<meta name="twitter:title" content="P5017 摆渡车(noip2018pjT3) 题解">
+<meta name="twitter:description" content="题目链接传送门 题目描述有$n$名同学要乘坐摆渡车从人大附中前往人民大学，第$i$位同学在第$t_i$ 分钟去 等车。只有一辆摆渡车在工作，但摆渡车容量可以视为无限大。摆渡车从人大附中出发、 把车上的同学送到人民大学、再回到人大附中（去接其他同学），这样往返一趟总共花费$m$分钟（同学上下车时间忽略不计）。摆渡车要将所有同学都送到人民大学。 凯凯很好奇，如果他能任意安排摆渡车出发的时间，那么这些同">
+  <link rel="canonical" href="http://yoursite.com/2019/10/08/P5017/">
 
 
 <script id="page-configurations">
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>9.22模拟赛 二十四点 题解 | qnickx's blog</title>
+  <title>P5017 摆渡车(noip2018pjT3) 题解 | qnickx's blog</title>
   
 
 
@@ -258,7 +258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/22/9-22-T1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/08/P5017/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="qnickx">
@@ -272,7 +272,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">9.22模拟赛 二十四点 题解
+          <h1 class="post-title" itemprop="name headline">P5017 摆渡车(noip2018pjT3) 题解
 
             
           </h1>
@@ -289,7 +289,7 @@
                 
               
 
-              <time title="创建时间：2019-09-22 21:28:38 / 修改时间：21:48:00" itemprop="dateCreated datePublished" datetime="2019-09-22T21:28:38+08:00">2019-09-22</time>
+              <time title="创建时间：2019-10-08 14:21:19 / 修改时间：14:22:33" itemprop="dateCreated datePublished" datetime="2019-10-08T14:21:19+08:00">2019-10-08</time>
             </span>
           
             
@@ -328,15 +328,23 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h4 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h4><p>给定n个数，不能改变顺序，可以再中间添加加号、减号或乘号，求有多少种算式可以算出24。</p>
+        <h4 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h4><p><a href="https://www.luogu.org/problem/P5017" target="_blank" rel="noopener">传送门</a></p>
+<h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>有$n$名同学要乘坐摆渡车从人大附中前往人民大学，第$i$位同学在第$t_i$ 分钟去 等车。只有一辆摆渡车在工作，但摆渡车容量可以视为无限大。摆渡车从人大附中出发、 把车上的同学送到人民大学、再回到人大附中（去接其他同学），这样往返一趟总共花费$m$分钟（同学上下车时间忽略不计）。摆渡车要将所有同学都送到人民大学。</p>
+<p>凯凯很好奇，如果他能任意安排摆渡车出发的时间，那么这些同学的等车时间之和最小为多少呢？</p>
+<p>注意：摆渡车回到人大附中后可以即刻出发。</p>
 <a id="more"></a>
-<h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h4><p>第一行一个正整数n。<br>接下来n行每行一个整数，第i行表示第i个数。</p>
-<h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h4><p>一行一个整数，输出满足条件的算式个数。</p>
-<h4 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h4><p>5<br>10<br>2<br>4<br>2<br>4</p>
-<h4 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h4><p>5</p>
-<h4 id="数据规模"><a href="#数据规模" class="headerlink" title="数据规模"></a>数据规模</h4><p>对于10%的数据，n=2<br>对于40%的数据，n&lt;=5<br>对于100%的数据，n&lt;=10</p>
-<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>很明显是一个深搜，不用剪枝就能过，但是要注意不能从pos=0开始乘和减。</p>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n,sz[<span class="number">15</span>],fac[<span class="number">15</span>],sum[<span class="number">15</span>],ans;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> pos,<span class="keyword">int</span> now)</span></span>&#123;</span><br><span class="line"><span class="comment">//	printf("%d %d\n",pos,now);</span></span><br><span class="line"><span class="comment">//	if(now&gt;24&amp;&amp;sum[n]-sum[pos]&lt;now-24)	return;</span></span><br><span class="line"><span class="comment">//	if(now&lt;24&amp;&amp;sum[n]-sum[pos]&lt;24-now)	return;</span></span><br><span class="line"><span class="comment">//	printf("Yes\n");</span></span><br><span class="line">	<span class="keyword">if</span>(pos==n)&#123;</span><br><span class="line">		<span class="keyword">if</span>(now==<span class="number">24</span>)&#123;</span><br><span class="line">	<span class="comment">//		printf("Yes\n");</span></span><br><span class="line">			ans++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> res=sz[pos+<span class="number">1</span>];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=pos+<span class="number">2</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		res*=sz[i];</span><br><span class="line">		dfs(i,now+res);</span><br><span class="line">		<span class="keyword">if</span>(pos!=<span class="number">0</span>)dfs(i,now-res);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(pos!=<span class="number">0</span>)	dfs(pos+<span class="number">1</span>,now-sz[pos+<span class="number">1</span>]);</span><br><span class="line">	dfs(pos+<span class="number">1</span>,now+sz[pos+<span class="number">1</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	freopen(<span class="string">"z24a.in"</span>,<span class="string">"r"</span>,<span class="built_in">stdin</span>);</span><br><span class="line">	freopen(<span class="string">"z24a.out"</span>,<span class="string">"w"</span>,<span class="built_in">stdout</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">	fac[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;sz[i]),sum[i]=sum[i<span class="number">-1</span>]+sz[i];</span><br><span class="line">	dfs(<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h4><p>第一行包含两个正整数 <em>n</em>,<em>m</em>，以一个空格分开，分别代表等车人数和摆渡车往返 一趟的时间。<br>第二行包含 <em>n</em> 个正整数，相邻两数之间以一个空格分隔，第 <em>i</em> 个非负整数$t_i$代 表第 <em>i</em> 个同学到达车站的时刻。</p>
+<h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h4><p>输出一行，一个整数，表示所有同学等车时间之和的最小值（单位：分钟）。</p>
+<h4 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h4><p>5 5<br>11 13 1 5 5</p>
+<h4 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h4><p>4</p>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>把时间从小到大排序然后考虑比较暴力的想法,设$dp_{i,j}$为前面i个人在第$j$分钟全部被接走的最长等待时间,但是由于$t_i$很大所以考虑转化第二维为第i个人等待了$j$分钟时前i个人都被接走的最长等待时间。</p>
+<p>用刷表法，枚举一个大于当前编号的k和一个不大于$min(m-1,t_{i+1}-t_{i})$的等待时间$j$，设第i+1个人到第k个人的总等待时间为$sumt$,可以得到转移方程：</p>
+<p>$dp_{k,max(t_i+j+m-t[k],0)}=min(dp_{k,max(t_i+j+m-t[k],0)},dp_{i,j}+sumt)$</p>
+<p>然后来求这个$sumt=\sum\limits_{x=i+1}^n(max(t_i+j+m-t[k],0)+t_k-t_x)$</p>
+<p>式子展开后可得$sumt=(max(t_i+j+m-t[k],0)+t_k)*(k-i)-(sum_k-sum_i)$，带回原式就得到了整道题的转移方程:</p>
+<p>$dp_{k,max(t_i+j+m-t[k],0)}=min(dp_{k,max(t_i+j+m-t[k],0)},dp_{i,j}+(max(t_i+j+m-t[k],0)+t_k)*(k-i)-(sum_k-sum_i))$</p>
+<p>好像用斜率优化可解？如果有空的话回头复习斜率优化的时候会(gu)补(gu)上(gu).</p>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">505</span>;</span><br><span class="line"><span class="keyword">int</span> n,m,sum[maxn],t[maxn],dp[maxn][maxn];</span><br><span class="line"><span class="keyword">int</span> ans;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;t[i]),sum[i]=sum[i<span class="number">-1</span>]+t[i];</span><br><span class="line">	sort(t+<span class="number">1</span>,t+n+<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=m;j++)	dp[i][j]=<span class="number">192608171</span>;</span><br><span class="line">	dp[<span class="number">0</span>][<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">	t[<span class="number">0</span>]=<span class="number">-89279123</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> maxt=min(m<span class="number">-1</span>,t[i+<span class="number">1</span>]-t[i]);<span class="comment">//到下一个人的最长等待时间 </span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=maxt;j++)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> k=i+<span class="number">1</span>;k&lt;=n;k++)</span><br><span class="line">				dp[k][max(t[i]+j+m-t[k],<span class="number">0</span>)]=min(dp[k][max(t[i]+j+m-t[k],<span class="number">0</span>)],dp[i][j]+(max(t[i]+j+m-t[k],<span class="number">0</span>)+t[k])*(k-i)-(sum[k]-sum[i]));</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	ans=INT_MAX;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=m<span class="number">-1</span>;i++)	ans=min(ans,dp[n][i]);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -352,7 +360,7 @@
           
           <div class="post-tags">
             
-              <a href="/tags/dfs/" rel="tag"># dfs</a>
+              <a href="/tags/动态规划/" rel="tag"># 动态规划</a>
             
           </div>
         
@@ -362,8 +370,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/09/22/poj3268/" rel="next" title="poj3268 奶牛农场 题解">
-                  <i class="fa fa-chevron-left"></i> poj3268 奶牛农场 题解
+                <a href="/2019/10/07/群岛沉没/" rel="next" title="群岛沉没">
+                  <i class="fa fa-chevron-left"></i> 群岛沉没
                 </a>
               
             </div>
@@ -371,10 +379,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/09/22/9-22-T2/" rel="prev" title="9_22_T2 模拟赛 排干净月潭水塘 题解">
-                  9_22_T2 模拟赛 排干净月潭水塘 题解 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -617,7 +621,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输入格式"><span class="nav-number">2.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出格式"><span class="nav-number">3.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例输入"><span class="nav-number">4.</span> <span class="nav-text">样例输入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例输出"><span class="nav-number">5.</span> <span class="nav-text">样例输出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据规模"><span class="nav-number">6.</span> <span class="nav-text">数据规模</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-number">7.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">8.</span> <span class="nav-text">代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目链接"><span class="nav-number">1.</span> <span class="nav-text">题目链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#题目描述"><span class="nav-number">2.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输入格式"><span class="nav-number">3.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出格式"><span class="nav-number">4.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例输入"><span class="nav-number">5.</span> <span class="nav-text">样例输入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例输出"><span class="nav-number">6.</span> <span class="nav-text">样例输出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-number">7.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">8.</span> <span class="nav-text">代码</span></a></li></ol></div>
             
 
           </div>
@@ -789,7 +793,7 @@
       repo: 'blogcomments',
       owner: 'qnickx',
       admin: ['qnickx'],
-      id: 'b859a99c102795f70470c5c30ddcf4fb',
+      id: 'eeaed6321e9a818e2057c728282ba428',
         language: 'zh-CN',
       
       distractionFreeMode: 'true'
