@@ -55,19 +55,21 @@
   };
 </script>
 
-  <meta name="description" content="题目链接传送门 题目描述 Description小机房有棵焕狗种的树，树上有N个节点，节点标号为0到N-1，有两只虫子名叫飘狗和大吉狗，分居在两个不同的节点上。有一天，他们想爬到一个节点上去搞基，但是作为两只虫子，他们不想花费太多精力。已知从某个节点爬到其父亲节点要花费 c 的能量（从父亲节点爬到此节点也相同），他们想找出一条花费精力最短的路，以使得搞基的时候精力旺盛，他们找到你要你设计一个程序来">
-<meta name="keywords" content="LCA">
+  <meta name="description" content="题目链接传送门 题目背景还记得 NOIP 2012 提高组 Day1 的国王游戏吗？时光飞逝，光阴荏苒，两年过去了。国王游戏早已过时，如今已被皇后游戏取代，请你来解决类似于国王游戏的另一个问题。 题目描述皇后有 n 位大臣，每位大臣的左右手上面分别写上了一个正整数。恰逢国庆节来临，皇后决定为 n 位大臣颁发奖金，其中第 i 位大臣所获得的奖金数目为第i－1 位大臣所获得奖金数目与前 i 位大臣左手">
+<meta name="keywords" content="贪心,数学">
 <meta property="og:type" content="article">
-<meta property="og:title" content="codevs2370 小机房的树 题解">
-<meta property="og:url" content="http://yoursite.com/2019/09/20/codevs2370/index.html">
+<meta property="og:title" content="P2123 皇后游戏 题解">
+<meta property="og:url" content="http://yoursite.com/2019/10/11/P2123/index.html">
 <meta property="og:site_name" content="qnickx&#39;s blog">
-<meta property="og:description" content="题目链接传送门 题目描述 Description小机房有棵焕狗种的树，树上有N个节点，节点标号为0到N-1，有两只虫子名叫飘狗和大吉狗，分居在两个不同的节点上。有一天，他们想爬到一个节点上去搞基，但是作为两只虫子，他们不想花费太多精力。已知从某个节点爬到其父亲节点要花费 c 的能量（从父亲节点爬到此节点也相同），他们想找出一条花费精力最短的路，以使得搞基的时候精力旺盛，他们找到你要你设计一个程序来">
+<meta property="og:description" content="题目链接传送门 题目背景还记得 NOIP 2012 提高组 Day1 的国王游戏吗？时光飞逝，光阴荏苒，两年过去了。国王游戏早已过时，如今已被皇后游戏取代，请你来解决类似于国王游戏的另一个问题。 题目描述皇后有 n 位大臣，每位大臣的左右手上面分别写上了一个正整数。恰逢国庆节来临，皇后决定为 n 位大臣颁发奖金，其中第 i 位大臣所获得的奖金数目为第i－1 位大臣所获得奖金数目与前 i 位大臣左手">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-20T15:21:53.144Z">
+<meta property="og:image" content="https://cdn.luogu.com.cn/upload/pic/1257.png">
+<meta property="og:updated_time" content="2019-10-11T15:36:06.575Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="codevs2370 小机房的树 题解">
-<meta name="twitter:description" content="题目链接传送门 题目描述 Description小机房有棵焕狗种的树，树上有N个节点，节点标号为0到N-1，有两只虫子名叫飘狗和大吉狗，分居在两个不同的节点上。有一天，他们想爬到一个节点上去搞基，但是作为两只虫子，他们不想花费太多精力。已知从某个节点爬到其父亲节点要花费 c 的能量（从父亲节点爬到此节点也相同），他们想找出一条花费精力最短的路，以使得搞基的时候精力旺盛，他们找到你要你设计一个程序来">
-  <link rel="canonical" href="http://yoursite.com/2019/09/20/codevs2370/">
+<meta name="twitter:title" content="P2123 皇后游戏 题解">
+<meta name="twitter:description" content="题目链接传送门 题目背景还记得 NOIP 2012 提高组 Day1 的国王游戏吗？时光飞逝，光阴荏苒，两年过去了。国王游戏早已过时，如今已被皇后游戏取代，请你来解决类似于国王游戏的另一个问题。 题目描述皇后有 n 位大臣，每位大臣的左右手上面分别写上了一个正整数。恰逢国庆节来临，皇后决定为 n 位大臣颁发奖金，其中第 i 位大臣所获得的奖金数目为第i－1 位大臣所获得奖金数目与前 i 位大臣左手">
+<meta name="twitter:image" content="https://cdn.luogu.com.cn/upload/pic/1257.png">
+  <link rel="canonical" href="http://yoursite.com/2019/10/11/P2123/">
 
 
 <script id="page-configurations">
@@ -81,7 +83,7 @@
   };
 </script>
 
-  <title>codevs2370 小机房的树 题解 | qnickx's blog</title>
+  <title>P2123 皇后游戏 题解 | qnickx's blog</title>
   
 
 
@@ -258,7 +260,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/20/codevs2370/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/11/P2123/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="qnickx">
@@ -272,7 +274,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">codevs2370 小机房的树 题解
+          <h1 class="post-title" itemprop="name headline">P2123 皇后游戏 题解
 
             
           </h1>
@@ -289,7 +291,7 @@
                 
               
 
-              <time title="创建时间：2019-09-20 23:13:28 / 修改时间：23:21:53" itemprop="dateCreated datePublished" datetime="2019-09-20T23:13:28+08:00">2019-09-20</time>
+              <time title="创建时间：2019-10-11 23:32:42 / 修改时间：23:36:06" itemprop="dateCreated datePublished" datetime="2019-10-11T23:32:42+08:00">2019-10-11</time>
             </span>
           
             
@@ -328,25 +330,47 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h4 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h4><p><a href="http://codevs.cn/problem/2370/" target="_blank" rel="noopener">传送门</a></p>
-<h4 id="题目描述-Description"><a href="#题目描述-Description" class="headerlink" title="题目描述 Description"></a><strong>题目描述</strong> Description</h4><p>小机房有棵焕狗种的树，树上有N个节点，节点标号为0到N-1，有两只虫子名叫飘狗和大吉狗，分居在两个不同的节点上。有一天，他们想爬到一个节点上去搞基，但是作为两只虫子，他们不想花费太多精力。已知从某个节点爬到其父亲节点要花费 c 的能量（从父亲节点爬到此节点也相同），他们想找出一条花费精力最短的路，以使得搞基的时候精力旺盛，他们找到你要你设计一个程序来找到这条路，要求你告诉他们最少需要花费多少精力</p>
+        <h4 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h4><p><a href="https://www.luogu.org/problem/P2123" target="_blank" rel="noopener">传送门</a></p>
+<h4 id="题目背景"><a href="#题目背景" class="headerlink" title="题目背景"></a>题目背景</h4><p>还记得 NOIP 2012 提高组 Day1 的国王游戏吗？时光飞逝，光阴荏苒，两年过去了。国王游戏早已过时，如今已被皇后游戏取代，请你来解决类似于国王游戏的另一个问题。</p>
+<h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>皇后有 n 位大臣，每位大臣的左右手上面分别写上了一个正整数。恰逢国庆节来临，皇后决定为 n 位大臣颁发奖金，其中第 i 位大臣所获得的奖金数目为第i－1 位大臣所获得奖金数目与前 i 位大臣左手上的数的和的较大值再加上第 i 位大臣右手上的数。</p>
+<p>形式化地讲：我们设第 i 位大臣左手上的正整数为 ai，右手上的正整数为 bi，则第 i 位大臣获得的奖金数目为 ci可以表达为：</p>
+<p><img src="https://cdn.luogu.com.cn/upload/pic/1257.png" alt="img"></p>
+<p>当然，吝啬的皇后并不希望太多的奖金被发给大臣，所以她想请你来重新安排一下队伍的顺序，使得获得奖金最多的大臣，所获奖金数目尽可能的少。<br>注意：重新安排队伍并不意味着一定要打乱顺序，我们允许不改变任何一位大臣的位置。</p>
 <a id="more"></a>
-<h4 id="输入描述-Input-Description"><a href="#输入描述-Input-Description" class="headerlink" title="输入描述 Input Description"></a><strong>输入描述</strong> Input Description</h4><p>第一行一个n，接下来n-1行每一行有三个整数u，v, c 。表示节点 u 爬到节点 v 需要花费 c 的精力。第n+1行有一个整数m表示有m次询问。接下来m行每一行有两个整数 u ，v 表示两只虫子所在的节点</p>
-<h4 id="输出描述-Output-Description"><a href="#输出描述-Output-Description" class="headerlink" title="输出描述 Output Description"></a><strong>输出描述</strong> Output Description</h4><p>一共有m行，每一行一个整数，表示对于该次询问所得出的最短距离。</p>
-<h4 id="样例输入-Sample-Input"><a href="#样例输入-Sample-Input" class="headerlink" title="样例输入 Sample Input"></a>样例输入 Sample Input</h4><p>3</p>
-<p>1 0 1</p>
-<p>2 0 1</p>
-<p>3</p>
-<p>1 0</p>
-<p>2 0</p>
-<p>1 2</p>
-<h4 id="样例输出-Sample-Output"><a href="#样例输出-Sample-Output" class="headerlink" title="样例输出 Sample Output"></a><strong>样例输出</strong> Sample Output</h4><p>1</p>
-<p>1</p>
-<p>2</p>
-<h4 id="数据范围及提示-Data-Size-amp-Hint"><a href="#数据范围及提示-Data-Size-amp-Hint" class="headerlink" title="数据范围及提示 Data Size &amp; Hint"></a><strong>数据范围及提示</strong> Data Size &amp; Hint</h4><p>1&lt;=n&lt;=50000， 1&lt;=m&lt;=75000， 0&lt;=c&lt;=1000</p>
-<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>LCA的一个性质:树上任意两点间的最短距离长度等于他们两个到树根的距离减去两倍LCA到树根的距离.</p>
-<p>于是利用这个性质,求出LCA后直接回答即可.</p>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">500005</span>,maxm=<span class="number">500005</span>;</span><br><span class="line"><span class="keyword">int</span> n,m;</span><br><span class="line"><span class="keyword">int</span> edge[maxn],dis[maxn],dep[maxn],tot,f[maxn][<span class="number">20</span>],lg[maxn],head[maxn],ver[maxm&lt;&lt;<span class="number">1</span>],Nxt[maxm&lt;&lt;<span class="number">1</span>];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> v,<span class="keyword">int</span> l)</span></span>&#123;</span><br><span class="line">	ver[++tot]=v,edge[tot]=l,Nxt[tot]=head[u],head[u]=tot;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> fa)</span></span>&#123;</span><br><span class="line">	f[u][<span class="number">0</span>]=fa,dep[u]=dep[fa]+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;(<span class="number">1</span>&lt;&lt;i)&lt;=dep[u];i++)	f[u][i]=f[f[u][i<span class="number">-1</span>]][i<span class="number">-1</span>];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=head[u];i;i=Nxt[i])	<span class="keyword">if</span>(ver[i]!=fa)	dis[ver[i]]=dis[u]+edge[i],dfs(ver[i],u);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">lca</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> v)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(dep[u]&lt;dep[v])	swap(u,v);</span><br><span class="line">	<span class="keyword">while</span>(dep[u]&gt;dep[v])	u=f[u][lg[dep[u]-dep[v]]<span class="number">-1</span>];</span><br><span class="line">	<span class="keyword">if</span>(u==v)	<span class="keyword">return</span> u;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=lg[dep[u]]<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--)	<span class="keyword">if</span>(f[u][i]!=f[v][i])	u=f[u][i],v=f[v][i];</span><br><span class="line">	<span class="keyword">return</span> f[u][<span class="number">0</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;i++)&#123;<span class="keyword">int</span> u,v,l;<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;u,&amp;v,&amp;l);u+=<span class="number">1</span>,v+=<span class="number">1</span>,add(u,v,l),add(v,u,l);&#125;</span><br><span class="line">	dfs(<span class="number">1</span>,<span class="number">0</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;m);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)	lg[i]=lg[i<span class="number">-1</span>]+(<span class="number">1</span>&lt;&lt;lg[i<span class="number">-1</span>]==i);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)&#123;<span class="keyword">int</span> u,v;<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;u,&amp;v);u+=<span class="number">1</span>,v+=<span class="number">1</span>;<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,dis[u]+dis[v]<span class="number">-2</span>*dis[lca(u,v)]);&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h4><p>第一行包含一个正整数 T，表示测试数据的组数。<br>接下来 T 个部分，每个部分的第一行包含一个正整数 n，表示大臣的数目。<br>每个部分接下来 n 行中，每行两个正整数，分别为 ai和 bi，含义如上文所述。</p>
+<h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h4><p>共 T 行，每行包含一个整数，表示获得奖金最多的大臣所获得的奖金数目。</p>
+<h4 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h4><p>2<br>5<br>85 100<br>95 99<br>76 87<br>60 97<br>79 85<br>12<br>9 68<br>18 45<br>52 61<br>39 83<br>63 67<br>45 99<br>52 54<br>82 100<br>23 54<br>99 94<br>63 100<br>52 68</p>
+<h4 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h4><p>528<br>902</p>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>冒泡型的贪心,和国王游戏一样需要通过证明推出一个式子来验证在序列里交换任意两项$i$和$j$不比当前序列更优,但是这道题的$c_i$特殊,于是先考虑设相邻两项$i,j(i==j-1)$以进行贪心证明：</p>
+<p>设$[1，i-1]$之间所有数的$a$值和为sum，第$i-1$个位置上的大臣奖金为$c_{i-1}$</p>
+<p>则交换前的$c_i=max(sum+a_i,c_{i-1})+b_i$,则$c_j=max(sum+a_i+a_j+b_j,sum+a_i+b_i+b_j,c_{i-1}+b_i+b_j)①$</p>
+<p>交换后的$c_j^{‘}=max(sum+a_j,c_{i-1})+b_j$，则$c_i^{‘}=max(sum+a_i+a_j+b_i,sum+a_j+b_i+b_j,c_{i-1}+b_i+b_j)②$</p>
+<p>要不更优使得①&gt;②，由于非数学的贪心手段我们可以把max里的最后一个公有式子删去，则</p>
+<p>$max(sum+a_i+a_j+b_j,sum+a_i+b_i+b_j)&lt;max(sum+a_i+a_j+b_i,sum+a_j+b_i+b_j)$</p>
+<p>发现两边可以同时删去$sum$并分别提取共有式子即得</p>
+<p>$max(a_j,b_i)+a_i+b_j&lt;max(a_i,b_j)+a_j+b_i$</p>
+<p>移项后$max(a_j,b_i)-a_j-b_i&lt;max(a_i,b_j)-a_i-b_j$发现两边分别消掉了更大的那一项，可得式子</p>
+<p>$min(a_i,b_j)&lt;min(a_j,b_i)$</p>
+<p>然后表面上这个题结束了，不幸的是按照这个式子写cmp函数只有80分。</p>
+<p>给上一组hack数据：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">4</span><br><span class="line">1 1</span><br><span class="line">1 1</span><br><span class="line">3 5</span><br><span class="line">2 7</span><br><span class="line">4</span><br><span class="line">1 1</span><br><span class="line">3 5</span><br><span class="line">1 1</span><br><span class="line">2 7</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">16</span><br><span class="line">16</span><br></pre></td></tr></table></figure>
+<p>为什么会错呢？<del>我也是看了题解才知道的</del>回顾sort排序内部的实现，有一个东西叫<strong>Strict Weak Ordering</strong>，<a href="https://www.cnblogs.com/walkerlala/p/5561339.html" target="_blank" rel="noopener">介绍链接</a></p>
+<p>参照ouuandalao的说法，可以得到实现这玩意儿的sort函数需要满足四个性质：</p>
+<ol>
+<li>$x\not&lt; x(非自反性)$</li>
+<li>$x&lt;y,y\not&lt;x(非对称性)$</li>
+<li>$x&lt;y,y&lt;z,则x&lt;z(传递性)$</li>
+<li>$x\not&lt;y,y\not&lt;x,y\not&lt;z,z\not&lt;y,则x\not&lt;z,z\not&lt;x(不可比性的传递性)$</li>
+</ol>
+<p>然后我们上面那个式子可以设逻辑式进行数学证明当式子相等时不满足性质4，可以参照<a href="https://www.luogu.org/blog/ouuan/QAQ-p2123" target="_blank" rel="noopener">ouuan的题解</a></p>
+<p>那么想办法让这玩意儿满足性质4，我们发现可以在上面式子额外增加下面任意一个比较条件：</p>
+<p>$a_i<a_j$或$b_i>b_j$</a_j$或$b_i></p>
+<p>根据ouuan的验证程序(其实是证明满足性质4的条件,但是式子详细列出来应该会特别麻烦……)得到条件正确</p>
+<p>也是贪心的一部分，可以证明这样比较在上一个比较条件相同时对于后面的$c$更优。</p>
+<p>于是此题结束。</p>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> T,n;</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> sum;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> a;</span><br><span class="line">	<span class="keyword">int</span> b;</span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> c;</span><br><span class="line">&#125;sz[<span class="number">20005</span>];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(node cp1,node cp2)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(min(cp2.b,cp1.a)==min(cp2.a,cp1.b))	<span class="keyword">return</span> cp1.a&lt;cp2.a;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">return</span> min(cp2.b,cp1.a)&lt;min(cp2.a,cp1.b);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;T);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> xh=<span class="number">1</span>;xh&lt;=T;xh++)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;sz[i].a,&amp;sz[i].b);</span><br><span class="line">		sort(sz+<span class="number">1</span>,sz+n+<span class="number">1</span>,cmp);</span><br><span class="line">		sum=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">			sum+=sz[i].a;</span><br><span class="line">			sz[i].c=max(sum,sz[i<span class="number">-1</span>].c)+sz[i].b;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,sz[n].c);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
     </div>
 
     
@@ -361,7 +385,9 @@
           
           <div class="post-tags">
             
-              <a href="/tags/LCA/" rel="tag"># LCA</a>
+              <a href="/tags/贪心/" rel="tag"># 贪心</a>
+            
+              <a href="/tags/数学/" rel="tag"># 数学</a>
             
           </div>
         
@@ -371,8 +397,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/09/19/51nod1674/" rel="next" title="51nod1674 区间的价值V2 题解">
-                  <i class="fa fa-chevron-left"></i> 51nod1674 区间的价值V2 题解
+                <a href="/2019/10/11/P1363/" rel="next" title="P1363 幻想迷宫 题解">
+                  <i class="fa fa-chevron-left"></i> P1363 幻想迷宫 题解
                 </a>
               
             </div>
@@ -381,8 +407,8 @@
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/2019/09/22/P4821/" rel="prev" title="P4821 [中山市选]生成树 题解">
-                  P4821 [中山市选]生成树 题解 <i class="fa fa-chevron-right"></i>
+                <a href="/2021/06/09/计划收藏表/" rel="prev" title="计划收藏表">
+                  计划收藏表 <i class="fa fa-chevron-right"></i>
                 </a>
               
             </div>
@@ -630,7 +656,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目链接"><span class="nav-number">1.</span> <span class="nav-text">题目链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#题目描述-Description"><span class="nav-number">2.</span> <span class="nav-text">题目描述 Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输入描述-Input-Description"><span class="nav-number">3.</span> <span class="nav-text">输入描述 Input Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出描述-Output-Description"><span class="nav-number">4.</span> <span class="nav-text">输出描述 Output Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例输入-Sample-Input"><span class="nav-number">5.</span> <span class="nav-text">样例输入 Sample Input</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例输出-Sample-Output"><span class="nav-number">6.</span> <span class="nav-text">样例输出 Sample Output</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据范围及提示-Data-Size-amp-Hint"><span class="nav-number">7.</span> <span class="nav-text">数据范围及提示 Data Size &amp; Hint</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-number">8.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">9.</span> <span class="nav-text">代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目链接"><span class="nav-number">1.</span> <span class="nav-text">题目链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#题目背景"><span class="nav-number">2.</span> <span class="nav-text">题目背景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#题目描述"><span class="nav-number">3.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输入格式"><span class="nav-number">4.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出格式"><span class="nav-number">5.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例输入"><span class="nav-number">6.</span> <span class="nav-text">样例输入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例输出"><span class="nav-number">7.</span> <span class="nav-text">样例输出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-number">8.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">9.</span> <span class="nav-text">代码</span></a></li></ol></div>
             
 
           </div>
@@ -802,7 +828,7 @@
       repo: 'blogcomments',
       owner: 'qnickx',
       admin: ['qnickx'],
-      id: 'c17375d0920a58db313a5361d7519c7c',
+      id: '62f2e1d049e80d3692b0dc94b3c55ee9',
         language: 'zh-CN',
       
       distractionFreeMode: 'true'
