@@ -252,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/08/计划收藏表/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/06/09/计划收藏表/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="qnickx">
@@ -268,7 +268,7 @@
         
           <h1 class="post-title" itemprop="name headline">
               
-              <a href="/2019/10/08/计划收藏表/" class="post-title-link" itemprop="url">计划收藏表</a>
+              <a href="/2021/06/09/计划收藏表/" class="post-title-link" itemprop="url">计划收藏表</a>
             
           </h1>
         
@@ -284,11 +284,19 @@
                 
               
 
-              <time title="创建时间：2019-10-08 15:08:45 / 修改时间：15:10:53" itemprop="dateCreated datePublished" datetime="2019-10-08T15:08:45+08:00">2019-10-08</time>
+              <time title="创建时间：2021-06-09 15:08:45" itemprop="dateCreated datePublished" datetime="2021-06-09T15:08:45+08:00">2021-06-09</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-11 23:18:44" itemprop="dateModified" datetime="2019-10-11T23:18:44+08:00">2019-10-11</time>
+              </span>
             
           
 
@@ -307,7 +315,120 @@
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/10/08/计划收藏表/#more" rel="contents">
+              <a class="btn" href="/2021/06/09/计划收藏表/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/11/P1363/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="qnickx">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://miao.su/images/2019/09/15/57915026_p043f4c.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="qnickx's blog">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/10/11/P1363/" class="post-title-link" itemprop="url">P1363 幻想迷宫 题解</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-11 23:25:06 / 修改时间：23:25:34" itemprop="dateCreated datePublished" datetime="2019-10-11T23:25:06+08:00">2019-10-11</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/OI/题解/" itemprop="url" rel="index"><span itemprop="name">题解</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h4><p><a href="https://www.luogu.org/problem/P1363" target="_blank" rel="noopener">传送门</a></p>
+<h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>（喵星人LHX和WD同心协力击退了汪星人的入侵，不幸的是，汪星人撤退之前给它们制造了一片幻象迷宫。）</p>
+<p>WD：呜呜，肿么办啊……</p>
+<p>LHX：momo…我们一定能走出去的！</p>
+<p>WD：嗯，+U+U！</p>
+<p>描述 Description</p>
+<p>幻象迷宫可以认为是无限大的，不过它由若干个N*M的矩阵重复组成。矩阵中有的地方是道路，用’.’表示；有的地方是墙，用’#’表示。LHX和WD所在的位置用’S’表示。也就是对于迷宫中的一个点(x,y)，如果(x mod n,y mod m)是’.’或者’S’，那么这个地方是道路；如果(x mod n,y mod m)是’#’，那么这个地方是墙。LHX和WD可以向上下左右四个方向移动，当然不能移动到墙上。</p>
+<p>请你告诉LHX和WD，它们能否走出幻象迷宫（如果它们能走到距离起点无限远处，就认为能走出去）。如果不能的话，LHX就只好启动城堡的毁灭程序了……当然不到万不得已，他不想这么做。。。</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/10/11/P1363/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1219,112 +1340,6 @@
   </article>
 
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/22/9-22-T1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="qnickx">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://miao.su/images/2019/09/15/57915026_p043f4c.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="qnickx's blog">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/09/22/9-22-T1/" class="post-title-link" itemprop="url">9.22模拟赛 二十四点 题解</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-09-22 21:28:38 / 修改时间：21:48:00" itemprop="dateCreated datePublished" datetime="2019-09-22T21:28:38+08:00">2019-09-22</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/OI/题解/" itemprop="url" rel="index"><span itemprop="name">题解</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h4 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h4><p>给定n个数，不能改变顺序，可以再中间添加加号、减号或乘号，求有多少种算式可以算出24。</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/09/22/9-22-T1/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
   </section>
 
   
@@ -1365,7 +1380,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-count">35</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
