@@ -8,7 +8,7 @@
       <link href="/2021/06/09/%E8%AE%A1%E5%88%92%E6%94%B6%E8%97%8F%E8%A1%A8/"/>
       <url>/2021/06/09/%E8%AE%A1%E5%88%92%E6%94%B6%E8%97%8F%E8%A1%A8/</url>
       
-        <content type="html"><![CDATA[<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="私人文章" />    <label for="pass">私人文章</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX1+1yo6cua50305k2zY8iP+7dur7VESP8n1fRoTWjosZvdTO07bxQNafHRr9UMckN/0ZjUc8evNzepEvEl32xbNhC7sYt+rrkriWi+ndfL+17L2C0zDUzojKQW5kEOGcU3A1EvsYwG/oiijm1v9Dj5GTrv5HBBTl242caeS/xJ1K3aEtVHGiEYAisZN787MkALqQISSzEbNHq1rQf8/LzAHXLHWOzIwCqf3leMMb8JJAgohq/YyYX9bV0NppmQ8j6rg6zNr1bipPVmh2W4+JZBv4QD6ozLrt/jHtbDDNZPIRhnQ/mpKngfpayZfX3fQtdHrJcXwVlT7242SsJl1/1nRXOXnqNbLGYa8CK5K4qiPwGhu4i3Vp3JKVqfqEJ9TaMl5zxgvQbZEZEF0JEN18eRIFuzHnKhXCP27k3TrwkhjBmKAlyt8FbDfssM3RXmD3M9HB6ehYPcWIFEatQQF5yH+xU+GasUvmrXn6x6hH+v30MAsG7nduBaR90PvJkfK9mtA9vcUHgcU07gytleReoKBwpMJwj92y1YOHvVk4+BCvqHZqXFDJFvTHrvow/cFEeISdlLyjO6jhS53EqrBLeO0+J07YvYkv/IO+V4N0C4B/HUwDwHDNUq/zTHpHDP4qxzSWYu/yiMR2MyA53bdH9s/CZGGZaoqs50Gq4O29Mce5jbNOnoWp98zAcDcNk0OJXr8P7Qoo+ODxHOLnYM2oN2/KD0IRrJcb14tjafG23EV/FFaNtIrSTqfsnzhPEzBSCJTnmjZsyQCp3zrqKNEym3603ol34XDBKlJODs/j8zSfCsh9B+JRC0oiJfHwmSJpoF1uo7O3Axn1Qvy8TSsSfalSLBa5mINHKuG2i+Fxv7JHyAbK0hitwFUpptpzyXhWZgNEmbFtVXmle8MCQK7ovKXwhTLToSCf1dALD9R+KVhdtO6hL4+ow/xguV17SSn6Esrdhjta3mDRm4YTDw7Zauaqi3x2i/TlWHUTepBAKkueEnWSEKLfGYDJZGvf8NNhW/6lfc45Jhlhrywa7jenFHdMaz0ASR9JTDQ9hvM5Xwi4VESrDv/k0WEJf8xTF0zqBDJJy/5ErjUzdj/219s6B/PKuSPbiqEoEPMCEyC4aK+W1YuEE0x3iyv3OzPB/HI5xDJIF3gSWrhcqxBurib3elgE8JqlU8eaKXuU1u+RknVkG27xaobHRVRlu5a2h9Jz+4gzUOCM1VfpvgErwowIkasjaNN+j5h14dJMqFSFUO77Sgk6m16ipjgHrUIJK/ZiErbNm5OafKYNhcUs/cYZIfcaMNYjF3Zyk3UVF1qGT7VNTLe59nAhxuk7YbQ0Yfgul5YtiBz4QoaYxbkFhWm7EIV40BZPNXYXjEghl+j12QgjREASLd6uNfNS</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+        <content type="html"><![CDATA[<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="私人文章" />    <label for="pass">私人文章</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX1+2Jzbgqq+8GqRgWeJh8hEEMRdgKpDtUovhkeUB3sMe1XpIGI+Gdhjhzo/V2oRKn37sc2hk2uH1pX6wVKT7xLlhVwtzoRld1hu9Q/vkREkWOFQODFSj9f30fmSdduy2n4QRtcrRgzrVhLVoiEKqwKCZcnRtzWNNKqlxgR+hcsEgS9I4xWEANIOuH7Y+SOTAGccbfqSgBGz8Afw92EtHsizB81nvPrXgID9pTFBVShYHGbW8fGV50qsaYaPnb3w4pdA8U8zJe/4POLY8m6dmg5yHUnaXhk8fYPpsN/O4guAjsWoyL3o80KAN91ARAhmxZUb650breSBQi6xzrnedvTV0YAWuRfdHnfg=</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
       
       
       
@@ -176,9 +176,9 @@
       
         <tags>
             
-            <tag> 二分答案 </tag>
-            
             <tag> 并查集 </tag>
+            
+            <tag> 二分答案 </tag>
             
             <tag> bfs </tag>
             
@@ -734,9 +734,9 @@
       
         <tags>
             
-            <tag> 树形dp </tag>
-            
             <tag> 贪心 </tag>
+            
+            <tag> 树形dp </tag>
             
         </tags>
       
@@ -975,7 +975,7 @@
       <link href="/2019/08/14/Follow/"/>
       <url>/2019/08/14/Follow/</url>
       
-        <content type="html"><![CDATA[<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="没有密码的话不用找博主了，不会有的" />    <label for="pass">没有密码的话不用找博主了，不会有的</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX19WZdNwsDPIoVvT+9n2TMqOX/2oGZ0nUnhmlLCoKB4HBPTKhwRGWKr9rbI7uku8R2eFF4P09D9ndJIlt26/zH+G9Al9xJB4WOpGi7+aA/hz/sOQO5zGPPyjPMENyhep7v6RZOp0WRkxPEelDevpHd77bGx+Z8DE167Si0HdUuwd9OdDHFAiG4PBWpTUCtEjT8pGxcqKUiCptuwW4xYrRMT3pTsZ5AK5BWRieEO+9sq079GKzNB/LvFARUQxChIlayE4YHvgts/YVB6HnQcO3t0ufv3kw6eMC47Uu5+Vw8m6KRqKLeYHzUrLsOIEWtN2jSFK+AzqoUc9XkhXYqe8C+Aj1Zy2LJHKqnerFa7o+Ai7Rz9qkZdv6bhrTDn7iCfHJkFA+5B65Rqg2EimF2LBNn12j3khN0mtKhccSdAE0/DkoFAoanJh3QcEYuaJtGaaoyukLNHn4/Y0hWwqtvvW5ATrXBRon+6pueBbyuF02CXewHv9/VQhKIgObat/cImL31NT3gfSJiuHJaVGkyZC8wTn3wRZVtGn3IhJ9b6KsMHx/QjIQVMJo+YiGJ/CRxjK5xJP4wZAeaDeCuFMTfyKfdxZKUUvfhtOKf2L4gDMP/B4+6svKZNvZdMagU5Dv4I1RJgJeoIoUYKEyVVq4B3Q8c7PxfQvlQg+kFoZX0FCHQuLrpYLFYXa/oJbnkDN/p+HGT5H44uC5cbq0Zp0DLYRuchjgq2iykI58F602hnPe8PixFzt65Aet+qTZPgCPqHnGxWBqw9e4YAJ+udXj4GnHXBnx87AmT9BAmpna/zYq3irgUteus4j35fXrC+CZ4lY18+VgEbO3jEdbsrnBJIoYWBRS041EUJTfKtwKo6+CQ+sWC+4D+GaMZIjNZ9eXwC0hHLRHJ/4its5kvHM0kvlIiVrS1s7nKXjlUyf15UYNCxyRuTp36vXZ/4m687KTSCf9s6ho547p1b6BdvtypkB6q0cTYOn4Sbmun2lRNx7hYhha9E4Z2kSWP/KpryMbqh89BKSPEOxeuSSP96RQZ1aYKnLo0pZSZQnzLJVxhLvzgPthi3ILKJ2RDPYVravTP5SxcBlWXKPn3daGAwM8nG5IKxNhiEqjQh2vPldhEcbDR9bJlmuRgOul6znylDaQJA78Qr/SItg5oMhLN1Ul68yjV9WQg2vSdsookKz8R73Pu8AOe1n/4yhGmMeuUbDfzomCvREuetBWQIKgBjWCPxiy9pSVTf/D8xd0B0=</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+        <content type="html"><![CDATA[<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="没有密码的话不用找博主了，不会有的" />    <label for="pass">没有密码的话不用找博主了，不会有的</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX1+/ahS4TQnKPz5YQMNCdAgakQSEHSs9ow13cW5+Ji9+Gp+ikIYCv1ILsEHgcZlR7+C1iLRkA0lL2Wdc6yMWamayl+BYAaNH25wP5xJRAHtgzKfjWw3IjXL87F/blOXjRQlkwaS9Nbi2ZtcO1pQe5xiUvV20NZrZTF76WeBfI1kPvnTzDaCZstRO8ONijw/KddjEwmcg2jFsV77+jj0YQYbzfHqf5kIy/zaN8c+CmKEwhNeLJFWvZz+BzHiZ9gmWXypM496pTrIWejByZOeve6uhFA4KrSC0IdUkL4AjDzY88AOYDWy9dggcjo1hlesqi1bG4m697OODJ63rszUU75WN3TeUgW7j27cW8o97XEGXt6LnD4J//lX1UpxUPeKVq1yOzyYriNBG03BY3rukeiinyGjbkoQTL1QfCFHnpMQH2olFFbzp2gPtFVm7YvHbPNllFOtynCWPo3PGQ5YSqwYhSsIkrDWBX93QUc+TY+1A9SaZUdFQc7nJgZh+vO+PK8+tFIp5INM7OMrRj1a9aiedt2K2weoomDXQmvFHpXukZo2hj85NV4Tr8iayMlxHujDEKTmJHRCH/jYVARkzz7ajEo1ulpP/x7M1wKG0oK+pomYx6z8R+E9WPEzMr5dIdPRCKLOXUWue7sssshzlWpL5eKBcT2Owk2ISw1pCoYnETb/0bFv2H6cCTPD5+/vwskD9Y0f2EvzrcXUTEuVLA9KASAOZ44d0i7k3rdG2UXzblYGfUUpNYQwU4ZBl//m02oyJuoOt2G9TO3JVHEw4ipVypFa2vktkm+8tKMrfLY05vLV1h26zNSu6Uq6UlyepIpkX02eLSw2vp96lfwkYKzwGZZkzGsKRIR8CDu3xiWemAinsPlXdqraT1e100QGZcNMPufjEeN+VGavtc3A4Ijt1pri5vvTfdxjZ3k+u/G08cEQhhNd/F1NwlHogIfbCmtmbuhvJPH5fKM36zBq5IlQ6A8yGbauq2IosSE3QeEwH9eFP308fgb1jJwG/hlFA/id2haT6EYYlqzZ3AqJJlY3Y1viAQaRTZVMnm2mOGNlHTRnwsbA2u1aAfu3H3aSevn1AYrkPYAh4PUdCW1reH0v5bU1gmJqIZi1s9rQxlsVpKLjU6VSuAG3sJ2Kq3okaw2bc+dTRJ0oiQWvDvj5pYHS4+/3vPJChUKIvnz52iYS4lMRtpQCZqC8l04Q1VHO5qXxyb8pyz77/16pMA1u+jlZQdtdbSvkJrlU=</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
       
       
       <categories>
@@ -1013,25 +1013,6 @@
             <tag> 最大流最小割 </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>网络流学习笔记（一）</title>
-      <link href="/2019/08/13/%E7%BD%91%E7%BB%9C%E6%B5%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/"/>
-      <url>/2019/08/13/%E7%BD%91%E7%BB%9C%E6%B5%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/</url>
-      
-        <content type="html"><![CDATA[<h1 id="网络流学习笔记（一）"><a href="#网络流学习笔记（一）" class="headerlink" title="网络流学习笔记（一）"></a>网络流学习笔记（一）</h1><p>（未完待续）</p><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>网络流(network-flows)是一种类比水流的解决问题方法，与线性规划密切相关。在oi中网络流是非常重要的考点。</p><a id="more"></a><h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><p>网络是指一个有向图$G=(V,E)$.其中的每一条边$(u,v)\in E$都有一个权值$c(u,v)$,称之为容量，当$(u,v)\notin G$ 时,$c(u,v)=0$.</p><h3 id="流"><a href="#流" class="headerlink" title="流"></a>流</h3><script type="math/tex; mode=display">f(u,v)=\left\{\begin{split} &f(u,v)&,(u,v)\in E\\ &-f(v,u)&,(v,u)\in E\\ &0&,(u,v)\notin E,(v,u)\notin E \end{split}\right.</script><h2 id="最大流问题"><a href="#最大流问题" class="headerlink" title="最大流问题"></a>最大流问题</h2><p>给定一个有向图$G=(V,E)$，把图中的边看作管道，每条边上有一个权值，表示该管道的流量上限。给定源点$s$和汇点$t$，现在假设在$s$处有一个水源，$t$处有一个蓄水池，问从$s$到$t$的最大水流量是多少</p><p><img src="https://miao.su/images/2019/08/13/15dfe7.png" alt="如图"></p><h2 id="Ford-Fulkerson算法"><a href="#Ford-Fulkerson算法" class="headerlink" title="Ford-Fulkerson算法"></a>Ford-Fulkerson算法</h2><p>基本思路很简单,每次用dfs从源到汇找一条可行路径，<br>然后把这条路塞满。这条路径上容量最小的那条边的容量，就是这次dfs所找到的流量。然后对于路径上的每条边，其容量要减去刚才找到的流量。并对反向边加上相同的流量 。</p><h2 id="Edmonds-Karp算法"><a href="#Edmonds-Karp算法" class="headerlink" title="Edmonds-Karp算法"></a>Edmonds-Karp算法</h2><h2 id="Dicnic算法"><a href="#Dicnic算法" class="headerlink" title="Dicnic算法"></a>Dicnic算法</h2>]]></content>
-      
-      
-      <categories>
-          
-          <category> 算法笔记 </category>
-          
-      </categories>
-      
       
     </entry>
     
