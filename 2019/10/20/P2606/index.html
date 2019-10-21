@@ -55,18 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="题目链接传送门 题目描述称一个1,2,…,N的排列P1,P2…,Pn是Magic的，当且仅当2&amp;lt;=i&amp;lt;=N时，Pi&amp;gt;Pi/2. 计算1，2，…N的排列中有多少是Magic的，答案可能很大，只能输出模P以后的值  输入格式 输入文件的第一行包含两个整数 n和p，含义如上所述。  输出格式一行一个非负整数，表示答案。 样例输入1233 998244353 样例输出1266181115">
+  <meta name="description" content="题目链接传送门 题目描述称一个1,2,…,N的排列P1,P2…,Pn是Magic的，当且仅当2&amp;lt;=i&amp;lt;=N时，Pi&amp;gt;Pi/2. 计算1，2，…N的排列中有多少是Magic的，答案可能很大，只能输出模P以后的值">
 <meta name="keywords" content="动态规划,组合数学">
 <meta property="og:type" content="article">
-<meta property="og:title" content="P2606">
+<meta property="og:title" content="P2606 [ZJOI2010]排列计数 题解">
 <meta property="og:url" content="http://yoursite.com/2019/10/20/P2606/index.html">
 <meta property="og:site_name" content="qnickx&#39;s blog">
-<meta property="og:description" content="题目链接传送门 题目描述称一个1,2,…,N的排列P1,P2…,Pn是Magic的，当且仅当2&amp;lt;=i&amp;lt;=N时，Pi&amp;gt;Pi/2. 计算1，2，…N的排列中有多少是Magic的，答案可能很大，只能输出模P以后的值  输入格式 输入文件的第一行包含两个整数 n和p，含义如上所述。  输出格式一行一个非负整数，表示答案。 样例输入1233 998244353 样例输出1266181115">
+<meta property="og:description" content="题目链接传送门 题目描述称一个1,2,…,N的排列P1,P2…,Pn是Magic的，当且仅当2&amp;lt;=i&amp;lt;=N时，Pi&amp;gt;Pi/2. 计算1，2，…N的排列中有多少是Magic的，答案可能很大，只能输出模P以后的值">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-20T15:34:03.896Z">
+<meta property="og:updated_time" content="2019-10-21T15:14:32.135Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="P2606">
-<meta name="twitter:description" content="题目链接传送门 题目描述称一个1,2,…,N的排列P1,P2…,Pn是Magic的，当且仅当2&amp;lt;=i&amp;lt;=N时，Pi&amp;gt;Pi/2. 计算1，2，…N的排列中有多少是Magic的，答案可能很大，只能输出模P以后的值  输入格式 输入文件的第一行包含两个整数 n和p，含义如上所述。  输出格式一行一个非负整数，表示答案。 样例输入1233 998244353 样例输出1266181115">
+<meta name="twitter:title" content="P2606 [ZJOI2010]排列计数 题解">
+<meta name="twitter:description" content="题目链接传送门 题目描述称一个1,2,…,N的排列P1,P2…,Pn是Magic的，当且仅当2&amp;lt;=i&amp;lt;=N时，Pi&amp;gt;Pi/2. 计算1，2，…N的排列中有多少是Magic的，答案可能很大，只能输出模P以后的值">
   <link rel="canonical" href="http://yoursite.com/2019/10/20/P2606/">
 
 
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>P2606 | qnickx's blog</title>
+  <title>P2606 [ZJOI2010]排列计数 题解 | qnickx's blog</title>
   
 
 
@@ -272,7 +272,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">P2606
+          <h1 class="post-title" itemprop="name headline">P2606 [ZJOI2010]排列计数 题解
 
             
           </h1>
@@ -289,11 +289,19 @@
                 
               
 
-              <time title="创建时间：2019-10-20 23:31:16 / 修改时间：23:34:03" itemprop="dateCreated datePublished" datetime="2019-10-20T23:31:16+08:00">2019-10-20</time>
+              <time title="创建时间：2019-10-20 23:31:16" itemprop="dateCreated datePublished" datetime="2019-10-20T23:31:16+08:00">2019-10-20</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-21 23:14:32" itemprop="dateModified" datetime="2019-10-21T23:14:32+08:00">2019-10-21</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -330,12 +338,14 @@
       
         <h4 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h4><p><a href="https://www.luogu.org/problem/P2606" target="_blank" rel="noopener">传送门</a></p>
 <h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>称一个1,2,…,N的排列P1,P2…,Pn是Magic的，当且仅当2&lt;=i&lt;=N时，Pi&gt;Pi/2. 计算1，2，…N的排列中有多少是Magic的，答案可能很大，只能输出模P以后的值 </p>
+<a id="more"></a>
 <h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h4><p> 输入文件的第一行包含两个整数 n和p，含义如上所述。 </p>
 <h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h4><p>一行一个非负整数，表示答案。</p>
 <h4 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">233 998244353</span><br></pre></td></tr></table></figure>
 <h4 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">266181115</span><br></pre></td></tr></table></figure>
-<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>把这个玩意儿画在一条数轴上就会发现$P_i$的大小只会影响$P_{i<em>2+1}$和$P_{i</em>2}$的选择</p>
-<p>然后考虑画一颗二叉树，发现节点$u$的左右儿子分别是$2<em>u$和$2</em>u+1$，那么整个二叉树的节点权值就是一颗小根堆。任意节点的左右子树互不影响。设$dp_u$表示以$u$为根的子树的合法摆放方案，那么就可以得到转移方程$dp_u=C(siz_u,siz_{lson}-1)<em>dp_{lson}</em>dp_{rson}$</p>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>把这个玩意儿画在一条数轴上就会发现$P_i$的大小只会影响$P_{2i+1}$和$P_{2i}$的选择</p>
+<p>然后考虑画一颗二叉树，发现节点$u$的左右儿子分别是2乘u和2乘u+1，那么整个二叉树的节点权值就是一颗小根堆。任意节点的左右子树互不影响。设$dp_u$表示以u为根的子树的合法摆放方案，那么就可以得到转移方程</p>
+<p>$dp_u=C(siz_u,siz_{lson}-1)dp_{lson}dp_{rson}$</p>
 <p>然后线性求一下阶乘的逆元就可以过了。</p>
 <h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">1e6</span>+<span class="number">5</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line">ll mod,T,fac[maxn&lt;&lt;<span class="number">1</span>],inv[maxn&lt;&lt;<span class="number">1</span>],dp[maxn&lt;&lt;<span class="number">1</span>],siz[maxn&lt;&lt;<span class="number">1</span>];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> ll <span class="title">power</span><span class="params">(ll a,<span class="keyword">int</span> p)</span></span>&#123;</span><br><span class="line">	ll res=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(p)&#123;</span><br><span class="line">		<span class="keyword">if</span>(p&amp;<span class="number">1</span>)	res=res*a%mod;</span><br><span class="line">		a=(a%mod*a%mod)%mod;</span><br><span class="line">		p&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">	fac[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=T;i++)	fac[i]=fac[i<span class="number">-1</span>]*i%mod;</span><br><span class="line">	inv[T]=power(fac[T],mod<span class="number">-2</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=T<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--)	inv[i]=(inv[i+<span class="number">1</span>]*(i+<span class="number">1</span>))%mod;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=T;i++)	siz[i]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=T;i&gt;=<span class="number">2</span>;i--)	siz[i&gt;&gt;<span class="number">1</span>]+=siz[i];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> ll <span class="title">C</span><span class="params">(ll n,ll m)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> (((fac[n]*inv[m])%mod)*inv[n-m])%mod;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="comment">//	freopen("perm.in","r",stdin);</span></span><br><span class="line"><span class="comment">//	freopen("perm.out","w",stdout);</span></span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%lld%lld"</span>,&amp;T,&amp;mod);</span><br><span class="line">	init();</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=T;i&gt;=<span class="number">1</span>;i--)&#123;</span><br><span class="line">		<span class="keyword">if</span>((i&lt;&lt;<span class="number">1</span>|<span class="number">1</span>)&lt;=T)		dp[i]=(C(siz[i]<span class="number">-1</span>,siz[i&lt;&lt;<span class="number">1</span>])*dp[i&lt;&lt;<span class="number">1</span>]%mod*dp[i&lt;&lt;<span class="number">1</span>|<span class="number">1</span>]%mod);</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>((i&lt;&lt;<span class="number">1</span>)&lt;=T)		dp[i]=dp[i&lt;&lt;<span class="number">1</span>];</span><br><span class="line">		<span class="keyword">else</span> dp[i]=<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%lld"</span>,dp[<span class="number">1</span>]);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -365,8 +375,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/10/20/10-20-T1/" rel="next" title="10_20_T1">
-                  <i class="fa fa-chevron-left"></i> 10_20_T1
+                <a href="/2019/10/20/10-20-T1/" rel="next" title="数列 题解">
+                  <i class="fa fa-chevron-left"></i> 数列 题解
                 </a>
               
             </div>
