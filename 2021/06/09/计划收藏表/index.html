@@ -30,9 +30,9 @@
     version: '7.3.0',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
     save_scroll: false,
-    copycode: {"enable":false,"show_result":false,"style":null},
+    copycode: {"enable":true,"show_result":true,"style":null},
     fancybox: false,
     mediumzoom: false,
     lazyload: false,
@@ -305,6 +305,14 @@
           
 
           
+            <span class="post-meta-item" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
 
         </div>
       </header>
@@ -326,7 +334,7 @@
 <div id="decryptionError" style="display: none;">Incorrect Password!</div>
 <div id="noContentError" style="display: none;">No content to display!</div>
 <div id="encrypt-blog" style="display:none">
-U2FsdGVkX18tHnqpY5sf3SvNtwF4H4jqL0a2OoVbHwgFBycZHBO0/rVM5RSm94yWq8RUCPGnjW1rZdUQGKhMi6aO9Wo+/wF96MIvjI1ADR8SLxH0UPICWEIyxvK33I/GBhlF0wGrjkTb65phxMwA4Vhd1tG2CQ/C8857Ki6WMEYGjY7Sf7O8lsk2dq4/S8jUDxPtteGWHKT16J2u6ut82cpcAgySIpRQELVoFKtqbz2tuffGHta6eq56QYMVvnDFm6XeALfG/by5R7pcW23C9AXECdUOQv7BEMCIBOgtXvC+vldq5FOYZ9OXJMNukn4AX9zdIbrSZN7CPvdfWPazez7ud3jxBkwzpJlv9BAVWg0=
+U2FsdGVkX19UZy60ZS+RfpLUZ6WH8fTuzjOWYa/c4l+SkKmZDr08GX/cShbJ9HeA17knZ0zfBNOeh5CA2r2zsZOePAsJVisiLh/zslA0NlVOUewggyN1CMXQqCcHUSsmpH7Vw4WO94srne+4b53tWGh7YzGsHI7E8hCbS/wKme3YICzAaErtnKgYKcygs8YdSgYoJtSxFmVvoRLgpiddsqVO22SAl239o8O6r4SiPza8lUlre7uZFtRH0lWdUPwg80oHMwJ+FUxDlYzbtfpPEsuY+TUNZHVnED/gAnjPEnCu2PJ/Duc8rGQ2C3acGP8+fqLEH6/YZjIvCTqccMd6LSCHy7AtBNja6T50ffk/obU=
 </div>
 <script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
     </div>
@@ -614,6 +622,25 @@ U2FsdGVkX18tHnqpY5sf3SvNtwF4H4jqL0a2OoVbHwgFBycZHBO0/rVM5RSm94yWq8RUCPGnjW1rZdUQ
   <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.3.0</div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
 
 
 
@@ -627,6 +654,8 @@ U2FsdGVkX18tHnqpY5sf3SvNtwF4H4jqL0a2OoVbHwgFBycZHBO0/rVM5RSm94yWq8RUCPGnjW1rZdUQ
     </footer>
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
+          <span id="scrollpercent"><span>0</span>%</span>
+        
       </div>
 
     
@@ -640,7 +669,11 @@ U2FsdGVkX18tHnqpY5sf3SvNtwF4H4jqL0a2OoVbHwgFBycZHBO0/rVM5RSm94yWq8RUCPGnjW1rZdUQ
 
 <script src="/js/utils.js?v=7.3.0"></script>
   <script src="/js/motion.js?v=7.3.0"></script>
-
+<script type="text/javascript">
+    $('.post-body').bind('copy', function() {
+        alert('本博客内容欢迎分享（将本博客的原文地址分享到其它网站），允许部分摘录并在醒目位置附上原文链接，未经许可禁止任何形式的全文转载。');
+    });
+</script>
 
   <script src="/js/affix.js?v=7.3.0"></script>
   <script src="/js/schemes/pisces.js?v=7.3.0"></script>
