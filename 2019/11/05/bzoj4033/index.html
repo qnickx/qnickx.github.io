@@ -55,19 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="问题描述给定n个数，不能改变顺序，可以再中间添加加号、减号或乘号，求有多少种算式可以算出24。">
-<meta name="keywords" content="dfs">
+  <meta name="description" content="Description有一棵点数为N的树，树边有边权。给你一个在0~N之内的正整数K，你要在这棵树中选择K个点，将其染成黑色，并 将其他的N-K个点染成白色。将所有点染色后，你会获得黑点两两之间的距离加上白点两两之间距离的和的收益。 问收益最大值是多少。">
+<meta name="keywords" content="树形dp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="9.22模拟赛 二十四点 题解">
-<meta property="og:url" content="http://yoursite.com/2019/09/22/9-22-T1/index.html">
+<meta property="og:title" content="bzoj4033 [HAOI2015]树上染色 题解">
+<meta property="og:url" content="http://yoursite.com/2019/11/05/bzoj4033/index.html">
 <meta property="og:site_name" content="qnickx&#39;s blog">
-<meta property="og:description" content="问题描述给定n个数，不能改变顺序，可以再中间添加加号、减号或乘号，求有多少种算式可以算出24。">
+<meta property="og:description" content="Description有一棵点数为N的树，树边有边权。给你一个在0~N之内的正整数K，你要在这棵树中选择K个点，将其染成黑色，并 将其他的N-K个点染成白色。将所有点染色后，你会获得黑点两两之间的距离加上白点两两之间距离的和的收益。 问收益最大值是多少。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-22T13:48:00.089Z">
+<meta property="og:updated_time" content="2019-11-05T15:58:04.416Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="9.22模拟赛 二十四点 题解">
-<meta name="twitter:description" content="问题描述给定n个数，不能改变顺序，可以再中间添加加号、减号或乘号，求有多少种算式可以算出24。">
-  <link rel="canonical" href="http://yoursite.com/2019/09/22/9-22-T1/">
+<meta name="twitter:title" content="bzoj4033 [HAOI2015]树上染色 题解">
+<meta name="twitter:description" content="Description有一棵点数为N的树，树边有边权。给你一个在0~N之内的正整数K，你要在这棵树中选择K个点，将其染成黑色，并 将其他的N-K个点染成白色。将所有点染色后，你会获得黑点两两之间的距离加上白点两两之间距离的和的收益。 问收益最大值是多少。">
+  <link rel="canonical" href="http://yoursite.com/2019/11/05/bzoj4033/">
 
 
 <script id="page-configurations">
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>9.22模拟赛 二十四点 题解 | qnickx's blog</title>
+  <title>bzoj4033 [HAOI2015]树上染色 题解 | qnickx's blog</title>
   
 
 
@@ -258,7 +258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/22/9-22-T1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/05/bzoj4033/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="qnickx">
@@ -272,7 +272,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">9.22模拟赛 二十四点 题解
+          <h1 class="post-title" itemprop="name headline">bzoj4033 [HAOI2015]树上染色 题解
 
             
           </h1>
@@ -289,7 +289,7 @@
                 
               
 
-              <time title="创建时间：2019-09-22 21:28:38 / 修改时间：21:48:00" itemprop="dateCreated datePublished" datetime="2019-09-22T21:28:38+08:00">2019-09-22</time>
+              <time title="创建时间：2019-11-05 23:38:42 / 修改时间：23:58:04" itemprop="dateCreated datePublished" datetime="2019-11-05T23:38:42+08:00">2019-11-05</time>
             </span>
           
             
@@ -336,15 +336,21 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h4 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h4><p>给定n个数，不能改变顺序，可以再中间添加加号、减号或乘号，求有多少种算式可以算出24。</p>
+        <h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>有一棵点数为N的树，树边有边权。给你一个在0~N之内的正整数K，你要在这棵树中选择K个点，将其染成黑色，并</p>
+<p>将其他的N-K个点染成白色。将所有点染色后，你会获得黑点两两之间的距离加上白点两两之间距离的和的收益。</p>
+<p>问收益最大值是多少。</p>
 <a id="more"></a>
-<h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h4><p>第一行一个正整数n。<br>接下来n行每行一个整数，第i行表示第i个数。</p>
-<h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h4><p>一行一个整数，输出满足条件的算式个数。</p>
-<h4 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h4><p>5<br>10<br>2<br>4<br>2<br>4</p>
-<h4 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h4><p>5</p>
-<h4 id="数据规模"><a href="#数据规模" class="headerlink" title="数据规模"></a>数据规模</h4><p>对于10%的数据，n=2<br>对于40%的数据，n&lt;=5<br>对于100%的数据，n&lt;=10</p>
-<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>很明显是一个深搜，不用剪枝就能过，但是要注意不能从pos=0开始乘和减。</p>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n,sz[<span class="number">15</span>],fac[<span class="number">15</span>],sum[<span class="number">15</span>],ans;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> pos,<span class="keyword">int</span> now)</span></span>&#123;</span><br><span class="line"><span class="comment">//	printf("%d %d\n",pos,now);</span></span><br><span class="line"><span class="comment">//	if(now&gt;24&amp;&amp;sum[n]-sum[pos]&lt;now-24)	return;</span></span><br><span class="line"><span class="comment">//	if(now&lt;24&amp;&amp;sum[n]-sum[pos]&lt;24-now)	return;</span></span><br><span class="line"><span class="comment">//	printf("Yes\n");</span></span><br><span class="line">	<span class="keyword">if</span>(pos==n)&#123;</span><br><span class="line">		<span class="keyword">if</span>(now==<span class="number">24</span>)&#123;</span><br><span class="line">	<span class="comment">//		printf("Yes\n");</span></span><br><span class="line">			ans++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> res=sz[pos+<span class="number">1</span>];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=pos+<span class="number">2</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		res*=sz[i];</span><br><span class="line">		dfs(i,now+res);</span><br><span class="line">		<span class="keyword">if</span>(pos!=<span class="number">0</span>)dfs(i,now-res);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(pos!=<span class="number">0</span>)	dfs(pos+<span class="number">1</span>,now-sz[pos+<span class="number">1</span>]);</span><br><span class="line">	dfs(pos+<span class="number">1</span>,now+sz[pos+<span class="number">1</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	freopen(<span class="string">"z24a.in"</span>,<span class="string">"r"</span>,<span class="built_in">stdin</span>);</span><br><span class="line">	freopen(<span class="string">"z24a.out"</span>,<span class="string">"w"</span>,<span class="built_in">stdout</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">	fac[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;sz[i]),sum[i]=sum[i<span class="number">-1</span>]+sz[i];</span><br><span class="line">	dfs(<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h4><p>第一行两个整数N,K。</p>
+<p>接下来N-1行每行三个正整数fr,to,dis，表示该树中存在一条长度为dis的边(fr,to)。</p>
+<p>输入保证所有点之间是联通的。</p>
+<p>N&lt;=2000,0&lt;=K&lt;=N</p>
+<h4 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h4><p> 输出一个正整数，表示收益的最大值。 </p>
+<h4 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">5 2</span><br><span class="line">1 2 3</span><br><span class="line">1 5 1</span><br><span class="line">2 3 1</span><br><span class="line">2 4 2</span><br></pre></td></tr></table></figure>
+<h4 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">17</span><br></pre></td></tr></table></figure>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>比较难想的树形dp，设$dp_{u,i}$表示以$u$为根的子树把i个节点染成黑色对于整棵树的贡献，可以得到转移方程：</p>
+<p>$dp_{u,i}=max(dp_{u,i-j}+dp_{v,j}+子树v内染色对整棵树的贡献)$</p>
+<p>问题在于后者怎么计算，你会发现一棵子树内所有染色的点互相的贡献是已经计算完毕了的，那么考虑向上，不断累加edge即可，白色点算算补集就好了。</p>
+<h4 id="code"><a href="#code" class="headerlink" title="code"></a>code</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">2005</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">int</span> siz[maxn], n, k, head[maxn], ver[maxn &lt;&lt; <span class="number">1</span>], Nxt[maxn &lt;&lt; <span class="number">1</span>], edge[maxn &lt;&lt; <span class="number">1</span>], tot;</span><br><span class="line">ll dp[maxn][maxn];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> v, <span class="keyword">int</span> l)</span> </span>&#123; ver[++tot] = v, edge[tot] = l, Nxt[tot] = head[u], head[u] = tot; &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> fa)</span> </span>&#123;</span><br><span class="line">    dp[u][<span class="number">0</span>] = dp[u][<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">    siz[u] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">int</span> i = head[u]; i; i = Nxt[i]) &#123;</span><br><span class="line">        <span class="keyword">int</span> v = ver[i];</span><br><span class="line">        <span class="keyword">if</span> (v == fa)</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        dfs(v, u);</span><br><span class="line">        siz[u] += siz[v];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">int</span> i = head[u]; i; i = Nxt[i]) &#123;</span><br><span class="line">        <span class="keyword">int</span> v = ver[i];</span><br><span class="line">        <span class="keyword">if</span> (v == fa)</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">int</span> j = min(k, siz[u]); j &gt;= <span class="number">0</span>; j--) &#123;      <span class="comment">// u的染色节点数</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">int</span> l = <span class="number">0</span>; l &lt;= min(j, siz[v]); l++) &#123;  <span class="comment">// v的</span></span><br><span class="line">                <span class="keyword">if</span> (dp[u][j - l] != <span class="number">-1</span>)</span><br><span class="line">                    dp[u][j] = max(dp[u][j], dp[u][j - l] + dp[v][l] +(ll) l * (ll)(k - l) *(ll) edge[i] +(ll)(siz[v] - l) *(ll) (n - k - siz[v] + l) *(ll) edge[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(dp, <span class="number">-1</span>, <span class="keyword">sizeof</span>(dp));</span><br><span class="line">  <span class="comment">//  freopen("tree.in","r",stdin);</span></span><br><span class="line">  <span class="comment">// 	freopen("tree.out","w",stdout);</span></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;k);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> u, v, l;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>, &amp;u, &amp;v, &amp;l);</span><br><span class="line">        add(u, v, l);</span><br><span class="line">        add(v, u, l);</span><br><span class="line">    &#125;</span><br><span class="line">    dfs(<span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%lld"</span>, dp[<span class="number">1</span>][k]);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -360,7 +366,7 @@
           
           <div class="post-tags">
             
-              <a href="/tags/dfs/" rel="tag"># dfs</a>
+              <a href="/tags/树形dp/" rel="tag"># 树形dp</a>
             
           </div>
         
@@ -370,8 +376,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/09/22/poj3268/" rel="next" title="poj3268 奶牛农场 题解">
-                  <i class="fa fa-chevron-left"></i> poj3268 奶牛农场 题解
+                <a href="/2019/11/03/10-29-t2/" rel="next" title="牛客10_29 乃爱与城市拥挤程度 题解">
+                  <i class="fa fa-chevron-left"></i> 牛客10_29 乃爱与城市拥挤程度 题解
                 </a>
               
             </div>
@@ -380,8 +386,8 @@
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/2019/09/22/9-22-T2/" rel="prev" title="9_22_T2 模拟赛 排干净月潭水塘 题解">
-                  9_22_T2 模拟赛 排干净月潭水塘 题解 <i class="fa fa-chevron-right"></i>
+                <a href="/2021/06/09/计划收藏表/" rel="prev" title="计划收藏表">
+                  计划收藏表 <i class="fa fa-chevron-right"></i>
                 </a>
               
             </div>
@@ -655,7 +661,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输入格式"><span class="nav-number">2.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出格式"><span class="nav-number">3.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例输入"><span class="nav-number">4.</span> <span class="nav-text">样例输入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例输出"><span class="nav-number">5.</span> <span class="nav-text">样例输出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据规模"><span class="nav-number">6.</span> <span class="nav-text">数据规模</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-number">7.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">8.</span> <span class="nav-text">代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Input"><span class="nav-number">2.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Output"><span class="nav-number">3.</span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-Input"><span class="nav-number">4.</span> <span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-Output"><span class="nav-number">5.</span> <span class="nav-text">Sample Output</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-number">6.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#code"><span class="nav-number">7.</span> <span class="nav-text">code</span></a></li></ol></div>
             
 
           </div>
@@ -852,7 +858,7 @@
       repo: 'blogcomments',
       owner: 'qnickx',
       admin: ['qnickx'],
-      id: 'b859a99c102795f70470c5c30ddcf4fb',
+      id: 'fbcb50f325e120e8a71b1286935172b6',
         language: 'zh-CN',
       
       distractionFreeMode: 'true'
