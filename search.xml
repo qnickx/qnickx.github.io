@@ -53,9 +53,9 @@
             
             <tag> 图论 </tag>
             
-            <tag> bfs </tag>
-            
             <tag> 模拟 </tag>
+            
+            <tag> bfs </tag>
             
             <tag> LCA </tag>
             
@@ -154,13 +154,13 @@
             
             <tag> 图论 </tag>
             
-            <tag> 背包 </tag>
-            
-            <tag> 杂题 </tag>
+            <tag> 模拟 </tag>
             
             <tag> 数学 </tag>
             
-            <tag> 模拟 </tag>
+            <tag> 背包 </tag>
+            
+            <tag> 杂题 </tag>
             
             <tag> 动态规划 </tag>
             
@@ -425,9 +425,9 @@
       
         <tags>
             
-            <tag> 数学 </tag>
-            
             <tag> 模拟 </tag>
+            
+            <tag> 数学 </tag>
             
         </tags>
       
@@ -597,9 +597,9 @@
       
         <tags>
             
-            <tag> 贪心 </tag>
-            
             <tag> 数学 </tag>
+            
+            <tag> 贪心 </tag>
             
         </tags>
       
